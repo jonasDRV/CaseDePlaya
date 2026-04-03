@@ -1,286 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa Chocaya – Casa de playa en Perú</title>
-  <meta name="description" content="Casa de playa privada directamente en la orilla de Chocaya, Perú. Con piscina, vista al mar y espacio para hasta 8 personas.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Chocaya – Casa de playa en Perú</title>
+    <meta
+      name="description"
+      content="Casa de playa privada directamente en la orilla de Chocaya, Perú. Con piscina, vista al mar y espacio para hasta 8 personas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header id="header">
+      <nav class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <img
+            src="images/LogoChocaya.png"
+            alt="Casa Chocaya"
+            class="nav-logo-img"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="#haus">La Casa</a></li>
+          <li><a href="#galerie">Galería</a></li>
+          <li><a href="#lage">Ubicación</a></li>
+          <li><a href="#kontakt" class="nav-cta">Consultar</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
 
-  <!-- ===================== HEADER ===================== -->
-  <header id="header">
-    <nav class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <img src="images/LogoChocaya.png" alt="Casa Chocaya" class="nav-logo-img">
-      </a>
-      <ul class="nav-links">
-        <li><a href="#haus">La Casa</a></li>
-        <li><a href="#galerie">Galería</a></li>
-        <li><a href="#lage">Ubicación</a></li>
-        <li><a href="#kontakt" class="nav-cta">Consultar</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#haus">La Casa</a>
+      <a href="#galerie">Galería</a>
+      <a href="#lage">Ubicación</a>
+      <a href="#kontakt">Consultar</a>
     </nav>
-  </header>
 
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="#haus">La Casa</a>
-    <a href="#galerie">Galería</a>
-    <a href="#lage">Ubicación</a>
-    <a href="#kontakt">Consultar</a>
-  </nav>
-
-  <!-- ===================== HERO ===================== -->
-  <section id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Chocaya &middot; Lima &middot; Perú</p>
-      <h1 class="hero-title">Casa Chocaya</h1>
-      <p class="hero-subtitle">Tu refugio privado en el Pacífico</p>
-      <a
-        href="https://wa.me/491734366359?text=Hola%2C%20estoy%20interesado%20en%20alquilar%20la%20casa%20en%20Chocaya.%20%C2%BFMe%20puede%20dar%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20precios%3F"
-        class="btn-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        Consultar ahora
-      </a>
-    </div>
-    <a href="#haus" class="hero-scroll" aria-label="Desplazarse hacia abajo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-    </a>
-  </section>
-
-  <!-- ===================== LA CASA ===================== -->
-  <section id="haus" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">La Casa</h2>
-      <p class="section-subtitle reveal">Un paraíso privado para momentos inolvidables en el Pacífico</p>
-
-      <div class="features-grid">
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-              <polyline points="9,22 9,12 15,12 15,22"/>
-            </svg>
-          </div>
-          <h3>3 Dormitorios</h3>
-          <p>Habitaciones amplias y luminosas con vista al mar y a la naturaleza</p>
-        </div>
-
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-              <path d="M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          </div>
-          <h3>Hasta 8 personas</h3>
-          <p>Ideal para familias y grupos de amigos – espacio para todos</p>
-        </div>
-
-        <div class="feature-card reveal reveal-delay-3">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9"/>
-            </svg>
-          </div>
-          <h3>Piscina y terraza</h3>
-          <p>Relájate en la piscina privada con vista al océano Pacífico</p>
-        </div>
-
-        <div class="feature-card reveal reveal-delay-4">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Frente al mar</h3>
-          <p>A pocos pasos de la arena fina y las olas cristalinas de Chocaya</p>
-        </div>
-
-        <div class="feature-card reveal reveal-delay-5">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <path d="M3 9h18v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
-              <path d="M3 9l2.45-4.9A2 2 0 017.24 3h9.52a2 2 0 011.8 1.1L21 9"/>
-              <path d="M12 3v6"/>
-            </svg>
-          </div>
-          <h3>Cocina totalmente equipada</h3>
-          <p>Cocina moderna con todo lo necesario para preparar tus propias comidas</p>
-        </div>
-
-        <div class="feature-card reveal reveal-delay-6">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 8v4l3 3"/>
-            </svg>
-          </div>
-          <h3>Alquiler flexible</h3>
-          <p>Fines de semana o semanas completas – condiciones según acuerdo</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GALERÍA ===================== -->
-  <section id="galerie" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title reveal">Galería</h2>
-      <p class="section-subtitle reveal">Un vistazo a tu próximo paraíso de vacaciones</p>
-
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/ChocallaWohnzimmer.jpeg" alt="Sala de estar" loading="lazy">
-          <div class="gallery-caption">Sala de estar</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/ChocallaPool.jpeg" alt="Piscina" loading="lazy">
-          <div class="gallery-caption">Piscina</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/WhatsApp Image 2026-04-02 at 19.52.28.jpeg" alt="Área exterior" loading="lazy">
-          <div class="gallery-caption">Área exterior</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/WhatsApp Image 2026-04-02 at 19.52.29.jpeg" alt="Terraza" loading="lazy">
-          <div class="gallery-caption">Terraza</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/WhatsApp Image 2026-04-02 at 19.52.30.jpeg" alt="Dormitorio" loading="lazy">
-          <div class="gallery-caption">Dormitorio</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/ChocallaDeAtras.jpeg" alt="Vista trasera" loading="lazy">
-          <div class="gallery-caption">Vista trasera</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/WhatsApp Image 2026-04-02 at 19.52.31.jpeg" alt="Comedor" loading="lazy">
-          <div class="gallery-caption">Comedor</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/WhatsApp Image 2026-04-02 at 19.52.32.jpeg" alt="Vista panorámica" loading="lazy">
-          <div class="gallery-caption">Vista panorámica</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== UBICACIÓN ===================== -->
-  <section id="lage" class="section">
-    <div class="container">
-      <div class="location-layout">
-        <div class="location-text reveal">
-          <h2 class="section-title text-left">Chocaya, Asia</h2>
-          <p class="location-description">
-            Chocaya es un tranquilo balneario en la costa peruana del Pacífico, a unos 70 km al sur de Lima.
-            Reconocido por su arena fina, aguas cristalinas y espectaculares atardeceres –
-            el refugio perfecto para escapar de la rutina.
-          </p>
-          <ul class="location-facts">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              A la altura del km 92.5 de la Panamericana Sur
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 8v4l3 3"/>
-              </svg>
-              A solo 1 hora y media de Lima
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-              Ubicación tranquila y privada frente al mar
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                <polyline points="9,22 9,12 15,12 15,22"/>
-              </svg>
-              Restaurantes a pocos minutos a pie
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true">
-                <circle cx="9" cy="21" r="1"/>
-                <circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61h9.72a2 2 0 001.97-1.61L23 6H6"/>
-              </svg>
-              A solo 15 min en auto del Boulevard de Asia
-            </li>
-          </ul>
-        </div>
-        <div class="location-image reveal">
-          <img src="images/ChocallaPool.jpeg" alt="Vista de Chocaya" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CONTACTO / CTA ===================== -->
-  <section id="kontakt" class="section section-cta">
-    <div class="container container-narrow">
-      <h2 class="section-title reveal">¿Listo para tus vacaciones?</h2>
-      <p class="section-subtitle reveal">Contáctanos por WhatsApp – respondemos rápido y sin complicaciones.</p>
-      <div class="reveal">
+    <!-- ===================== HERO ===================== -->
+    <section id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tagline">Chocaya &middot; Lima &middot; Perú</p>
+        <h1 class="hero-title">Casa Chocaya</h1>
+        <p class="hero-subtitle">Tu refugio privado en el Pacífico</p>
         <a
           href="https://wa.me/491734366359?text=Hola%2C%20estoy%20interesado%20en%20alquilar%20la%20casa%20en%20Chocaya.%20%C2%BFMe%20puede%20dar%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20precios%3F"
-          class="btn-whatsapp btn-whatsapp--large"
+          class="btn-whatsapp"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
           </svg>
-          Consultar por WhatsApp ahora
+          Consultar ahora
         </a>
       </div>
+      <a href="#haus" class="hero-scroll" aria-label="Desplazarse hacia abajo">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          width="28"
+          height="28"
+          aria-hidden="true"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ===================== LA CASA ===================== -->
+    <section id="haus" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">La Casa</h2>
+        <p class="section-subtitle reveal">
+          Un paraíso privado para momentos inolvidables en el Pacífico
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9,22 9,12 15,12 15,22" />
+              </svg>
+            </div>
+            <h3>3 Dormitorios</h3>
+            <p>
+              Habitaciones amplias y luminosas con vista al mar y a la
+              naturaleza
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <h3>Hasta 8 personas</h3>
+            <p>Ideal para familias y grupos de amigos – espacio para todos</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <h3>Piscina y terraza</h3>
+            <p>Relájate en la piscina privada con vista al océano Pacífico</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-4">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Frente al mar</h3>
+            <p>
+              A pocos pasos de la arena fina y las olas cristalinas de Chocaya
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-5">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <path d="M3 9h18v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                <path
+                  d="M3 9l2.45-4.9A2 2 0 017.24 3h9.52a2 2 0 011.8 1.1L21 9"
+                />
+                <path d="M12 3v6" />
+              </svg>
+            </div>
+            <h3>Cocina totalmente equipada</h3>
+            <p>
+              Cocina moderna con todo lo necesario para preparar tus propias
+              comidas
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-6">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+              </svg>
+            </div>
+            <h3>Alquiler flexible</h3>
+            <p>
+              Fines de semana o semanas completas – condiciones según acuerdo
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section id="galerie" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Galería</h2>
+        <p class="section-subtitle reveal">
+          Un vistazo a tu próximo paraíso de vacaciones
+        </p>
+
+        <!-- Masonry: añade más imágenes aquí cuando las tengas -->
+        <div class="gallery-masonry">
+          <div class="gallery-item">
+            <img
+              src="images/ChocallaWohnzimmer.jpeg"
+              alt="Sala de estar"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Sala de estar</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/ChocallaPool.jpeg" alt="Piscina" loading="lazy" />
+            <div class="gallery-caption">Piscina</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/WhatsApp Image 2026-04-02 at 19.52.28.jpeg"
+              alt="Área exterior"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Área exterior</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/WhatsApp Image 2026-04-02 at 19.52.29.jpeg"
+              alt="Terraza"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Terraza</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/WhatsApp Image 2026-04-02 at 19.52.30.jpeg"
+              alt="Dormitorio"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Dormitorio</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/ChocallaDeAtras.jpeg"
+              alt="Vista trasera"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Vista trasera</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/WhatsApp Image 2026-04-02 at 19.52.31.jpeg"
+              alt="Comedor"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Comedor</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/WhatsApp Image 2026-04-02 at 19.52.32.jpeg"
+              alt="Vista panorámica"
+              loading="lazy"
+            />
+            <div class="gallery-caption">Vista panorámica</div>
+          </div>
+          <!-- Agrega más fotos aquí:
+        <div class="gallery-item">
+          <img src="images/NOMBRE.jpeg" alt="Descripción" loading="lazy">
+          <div class="gallery-caption">Descripción</div>
+        </div>
+        --></div>
+      </div>
+    </section>
+
+    <!-- ===================== UBICACIÓN ===================== -->
+    <section id="lage" class="section">
+      <div class="container">
+        <div class="location-layout">
+          <div class="location-text reveal">
+            <h2 class="section-title text-left">Chocaya, Asia</h2>
+            <p class="location-description">
+              Chocaya ofrece un entorno familiar, privado y tranquilo, ideal
+              para desconectarse y disfrutar en familia. A solo 15 minutos en
+              auto del Boulevard de Asia, cuenta con vigilancia las 24 horas,
+              los 365 días del año, acceso directo a la playa y todo lo
+              necesario para escapar de la rutina.
+            </p>
+            <ul class="location-facts">
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                A la altura del km 92.5 de la Panamericana Sur
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+                A solo 1 hora y media de Lima
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                Ubicación tranquila y privada frente al mar
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9,22 9,12 15,12 15,22" />
+                </svg>
+                Restaurantes a pocos minutos a pie
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61h9.72a2 2 0 001.97-1.61L23 6H6"
+                  />
+                </svg>
+                A solo 15 min del Boulevard de Asia
+              </li>
+            </ul>
+          </div>
+          <div class="location-image reveal">
+            <img
+              src="images/ChocallaPool.jpeg"
+              alt="Vista de Chocaya"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO / CTA ===================== -->
+    <section id="kontakt" class="section section-cta">
+      <div class="container container-narrow">
+        <h2 class="section-title reveal">¿Listo para tus vacaciones?</h2>
+        <p class="section-subtitle reveal">
+          Contáctanos por WhatsApp – respondemos rápido y sin complicaciones.
+        </p>
+        <div class="reveal">
+          <a
+            href="https://wa.me/491734366359?text=Hola%2C%20estoy%20interesado%20en%20alquilar%20la%20casa%20en%20Chocaya.%20%C2%BFMe%20puede%20dar%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20precios%3F"
+            class="btn-whatsapp btn-whatsapp--large"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Consultar por WhatsApp ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-logo">Casa Chocaya</p>
+        <p class="footer-sub">Chocaya &middot; Lima &middot; Perú</p>
+        <p class="footer-copy">
+          &copy; 2026 Casa Chocaya. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===================== LIGHTBOX ===================== -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Vista previa de imagen"
+    >
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+        &times;
+      </button>
+      <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Imagen anterior"
+      >
+        &#8249;
+      </button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <button
+        class="lightbox-next"
+        id="lightboxNext"
+        aria-label="Imagen siguiente"
+      >
+        &#8250;
+      </button>
     </div>
-  </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-logo">Casa Chocaya</p>
-      <p class="footer-sub">Chocaya &middot; Lima &middot; Perú</p>
-      <p class="footer-copy">&copy; 2026 Casa Chocaya. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista previa de imagen">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Imagen anterior">&#8249;</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <button class="lightbox-next" id="lightboxNext" aria-label="Imagen siguiente">&#8250;</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
