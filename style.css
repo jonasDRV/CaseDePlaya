@@ -149,17 +149,20 @@ ul {
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-size: 1.55rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--white);
-  transition: color var(--transition);
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
-#header.scrolled .nav-logo {
-  color: var(--brown);
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+
+#header.scrolled .nav-logo-img {
+  filter: none;
 }
 
 .nav-links {
