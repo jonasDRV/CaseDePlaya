@@ -151,12 +151,17 @@ ul {
 .nav-logo {
   display: flex;
   align-items: center;
+  overflow: hidden;
+  height: var(--nav-height);
 }
 
 .nav-logo-img {
-  height: 22px;
+  height: 40px;
+  max-height: 40px;
   width: auto;
+  max-width: 160px;
   object-fit: contain;
+  display: block;
   filter: brightness(0) invert(1);
   transition: filter var(--transition);
 }
