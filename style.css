@@ -573,6 +573,7 @@ ul {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-hover);
+  height: 520px;
 }
 
 .location-image img {
