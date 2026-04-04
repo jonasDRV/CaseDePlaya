@@ -872,8 +872,16 @@ ul {
     padding-left: 0;
   }
 
+  /* Mobile gallery: 2 columns, select items span full width */
   .gallery-masonry {
-    columns: 1;
+    columns: 2;
+    column-gap: 6px;
+  }
+
+  .gallery-item:nth-child(3n+1) {
+    break-before: column;
+    column-span: all;
+    margin-bottom: 6px;
   }
 
   .container {
