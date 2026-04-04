@@ -503,8 +503,8 @@ ul {
 
 .amenity-icon {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,11 +512,11 @@ ul {
 }
 
 .amenity-svg {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   display: block;
-  opacity: 0.72;
+  filter: invert(62%) sepia(18%) saturate(600%) hue-rotate(345deg) brightness(88%);
 }
 
 .amenity-text h3 {
@@ -657,11 +657,11 @@ ul {
 }
 
 .location-svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   flex-shrink: 0;
-  opacity: 0.72;
+  filter: invert(62%) sepia(18%) saturate(600%) hue-rotate(345deg) brightness(88%);
 }
 
 .location-image {
