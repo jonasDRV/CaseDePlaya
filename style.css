@@ -430,46 +430,121 @@ ul {
 
 
 /* ============================================================
-   FEATURES GRID
+   LA CASA SECTION
    ============================================================ */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
+.casa-header {
+  margin-bottom: 2rem;
 }
 
-.feature-card {
-  background: var(--white);
-  padding: 2.4rem 2rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--beige-light);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
-.feature-icon {
+.casa-location {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--beige-dark);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
-.feature-card h3 {
+.casa-title {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--brown);
+  line-height: 1.1;
+  margin-bottom: 0.7rem;
+}
+
+.casa-specs {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.casa-description {
+  max-width: 780px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.casa-description p {
+  font-size: 0.97rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* Amenities 2-column grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--beige-light);
+  margin-bottom: 2rem;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem 1.2rem 1.6rem 0;
+  border-bottom: 1px solid var(--beige-light);
+}
+
+.amenity-item:nth-child(odd) {
+  padding-right: 3rem;
+  border-right: 1px solid var(--beige-light);
+}
+
+.amenity-item:nth-child(even) {
+  padding-left: 3rem;
+}
+
+.amenity-icon {
+  color: var(--beige-dark);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.amenity-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--brown);
-  margin-bottom: 0.55rem;
-  line-height: 1.2;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
 }
 
-.feature-card p {
-  font-size: 0.88rem;
+.amenity-text p {
+  font-size: 0.85rem;
   color: var(--text-muted);
-  line-height: 1.75;
+  line-height: 1.7;
   font-weight: 300;
+}
+
+/* Toggle button */
+.amenities-toggle {
+  margin-top: 0.5rem;
+}
+
+.btn-amenities {
+  background: none;
+  border: 1.5px solid var(--brown);
+  color: var(--brown);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  padding: 0.85rem 2rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.btn-amenities:hover {
+  background-color: var(--brown);
+  color: var(--white);
 }
 
 
@@ -746,8 +821,11 @@ ul {
    MEDIA QUERIES
    ============================================================ */
 @media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .amenity-item:nth-child(odd) {
+    padding-right: 1.5rem;
+  }
+  .amenity-item:nth-child(even) {
+    padding-left: 1.5rem;
   }
 
   .location-layout {
@@ -783,8 +861,15 @@ ul {
 }
 
 @media (max-width: 520px) {
-  .features-grid {
+  .amenities-grid {
     grid-template-columns: 1fr;
+  }
+  .amenity-item:nth-child(odd) {
+    border-right: none;
+    padding-right: 0;
+  }
+  .amenity-item:nth-child(even) {
+    padding-left: 0;
   }
 
   .gallery-masonry {
