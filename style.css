@@ -656,6 +656,14 @@ ul {
   flex-shrink: 0;
 }
 
+.location-svg {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.72;
+}
+
 .location-image {
   border-radius: var(--radius);
   overflow: hidden;
