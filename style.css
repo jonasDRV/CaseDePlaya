@@ -502,9 +502,21 @@ ul {
 }
 
 .amenity-icon {
-  color: var(--beige-dark);
   flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 2px;
+}
+
+.amenity-svg {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.72;
 }
 
 .amenity-text h3 {
