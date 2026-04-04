@@ -1,5 +1,5 @@
 /* ============================================================
-   CASA CHOCALLA — script.js
+   CASA CHOCAYA — script.js
    ============================================================ */
 
 
@@ -99,6 +99,36 @@ lightbox.addEventListener('touchend', e => {
   const delta = e.changedTouches[0].screenX - touchStartX;
   if (Math.abs(delta) > 50) navigate(delta < 0 ? 1 : -1);
 }, { passive: true });
+
+
+/* ============================================================
+   MODAL COMODIDADES
+   ============================================================ */
+const modalOverlay  = document.getElementById('modalComodidades');
+const btnAmenities  = document.getElementById('btnAmenities');
+const modalClose    = document.getElementById('modalClose');
+
+function openModal() {
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  modalClose.focus();
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+btnAmenities.addEventListener('click', openModal);
+modalClose.addEventListener('click', closeModal);
+
+modalOverlay.addEventListener('click', e => {
+  if (e.target === modalOverlay) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+});
 
 
 /* ============================================================
