@@ -102,6 +102,59 @@ lightbox.addEventListener('touchend', e => {
 
 
 /* ============================================================
+   DISTRIBUCIÓN — ROOM CAROUSEL
+   ============================================================ */
+const layoutTrack = document.getElementById('layoutTrack');
+const layoutPrev  = document.getElementById('layoutPrev');
+const layoutNext  = document.getElementById('layoutNext');
+
+function getCardStep() {
+  const card = layoutTrack.querySelector('.room-card');
+  if (!card) return 340;
+  return card.offsetWidth + 24; // card width + gap
+}
+
+layoutPrev.addEventListener('click', () => {
+  layoutTrack.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
+});
+
+layoutNext.addEventListener('click', () => {
+  layoutTrack.scrollBy({ left: getCardStep(), behavior: 'smooth' });
+});
+
+// Per-card image cycling
+document.querySelectorAll('.room-card').forEach(card => {
+  const images = JSON.parse(card.dataset.images || '[]');
+  if (images.length <= 1) return;
+
+  const img    = card.querySelector('.room-img');
+  const dots   = card.querySelectorAll('.room-dot');
+  const prev   = card.querySelector('.room-img-prev');
+  const next   = card.querySelector('.room-img-next');
+  let idx = 0;
+
+  function goTo(n) {
+    idx = (n + images.length) % images.length;
+    img.src = images[idx];
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  prev.addEventListener('click', e => { e.stopPropagation(); goTo(idx - 1); });
+  next.addEventListener('click', e => { e.stopPropagation(); goTo(idx + 1); });
+});
+
+// "Ver más" toggle
+document.querySelectorAll('.room-more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const details = btn.closest('.room-card').querySelector('.room-details');
+    const isOpen  = !details.hidden;
+    details.hidden = isOpen;
+    btn.textContent = isOpen ? 'Ver más' : 'Ver menos';
+  });
+});
+
+
+/* ============================================================
    MODAL COMODIDADES
    ============================================================ */
 const modalOverlay  = document.getElementById('modalComodidades');
