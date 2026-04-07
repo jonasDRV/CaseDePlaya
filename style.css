@@ -733,6 +733,31 @@ ul {
   margin-bottom: 2rem;
 }
 
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer-legal a {
+  color: rgba(138, 112, 96, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--beige);
+}
+
+.footer-legal span {
+  color: rgba(138, 112, 96, 0.35);
+}
+
 .footer-copy {
   font-size: 0.78rem;
   color: rgba(138, 112, 96, 0.45);
@@ -1017,20 +1042,23 @@ ul {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: var(--beige-light);
+  background: var(--brown-deep);
   border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .room-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.5s ease;
 }
 
 .room-card:hover .room-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* Per-card image nav */
