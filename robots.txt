@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /impressum.html
+Disallow: /privacy-policy.html
+
+Sitemap: https://casa-chocaya.com/sitemap.xml

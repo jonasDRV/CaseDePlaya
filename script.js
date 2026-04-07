@@ -164,12 +164,14 @@ const modalClose    = document.getElementById('modalClose');
 function openModal() {
   modalOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+  btnAmenities.setAttribute('aria-expanded', 'true');
   modalClose.focus();
 }
 
 function closeModal() {
   modalOverlay.classList.remove('active');
   document.body.style.overflow = '';
+  btnAmenities.setAttribute('aria-expanded', 'false');
 }
 
 btnAmenities.addEventListener('click', openModal);
