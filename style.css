@@ -1273,3 +1273,70 @@ ul {
     padding: 1.2rem;
   }
 }
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+/* Skip link — visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 99999;
+  background: var(--brown);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus ring for all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--brown);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Buttons and links that already have their own styles */
+.btn-whatsapp:focus-visible,
+.btn-amenities:focus-visible,
+.nav-cta:focus-visible {
+  outline-color: var(--brown);
+  outline-offset: 4px;
+}
+
+/* Lightbox and modal buttons on dark background */
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible,
+.modal-close:focus-visible {
+  outline-color: var(--white);
+}
+
+/* Reduced motion — disable animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
