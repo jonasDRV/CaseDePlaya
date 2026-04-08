@@ -1327,16 +1327,10 @@ ul {
     padding-left: 0;
   }
 
-  /* Mobile gallery: 2 columns, select items span full width */
+  /* Mobile gallery: 2 columns, natural masonry flow */
   .gallery-masonry {
     columns: 2;
     column-gap: 6px;
-  }
-
-  .gallery-item:nth-child(3n+1) {
-    break-before: column;
-    column-span: all;
-    margin-bottom: 6px;
   }
 
   .container {
