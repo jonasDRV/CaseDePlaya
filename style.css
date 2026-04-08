@@ -1116,10 +1116,24 @@ ul {
   object-fit: contain;
   display: block;
   transition: transform 0.5s ease;
+  cursor: zoom-in;
 }
 
 .room-card:hover .room-img {
   transform: scale(1.02);
+}
+
+.room-img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.room-img-wrapper:hover::after {
+  background: rgba(0, 0, 0, 0.07);
 }
 
 /* Per-card image nav */

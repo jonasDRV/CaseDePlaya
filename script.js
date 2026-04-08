@@ -80,14 +80,14 @@ const translations = {
     'r1.name': 'Dormitorio 1',   'r1.sub': 'Cama matrimonial · Baño incorporado',
     'r1.d1': 'Cama matrimonial', 'r1.d2': 'Baño incorporado con ducha tipo lluvia',
     'r1.d3': 'Armario',          'r1.d4': 'Planta alta',
-    'r2.name': 'Dormitorio 2',   'r2.sub': 'Cama matrimonial · Baño incorporado',
-    'r2.d1': 'Cama matrimonial', 'r2.d2': 'Baño incorporado con ducha tipo lluvia',
+    'r2.name': 'Dormitorio 2',   'r2.sub': 'Cama doble 140×200 cm · Baño compartido',
+    'r2.d1': 'Cama doble 140×200 cm', 'r2.d2': 'Baño compartido',
     'r2.d3': 'Armario',          'r2.d4': 'Planta alta',
-    'r3.name': 'Dormitorio 3',   'r3.sub': '2 camas individuales',
-    'r3.d1': '2 camas individuales', 'r3.d2': 'Armario', 'r3.d3': 'Baño compartido',
-    'r4.name': 'Dormitorio 4',   'r4.sub': '2 camas individuales',
-    'r4.d1': '2 camas individuales', 'r4.d2': 'Armario',
-    'r4.d3': 'Baño compartido',  'r4.d4': 'Planta baja',
+    'r3.name': 'Dormitorio 3',   'r3.sub': 'Cama doble 140×200 cm',
+    'r3.d1': 'Cama doble 140×200 cm', 'r3.d2': 'Armario', 'r3.d3': 'Baño compartido',
+    'r4.name': 'Dormitorio 4',   'r4.sub': 'Cama doble 140×200 cm · Baño incorporado',
+    'r4.d1': 'Cama doble 140×200 cm', 'r4.d2': 'Baño incorporado con ducha tipo lluvia',
+    'r4.d3': 'Armario',          'r4.d4': 'Planta baja',
     'rsala.name': 'Sala de estar', 'rsala.sub': 'TV · Comedor para 8',
     'rsala.d1': 'TV',            'rsala.d2': 'Sofás y zona de descanso',
     'rsala.d3': 'Comedor para 8 personas', 'rsala.d4': 'Acceso directo a terraza',
@@ -99,10 +99,9 @@ const translations = {
     'rpis.name': 'Piscina y terraza', 'rpis.sub': 'Tercer piso · Vista al mar',
     'rpis.d1': 'Piscina en la azotea', 'rpis.d2': 'Zona de parrilla',
     'rpis.d3': 'Vista panorámica al mar', 'rpis.d4': 'Zona de descanso y hamacas',
-    'rbanos.name': 'Baños',      'rbanos.sub': '5 baños en total',
-    'rbanos.d1': '5 baños en total',
-    'rbanos.d2': '3 baños completos con ducha tipo lluvia',
-    'rbanos.d3': '2 baños incorporados en dormitorios',
+    'rbanos.name': 'Baños',      'rbanos.sub': '5 baños · 2 con ducha tipo lluvia',
+    'rbanos.d1': '2 baños en suite con ducha tipo lluvia (Dormitorios 1 y 4)',
+    'rbanos.d2': '3 baños adicionales',
     'rplaya.name': 'Playa',      'rplaya.sub': 'A 80 metros · Acceso directo',
     'rplaya.d1': 'A solo 80 metros del mar', 'rplaya.d2': 'Acceso directo a la playa',
     'rplaya.d3': 'A 2 minutos a pie', 'rplaya.d4': 'Arena fina y aguas tranquilas',
@@ -219,14 +218,14 @@ const translations = {
     'r1.name': 'Bedroom 1',      'r1.sub': 'Double bed · En-suite bathroom',
     'r1.d1': 'Double bed',       'r1.d2': 'En-suite with rainfall shower',
     'r1.d3': 'Wardrobe',         'r1.d4': 'Upper floor',
-    'r2.name': 'Bedroom 2',      'r2.sub': 'Double bed · En-suite bathroom',
-    'r2.d1': 'Double bed',       'r2.d2': 'En-suite with rainfall shower',
+    'r2.name': 'Bedroom 2',      'r2.sub': 'Double bed 140×200 cm · Shared bathroom',
+    'r2.d1': 'Double bed 140×200 cm', 'r2.d2': 'Shared bathroom',
     'r2.d3': 'Wardrobe',         'r2.d4': 'Upper floor',
-    'r3.name': 'Bedroom 3',      'r3.sub': '2 single beds',
-    'r3.d1': '2 single beds',    'r3.d2': 'Wardrobe', 'r3.d3': 'Shared bathroom',
-    'r4.name': 'Bedroom 4',      'r4.sub': '2 single beds',
-    'r4.d1': '2 single beds',    'r4.d2': 'Wardrobe',
-    'r4.d3': 'Shared bathroom',  'r4.d4': 'Ground floor',
+    'r3.name': 'Bedroom 3',      'r3.sub': 'Double bed 140×200 cm',
+    'r3.d1': 'Double bed 140×200 cm', 'r3.d2': 'Wardrobe', 'r3.d3': 'Shared bathroom',
+    'r4.name': 'Bedroom 4',      'r4.sub': 'Double bed 140×200 cm · En-suite bathroom',
+    'r4.d1': 'Double bed 140×200 cm', 'r4.d2': 'En-suite with rainfall shower',
+    'r4.d3': 'Wardrobe',         'r4.d4': 'Ground floor',
     'rsala.name': 'Living room', 'rsala.sub': 'TV · Dining for 8',
     'rsala.d1': 'TV',            'rsala.d2': 'Sofas and lounge area',
     'rsala.d3': 'Dining table for 8', 'rsala.d4': 'Direct terrace access',
@@ -238,10 +237,9 @@ const translations = {
     'rpis.name': 'Pool and terrace', 'rpis.sub': 'Third floor · Sea view',
     'rpis.d1': 'Rooftop pool',   'rpis.d2': 'BBQ area',
     'rpis.d3': 'Panoramic sea view', 'rpis.d4': 'Lounge area and hammocks',
-    'rbanos.name': 'Bathrooms',  'rbanos.sub': '5 bathrooms in total',
-    'rbanos.d1': '5 bathrooms in total',
-    'rbanos.d2': '3 full bathrooms with rainfall shower',
-    'rbanos.d3': '2 en-suite bathrooms',
+    'rbanos.name': 'Bathrooms',  'rbanos.sub': '5 bathrooms · 2 with rainfall shower',
+    'rbanos.d1': '2 en-suite bathrooms with rainfall shower (Bedrooms 1 & 4)',
+    'rbanos.d2': '3 additional bathrooms',
     'rplaya.name': 'Beach',      'rplaya.sub': '80 metres away · Direct access',
     'rplaya.d1': 'Just 80 metres from the sea', 'rplaya.d2': 'Direct beach access',
     'rplaya.d3': '2 minutes on foot', 'rplaya.d4': 'Fine sand and calm waters',
@@ -355,20 +353,22 @@ mobileNav.querySelectorAll('a').forEach(link => {
 
 
 /* ============================================================
-   GALLERY LIGHTBOX
+   GALLERY LIGHTBOX — shared by gallery and room cards
    ============================================================ */
-const galleryImgs   = Array.from(document.querySelectorAll('.gallery-item img'));
+let lightboxPool = [];   // current image src array
+let lightboxIdx  = 0;
+
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev  = document.getElementById('lightboxPrev');
 const lightboxNext  = document.getElementById('lightboxNext');
-let currentIndex = 0;
 
-function openLightbox(index) {
-  currentIndex = index;
-  lightboxImg.src = galleryImgs[index].src;
-  lightboxImg.alt = galleryImgs[index].alt;
+function openLightbox(srcs, index) {
+  lightboxPool = srcs;
+  lightboxIdx  = index;
+  lightboxImg.src = srcs[index];
+  lightboxImg.alt = '';
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
   lightboxClose.focus();
@@ -380,19 +380,21 @@ function closeLightbox() {
   lightboxImg.src = '';
 }
 
-function navigate(direction) {
-  currentIndex = (currentIndex + direction + galleryImgs.length) % galleryImgs.length;
-  lightboxImg.src = galleryImgs[currentIndex].src;
-  lightboxImg.alt = galleryImgs[currentIndex].alt;
+function navigateLightbox(direction) {
+  lightboxIdx = (lightboxIdx + direction + lightboxPool.length) % lightboxPool.length;
+  lightboxImg.src = lightboxPool[lightboxIdx];
 }
 
+// Gallery images
+const galleryImgs = Array.from(document.querySelectorAll('.gallery-item img'));
+const gallerySrcs = galleryImgs.map(img => img.src);
 galleryImgs.forEach((img, i) => {
-  img.addEventListener('click', () => openLightbox(i));
+  img.addEventListener('click', () => openLightbox(gallerySrcs, i));
 });
 
 lightboxClose.addEventListener('click', closeLightbox);
-lightboxPrev.addEventListener('click', () => navigate(-1));
-lightboxNext.addEventListener('click', () => navigate(1));
+lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+lightboxNext.addEventListener('click', () => navigateLightbox(1));
 
 lightbox.addEventListener('click', e => {
   if (e.target === lightbox) closeLightbox();
@@ -401,8 +403,8 @@ lightbox.addEventListener('click', e => {
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('active')) return;
   if (e.key === 'Escape')     closeLightbox();
-  if (e.key === 'ArrowLeft')  navigate(-1);
-  if (e.key === 'ArrowRight') navigate(1);
+  if (e.key === 'ArrowLeft')  navigateLightbox(-1);
+  if (e.key === 'ArrowRight') navigateLightbox(1);
 });
 
 let touchStartX = 0;
@@ -411,7 +413,7 @@ lightbox.addEventListener('touchstart', e => {
 }, { passive: true });
 lightbox.addEventListener('touchend', e => {
   const delta = e.changedTouches[0].screenX - touchStartX;
-  if (Math.abs(delta) > 50) navigate(delta < 0 ? 1 : -1);
+  if (Math.abs(delta) > 50) navigateLightbox(delta < 0 ? 1 : -1);
 }, { passive: true });
 
 
@@ -435,11 +437,9 @@ layoutNext.addEventListener('click', () => {
   layoutTrack.scrollBy({ left: getCardStep(), behavior: 'smooth' });
 });
 
-// Per-card image cycling
+// Per-card image cycling + lightbox on click
 document.querySelectorAll('.room-card').forEach(card => {
   const images = JSON.parse(card.dataset.images || '[]');
-  if (images.length <= 1) return;
-
   const img  = card.querySelector('.room-img');
   const dots = card.querySelectorAll('.room-dot');
   const prev = card.querySelector('.room-img-prev');
@@ -452,8 +452,16 @@ document.querySelectorAll('.room-card').forEach(card => {
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   }
 
-  prev.addEventListener('click', e => { e.stopPropagation(); goTo(idx - 1); });
-  next.addEventListener('click', e => { e.stopPropagation(); goTo(idx + 1); });
+  if (images.length > 1) {
+    prev.addEventListener('click', e => { e.stopPropagation(); goTo(idx - 1); });
+    next.addEventListener('click', e => { e.stopPropagation(); goTo(idx + 1); });
+  }
+
+  // Click image → open lightbox with this card's full image set
+  img.addEventListener('click', () => {
+    const srcs = images.length > 0 ? images : [img.getAttribute('src')];
+    openLightbox(srcs, idx);
+  });
 });
 
 // "Ver más / Show more" toggle
@@ -548,3 +556,11 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 applyLang(localStorage.getItem('lang') || 'es');
+
+
+/* ============================================================
+   PERFORMANCE — async image decoding for all images
+   ============================================================ */
+document.querySelectorAll('img').forEach(img => {
+  if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+});

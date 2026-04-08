@@ -112,7 +112,6 @@
           "@type": "Room",
           "name": "Dormitorio 2",
           "numberOfBedrooms": 1,
-          "numberOfBathroomsTotal": 1,
           "occupancy": {
             "@type": "QuantitativeValue",
             "maxValue": 2
@@ -122,10 +121,7 @@
             "typeOfBed": "Double Bed",
             "numberOfBeds": 1,
             "description": "Cama doble 140×200 cm"
-          },
-          "amenityFeature": [
-            {"@type": "LocationFeatureSpecification", "name": "Baño en suite", "value": true}
-          ]
+          }
         },
         {
           "@type": "Room",
@@ -150,6 +146,7 @@
           "@type": "Room",
           "name": "Dormitorio 4",
           "numberOfBedrooms": 1,
+          "numberOfBathroomsTotal": 1,
           "occupancy": {
             "@type": "QuantitativeValue",
             "maxValue": 2
@@ -157,8 +154,13 @@
           "bed": {
             "@type": "BedDetails",
             "typeOfBed": "Double Bed",
-            "numberOfBeds": 1
-          }
+            "numberOfBeds": 1,
+            "description": "Cama doble 140×200 cm"
+          },
+          "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Baño en suite", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Ducha tipo lluvia", "value": true}
+          ]
         }
       ],
       "offers": {
@@ -564,14 +566,14 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r2.name">Dormitorio 2</h3>
-                  <p class="room-sub" data-i18n="r2.sub">Cama matrimonial &middot; Baño incorporado</p>
+                  <p class="room-sub" data-i18n="r2.sub">Cama doble 140×200 cm &middot; Baño compartido</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r2.d1">Cama matrimonial</li>
-                  <li data-i18n="r2.d2">Baño incorporado con ducha tipo lluvia</li>
+                  <li data-i18n="r2.d1">Cama doble 140×200 cm</li>
+                  <li data-i18n="r2.d2">Baño compartido</li>
                   <li data-i18n="r2.d3">Armario</li>
                   <li data-i18n="r2.d4">Planta alta</li>
                 </ul>
@@ -588,13 +590,13 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r3.name">Dormitorio 3</h3>
-                  <p class="room-sub" data-i18n="r3.sub">2 camas individuales</p>
+                  <p class="room-sub" data-i18n="r3.sub">Cama doble 140×200 cm</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r3.d1">2 camas individuales</li>
+                  <li data-i18n="r3.d1">Cama doble 140×200 cm</li>
                   <li data-i18n="r3.d2">Armario</li>
                   <li data-i18n="r3.d3">Baño compartido</li>
                 </ul>
@@ -611,15 +613,15 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r4.name">Dormitorio 4</h3>
-                  <p class="room-sub" data-i18n="r4.sub">2 camas individuales</p>
+                  <p class="room-sub" data-i18n="r4.sub">Cama doble 140×200 cm &middot; Baño incorporado</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r4.d1">2 camas individuales</li>
-                  <li data-i18n="r4.d2">Armario</li>
-                  <li data-i18n="r4.d3">Baño compartido</li>
+                  <li data-i18n="r4.d1">Cama doble 140×200 cm</li>
+                  <li data-i18n="r4.d2">Baño incorporado con ducha tipo lluvia</li>
+                  <li data-i18n="r4.d3">Armario</li>
                   <li data-i18n="r4.d4">Planta baja</li>
                 </ul>
               </div>
@@ -741,15 +743,14 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="rbanos.name">Baños</h3>
-                  <p class="room-sub" data-i18n="rbanos.sub">5 baños en total</p>
+                  <p class="room-sub" data-i18n="rbanos.sub">5 baños · 2 con ducha tipo lluvia</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="rbanos.d1">5 baños en total</li>
-                  <li data-i18n="rbanos.d2">3 baños completos con ducha tipo lluvia</li>
-                  <li data-i18n="rbanos.d3">2 baños incorporados en dormitorios</li>
+                  <li data-i18n="rbanos.d1">2 baños en suite con ducha tipo lluvia (Dormitorios 1 y 4)</li>
+                  <li data-i18n="rbanos.d2">3 baños adicionales</li>
                 </ul>
               </div>
             </div>
