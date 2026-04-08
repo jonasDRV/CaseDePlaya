@@ -20,29 +20,44 @@
     <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://casa-chocaya.com/">
-    <meta property="og:title" content="Casa Chocaya – Casa de Playa en Asia, Lima">
+    <meta property="og:title" content="Casa Chocaya – Casa de Playa en Asia, Lima | Desde $100/noche">
     <meta property="og:description" content="Casa privada de playa en Chocaya, Asia. 4 dormitorios, piscina en azotea, acceso directo al mar y zona de parrilla. A 10 min del Boulevard de Asia. Desde $100/noche.">
-    <meta property="og:image" content="https://casa-chocaya.com/images/ChocayaSala.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://casa-chocaya.com/images/ChocayaDeFrente.jpeg">
+    <meta property="og:image:alt" content="Vista exterior de Casa Chocaya, casa de playa en Asia, Lima, Perú">
     <meta property="og:locale" content="es_PE">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:site_name" content="Casa Chocaya">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Casa Chocaya – Casa de Playa en Asia, Lima">
+    <meta name="twitter:title" content="Casa Chocaya – Casa de Playa en Asia, Lima | Desde $100/noche">
     <meta name="twitter:description" content="Casa privada de playa en Chocaya, Asia. 4 dormitorios, piscina en azotea, acceso directo al mar. Desde $100/noche.">
-    <meta name="twitter:image" content="https://casa-chocaya.com/images/ChocayaSala.jpg">
+    <meta name="twitter:image" content="https://casa-chocaya.com/images/ChocayaDeFrente.jpeg">
+    <meta name="twitter:image:alt" content="Vista exterior de Casa Chocaya, casa de playa en Asia, Lima, Perú">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VacationRental",
+      "@id": "https://casa-chocaya.com/#property",
+      "identifier": "casa-chocaya-chocaya-asia-lima-peru",
       "name": "Casa Chocaya",
       "description": "Casa privada de playa en Chocaya, Asia, Lima. 4 dormitorios, 5 baños, piscina en azotea, zona de parrilla, acceso directo al mar y condominio privado con vigilancia 24/7.",
       "url": "https://casa-chocaya.com/",
-      "image": "https://casa-chocaya.com/images/ChocayaSala.jpg",
+      "additionalType": "https://schema.org/House",
+      "image": [
+        "https://casa-chocaya.com/images/ChocayaDeFrente.jpeg",
+        "https://casa-chocaya.com/images/ChocayaSala.jpg",
+        "https://casa-chocaya.com/images/ChocallaPool.jpeg",
+        "https://casa-chocaya.com/images/PoolyMar.jpg",
+        "https://casa-chocaya.com/images/Terraza.jpeg",
+        "https://casa-chocaya.com/images/ChocayaDormitorio.jpeg",
+        "https://casa-chocaya.com/images/CocinaComedor.jpg",
+        "https://casa-chocaya.com/images/Comedor.jpeg",
+        "https://casa-chocaya.com/images/VistaFrontisBalcon.jpg",
+        "https://casa-chocaya.com/images/Playa.jpg"
+      ],
       "numberOfRooms": 4,
       "numberOfBathroomsTotal": 5,
       "floorSize": {
@@ -64,6 +79,7 @@
         "streetAddress": "Chocaya",
         "addressLocality": "Asia",
         "addressRegion": "Lima",
+        "postalCode": "15730",
         "addressCountry": "PE"
       },
       "geo": {
@@ -71,6 +87,35 @@
         "latitude": -12.741028,
         "longitude": -76.632288
       },
+      "containsPlace": [
+        {
+          "@type": "Room",
+          "name": "Suite Principal",
+          "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Baño en suite", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Aire acondicionado", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Vista al mar", "value": true}
+          ]
+        },
+        {
+          "@type": "Room",
+          "name": "Dormitorio 2",
+          "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Baño en suite", "value": true}
+          ]
+        },
+        {
+          "@type": "Room",
+          "name": "Dormitorio 3",
+          "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Baño en suite", "value": true}
+          ]
+        },
+        {
+          "@type": "Room",
+          "name": "Dormitorio 4"
+        }
+      ],
       "offers": {
         "@type": "Offer",
         "price": "100",
