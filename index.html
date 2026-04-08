@@ -114,13 +114,18 @@
           />
         </a>
         <ul class="nav-links">
-          <li><a href="#haus">La Casa</a></li>
-          <li><a href="#distribucion">Distribución</a></li>
-          <li><a href="#galerie">Galería</a></li>
-          <li><a href="#lage">Ubicación</a></li>
-          <li><a href="#kontakt" class="nav-cta">Consultar</a></li>
+          <li><a href="#haus" data-i18n="nav.lacasa">La Casa</a></li>
+          <li><a href="#distribucion" data-i18n="nav.dist">Distribución</a></li>
+          <li><a href="#galerie" data-i18n="nav.galeria">Galería</a></li>
+          <li><a href="#lage" data-i18n="nav.ubicacion">Ubicación</a></li>
+          <li><a href="#kontakt" class="nav-cta" data-i18n="nav.consultar">Consultar</a></li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <div class="lang-switcher" role="group" aria-label="Language / Idioma">
+          <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+          <span aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" data-i18n-aria="aria.menu">
           <span></span>
           <span></span>
           <span></span>
@@ -130,11 +135,11 @@
 
     <!-- Mobile Nav -->
     <nav class="mobile-nav" id="mobileNav">
-      <a href="#haus">La Casa</a>
-      <a href="#distribucion">Distribución</a>
-      <a href="#galerie">Galería</a>
-      <a href="#lage">Ubicación</a>
-      <a href="#kontakt">Consultar</a>
+      <a href="#haus" data-i18n="nav.lacasa">La Casa</a>
+      <a href="#distribucion" data-i18n="nav.dist">Distribución</a>
+      <a href="#galerie" data-i18n="nav.galeria">Galería</a>
+      <a href="#lage" data-i18n="nav.ubicacion">Ubicación</a>
+      <a href="#kontakt" data-i18n="nav.consultar">Consultar</a>
     </nav>
 
     <main id="main-content">
@@ -143,9 +148,9 @@
     <section id="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="hero-tagline">Chocaya &middot; Lima &middot; Perú</p>
+        <p class="hero-tagline" data-i18n="hero.tagline">Chocaya &middot; Lima &middot; Perú</p>
         <h1 class="hero-title">Casa Chocaya</h1>
-        <p class="hero-subtitle">Tu refugio privado en el Pacífico</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Tu refugio privado en el Pacífico</p>
         <a
           href="https://wa.me/4917656891136?text=Hola%2C%20estoy%20interesado%20en%20alquilar%20la%20casa%20en%20Chocaya.%20%C2%BFMe%20puede%20dar%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20precios%3F"
           class="btn-whatsapp"
@@ -163,10 +168,10 @@
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
             />
           </svg>
-          Consultar ahora
+          <span data-i18n="hero.cta">Consultar ahora</span>
         </a>
       </div>
-      <a href="#haus" class="hero-scroll" aria-label="Desplazarse hacia abajo">
+      <a href="#haus" class="hero-scroll" aria-label="Desplazarse hacia abajo" data-i18n-aria="aria.scroll">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -186,14 +191,14 @@
       <div class="container">
 
         <div class="casa-header reveal">
-          <p class="casa-location">Chocaya, Asia, Lima, Perú</p>
+          <p class="casa-location" data-i18n="casa.location">Chocaya, Asia, Lima, Perú</p>
           <h2 class="casa-title">Casa Chocaya</h2>
-          <p class="casa-specs">4 dormitorios &middot; 5 baños &middot; 308 m² aprox.</p>
+          <p class="casa-specs" data-i18n="casa.specs">4 dormitorios &middot; 5 baños &middot; 308 m² aprox.</p>
         </div>
 
         <div class="casa-description reveal">
-          <p>Ubicada dentro de un condominio privado en Chocaya, Casa Chocaya ofrece una experiencia de descanso sofisticada para familias que valoran privacidad, seguridad y comodidad. A solo 80 metros del mar, combina la tranquilidad de la playa con el confort, la amplitud y el nivel de una casa pensada para disfrutarse plenamente.</p>
-          <p>Distribuida en tres pisos, la casa reúne amplios espacios interiores y exteriores, balcones, terrazas, piscina en la azotea y zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima, con todo lo necesario para vivir la estadía con comodidad, como en casa, pero junto al mar.</p>
+          <p data-i18n="casa.desc1">Ubicada dentro de un condominio privado en Chocaya, Casa Chocaya ofrece una experiencia de descanso sofisticada para familias que valoran privacidad, seguridad y comodidad. A solo 80 metros del mar, combina la tranquilidad de la playa con el confort, la amplitud y el nivel de una casa pensada para disfrutarse plenamente.</p>
+          <p data-i18n="casa.desc2">Distribuida en tres pisos, la casa reúne amplios espacios interiores y exteriores, balcones, terrazas, piscina en la azotea y zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima, con todo lo necesario para vivir la estadía con comodidad, como en casa, pero junto al mar.</p>
         </div>
 
         <div class="amenities-grid">
@@ -203,8 +208,8 @@
               <img src="images/palm-tree-5-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Acceso directo a la playa</h3>
-              <p>A solo 80 metros del mar, con acceso directo para disfrutar días de playa con comodidad y total tranquilidad.</p>
+              <h3 data-i18n="am1.h">Acceso directo a la playa</h3>
+              <p data-i18n="am1.p">A solo 80 metros del mar, con acceso directo para disfrutar días de playa con comodidad y total tranquilidad.</p>
             </div>
           </div>
 
@@ -213,8 +218,8 @@
               <img src="images/shield-alt-1-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Condominio privado con vigilancia 24/7</h3>
-              <p>Un entorno exclusivo y seguro, con acceso bajo registro y vigilancia las 24 horas, los 365 días del año.</p>
+              <h3 data-i18n="am2.h">Condominio privado con vigilancia 24/7</h3>
+              <p data-i18n="am2.p">Un entorno exclusivo y seguro, con acceso bajo registro y vigilancia las 24 horas, los 365 días del año.</p>
             </div>
           </div>
 
@@ -223,8 +228,8 @@
               <img src="images/pool-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Piscina en la terraza</h3>
-              <p>Ubicada en el tercer piso, perfecta para relajarse, compartir y disfrutar con vista al mar.</p>
+              <h3 data-i18n="am3.h">Piscina en la terraza</h3>
+              <p data-i18n="am3.p">Ubicada en el tercer piso, perfecta para relajarse, compartir y disfrutar con vista al mar.</p>
             </div>
           </div>
 
@@ -233,8 +238,8 @@
               <img src="images/grill-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Zona de parrilla</h3>
-              <p>Ideal para almuerzos al aire libre, tardes largas y encuentros especiales en familia.</p>
+              <h3 data-i18n="am4.h">Zona de parrilla</h3>
+              <p data-i18n="am4.p">Ideal para almuerzos al aire libre, tardes largas y encuentros especiales en familia.</p>
             </div>
           </div>
 
@@ -243,8 +248,8 @@
               <img src="images/sun-umbrella-terrace-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Balcones y terrazas</h3>
-              <p>Dos balcones y dos terrazas que amplían la experiencia de la casa con luz, aire y espacios para disfrutar.</p>
+              <h3 data-i18n="am5.h">Balcones y terrazas</h3>
+              <p data-i18n="am5.p">Dos balcones y dos terrazas que amplían la experiencia de la casa con luz, aire y espacios para disfrutar.</p>
             </div>
           </div>
 
@@ -253,8 +258,8 @@
               <img src="images/kitchen-cooker-utensils-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Cocina equipada</h3>
-              <p>Cuenta con lo necesario para acompañar la estadía con practicidad y comodidad.</p>
+              <h3 data-i18n="am6.h">Cocina equipada</h3>
+              <p data-i18n="am6.p">Cuenta con lo necesario para acompañar la estadía con practicidad y comodidad.</p>
             </div>
           </div>
 
@@ -263,8 +268,8 @@
               <img src="images/parking-garage-transportation-car-parking-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Estacionamiento privado</h3>
-              <p>Cochera dentro de la propiedad con espacio para dos autos.</p>
+              <h3 data-i18n="am7.h">Estacionamiento privado</h3>
+              <p data-i18n="am7.p">Cochera dentro de la propiedad con espacio para dos autos.</p>
             </div>
           </div>
 
@@ -273,15 +278,15 @@
               <img src="images/paw-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3>Pet friendly</h3>
-              <p>Las mascotas son bienvenidas, previa coordinación con el propietario, para que toda la familia disfrute la estadía.</p>
+              <h3 data-i18n="am8.h">Pet friendly</h3>
+              <p data-i18n="am8.p">Las mascotas son bienvenidas, previa coordinación con el propietario, para que toda la familia disfrute la estadía.</p>
             </div>
           </div>
 
         </div>
 
         <div class="amenities-toggle reveal">
-          <button class="btn-amenities" id="btnAmenities" aria-expanded="false">Ver todas las comodidades</button>
+          <button class="btn-amenities" id="btnAmenities" aria-expanded="false" data-i18n="casa.btn">Ver todas las comodidades</button>
         </div>
 
       </div>
@@ -290,135 +295,135 @@
     <!-- ===================== GALERÍA ===================== -->
     <section id="galerie" class="section section-alt">
       <div class="container">
-        <h2 class="section-title reveal">Galería</h2>
-        <p class="section-subtitle reveal">
+        <h2 class="section-title reveal" data-i18n="gal.title">Galería</h2>
+        <p class="section-subtitle reveal" data-i18n="gal.sub">
           Un vistazo a tu próximo paraíso de vacaciones
         </p>
 
         <div class="gallery-masonry">
           <div class="gallery-item">
             <img src="images/ChocayaSala.jpg" alt="Sala de estar Casa Chocaya – casa de playa en Chocaya, Asia, Lima" loading="lazy">
-            <div class="gallery-caption">Sala de estar</div>
+            <div class="gallery-caption" data-i18n="cap.sala">Sala de estar</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocallaPool.jpeg" alt="Piscina en la azotea – casa de playa con piscina en Asia, Lima" loading="lazy">
-            <div class="gallery-caption">Piscina</div>
+            <div class="gallery-caption" data-i18n="cap.piscina">Piscina</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaDeFrente.jpeg" alt="Fachada Casa Chocaya – alquiler casa playa Chocaya Perú" loading="lazy">
-            <div class="gallery-caption">Fachada</div>
+            <div class="gallery-caption" data-i18n="cap.fachada">Fachada</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaDeAtras.jpg" alt="Vista trasera Casa Chocaya – casa vacaciones frente al mar Lima" loading="lazy">
-            <div class="gallery-caption">Vista trasera</div>
+            <div class="gallery-caption" data-i18n="cap.trasera">Vista trasera</div>
           </div>
           <div class="gallery-item">
             <img src="images/CasaDeAtras.jpeg" alt="Jardín y área exterior – casa de playa privada en Asia Lima" loading="lazy">
-            <div class="gallery-caption">Jardín trasero</div>
+            <div class="gallery-caption" data-i18n="cap.jardin">Jardín trasero</div>
           </div>
           <div class="gallery-item">
             <img src="images/Terraza.jpeg" alt="Terraza con vista al mar – Casa Chocaya Asia Lima" loading="lazy">
-            <div class="gallery-caption">Terraza</div>
+            <div class="gallery-caption" data-i18n="cap.terraza">Terraza</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaWohnzimmer2.jpeg" alt="Sala de estar amplia – casa de alquiler en Chocaya Asia" loading="lazy">
-            <div class="gallery-caption">Sala de estar</div>
+            <div class="gallery-caption" data-i18n="cap.sala2">Sala de estar</div>
           </div>
           <div class="gallery-item">
             <img src="images/Wohnzimmer.jpeg" alt="Living comedor – Casa Chocaya alquiler vacaciones Peru" loading="lazy">
-            <div class="gallery-caption">Living</div>
+            <div class="gallery-caption" data-i18n="cap.living">Living</div>
           </div>
           <div class="gallery-item">
             <img src="images/LobbyAbajo.jpeg" alt="Lobby entrada – Casa Chocaya condominio privado Chocaya" loading="lazy">
-            <div class="gallery-caption">Lobby</div>
+            <div class="gallery-caption" data-i18n="cap.lobby">Lobby</div>
           </div>
           <div class="gallery-item">
             <img src="images/LobbyAbajo2.jpeg" alt="Acceso privado – casa de playa en condominio Chocaya Asia" loading="lazy">
-            <div class="gallery-caption">Acceso</div>
+            <div class="gallery-caption" data-i18n="cap.acceso">Acceso</div>
           </div>
           <div class="gallery-item">
             <img src="images/Comedor.jpeg" alt="Comedor para 8 personas – Casa Chocaya alquiler Asia Lima" loading="lazy">
-            <div class="gallery-caption">Comedor</div>
+            <div class="gallery-caption" data-i18n="cap.comedor">Comedor</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaCocina.jpeg" alt="Cocina equipada Casa Chocaya – casa de playa con cocina completa" loading="lazy">
-            <div class="gallery-caption">Cocina</div>
+            <div class="gallery-caption" data-i18n="cap.cocina">Cocina</div>
           </div>
           <div class="gallery-item">
             <img src="images/CocinaDeNoche.jpeg" alt="Cocina de noche – Casa Chocaya Chocaya Asia Lima" loading="lazy">
-            <div class="gallery-caption">Cocina de noche</div>
+            <div class="gallery-caption" data-i18n="cap.cocinanoche">Cocina de noche</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaDormitorio.jpeg" alt="Dormitorio principal con baño incorporado – casa playa Asia Lima" loading="lazy">
-            <div class="gallery-caption">Dormitorio principal</div>
+            <div class="gallery-caption" data-i18n="cap.dorm1">Dormitorio principal</div>
           </div>
           <div class="gallery-item">
             <img src="images/Dormitorio2.jpeg" alt="Dormitorio 2 – casa de 4 habitaciones playa Chocaya Peru" loading="lazy">
-            <div class="gallery-caption">Dormitorio 2</div>
+            <div class="gallery-caption" data-i18n="cap.dorm2">Dormitorio 2</div>
           </div>
           <div class="gallery-item">
             <img src="images/Dormitorio3.jpeg" alt="Dormitorio 3 – alquiler casa vacaciones Chocaya Asia Peru" loading="lazy">
-            <div class="gallery-caption">Dormitorio 3</div>
+            <div class="gallery-caption" data-i18n="cap.dorm3">Dormitorio 3</div>
           </div>
           <div class="gallery-item">
             <img src="images/Dormitorio4.jpeg" alt="Dormitorio 4 – Casa Chocaya 4 dormitorios playa Asia" loading="lazy">
-            <div class="gallery-caption">Dormitorio 4</div>
+            <div class="gallery-caption" data-i18n="cap.dorm4">Dormitorio 4</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaBanoAbajo.jpeg" alt="Baño con ducha tipo lluvia planta baja – Casa Chocaya" loading="lazy">
-            <div class="gallery-caption">Baño planta baja</div>
+            <div class="gallery-caption" data-i18n="cap.bano1">Baño planta baja</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaBano2.jpeg" alt="Baño 2 con ducha lluvia – casa playa 5 baños Asia Lima" loading="lazy">
-            <div class="gallery-caption">Baño 2</div>
+            <div class="gallery-caption" data-i18n="cap.bano2">Baño 2</div>
           </div>
           <div class="gallery-item">
             <img src="images/Bano3.jpeg" alt="Baño 3 – Casa Chocaya 5 baños alquiler playa Lima" loading="lazy">
-            <div class="gallery-caption">Baño 3</div>
+            <div class="gallery-caption" data-i18n="cap.bano3">Baño 3</div>
           </div>
           <div class="gallery-item">
             <img src="images/Bano4.jpeg" alt="Baño 4 – casa vacaciones frente al mar Chocaya Asia" loading="lazy">
-            <div class="gallery-caption">Baño 4</div>
+            <div class="gallery-caption" data-i18n="cap.bano4">Baño 4</div>
           </div>
           <div class="gallery-item">
             <img src="images/ChocayaCarPort.jpeg" alt="Estacionamiento privado para 2 autos – Casa Chocaya Asia" loading="lazy">
-            <div class="gallery-caption">Estacionamiento</div>
+            <div class="gallery-caption" data-i18n="cap.estac">Estacionamiento</div>
           </div>
           <div class="gallery-item">
             <img src="images/VistaFrontisBalcon.jpg" alt="Vista al mar desde el balcón – Casa Chocaya casa playa Perú" loading="lazy">
-            <div class="gallery-caption">Vista desde el balcón</div>
+            <div class="gallery-caption" data-i18n="cap.balcon">Vista desde el balcón</div>
           </div>
           <div class="gallery-item">
             <img src="images/VistaParque.jpg" alt="Vista al parque del condominio – Casa Chocaya Chocaya Asia Lima" loading="lazy">
-            <div class="gallery-caption">Vista del parque</div>
+            <div class="gallery-caption" data-i18n="cap.parque">Vista del parque</div>
           </div>
           <div class="gallery-item">
             <img src="images/Playa.jpg" alt="Playa de Chocaya – acceso directo al mar desde Casa Chocaya" loading="lazy">
-            <div class="gallery-caption">Playa</div>
+            <div class="gallery-caption" data-i18n="cap.playa">Playa</div>
           </div>
           <div class="gallery-item">
             <img src="images/Playa2.jpg" alt="Playa de Chocaya Asia Lima – casa de playa privada a 80 metros del mar" loading="lazy">
-            <div class="gallery-caption">Playa</div>
+            <div class="gallery-caption" data-i18n="cap.playa2">Playa</div>
           </div>
           <div class="gallery-item">
             <img src="images/PoolyMar.jpg" alt="Piscina con vista al mar – Casa Chocaya alquiler playa Asia Lima" loading="lazy">
-            <div class="gallery-caption">Piscina y mar</div>
+            <div class="gallery-caption" data-i18n="cap.poolmar">Piscina y mar</div>
           </div>
           <div class="gallery-item">
             <img src="images/PoolyVista.jpg" alt="Piscina azotea con vista panorámica – Casa Chocaya Chocaya Perú" loading="lazy">
-            <div class="gallery-caption">Piscina y vista</div>
+            <div class="gallery-caption" data-i18n="cap.poolvista">Piscina y vista</div>
           </div>
           <div class="gallery-item">
             <img src="images/poolyvistafrontis.jpg" alt="Piscina con vista al frontis – casa playa piscina Asia Lima" loading="lazy">
-            <div class="gallery-caption">Piscina y frontis</div>
+            <div class="gallery-caption" data-i18n="cap.poolfrontis">Piscina y frontis</div>
           </div>
           <div class="gallery-item">
             <img src="images/CocinaComedor.jpg" alt="Cocina y comedor integrados – Casa Chocaya alquiler Asia Lima" loading="lazy">
-            <div class="gallery-caption">Cocina y comedor</div>
+            <div class="gallery-caption" data-i18n="cap.cocinacom">Cocina y comedor</div>
           </div>
           <div class="gallery-item">
             <img src="images/figura.jpg" alt="Casa Chocaya – casa de playa en Chocaya Asia Lima Perú" loading="lazy">
-            <div class="gallery-caption">Casa Chocaya</div>
+            <div class="gallery-caption" data-i18n="cap.casa">Casa Chocaya</div>
           </div>
         </div>
       </div>
@@ -427,8 +432,8 @@
     <!-- ===================== DISTRIBUCIÓN ===================== -->
     <section id="distribucion" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Distribución</h2>
-        <p class="section-subtitle reveal">Conoce cada espacio de la casa</p>
+        <h2 class="section-title reveal" data-i18n="dist.title">Distribución</h2>
+        <p class="section-subtitle reveal" data-i18n="dist.sub">Conoce cada espacio de la casa</p>
       </div>
 
       <div class="layout-wrapper">
@@ -444,17 +449,17 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Dormitorio 1</h3>
-                  <p class="room-sub">Cama matrimonial &middot; Baño incorporado</p>
+                  <h3 class="room-name" data-i18n="r1.name">Dormitorio 1</h3>
+                  <p class="room-sub" data-i18n="r1.sub">Cama matrimonial &middot; Baño incorporado</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>Cama matrimonial</li>
-                  <li>Baño incorporado con ducha tipo lluvia</li>
-                  <li>Armario</li>
-                  <li>Planta alta</li>
+                  <li data-i18n="r1.d1">Cama matrimonial</li>
+                  <li data-i18n="r1.d2">Baño incorporado con ducha tipo lluvia</li>
+                  <li data-i18n="r1.d3">Armario</li>
+                  <li data-i18n="r1.d4">Planta alta</li>
                 </ul>
               </div>
             </div>
@@ -468,17 +473,17 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Dormitorio 2</h3>
-                  <p class="room-sub">Cama matrimonial &middot; Baño incorporado</p>
+                  <h3 class="room-name" data-i18n="r2.name">Dormitorio 2</h3>
+                  <p class="room-sub" data-i18n="r2.sub">Cama matrimonial &middot; Baño incorporado</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>Cama matrimonial</li>
-                  <li>Baño incorporado con ducha tipo lluvia</li>
-                  <li>Armario</li>
-                  <li>Planta alta</li>
+                  <li data-i18n="r2.d1">Cama matrimonial</li>
+                  <li data-i18n="r2.d2">Baño incorporado con ducha tipo lluvia</li>
+                  <li data-i18n="r2.d3">Armario</li>
+                  <li data-i18n="r2.d4">Planta alta</li>
                 </ul>
               </div>
             </div>
@@ -492,16 +497,16 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Dormitorio 3</h3>
-                  <p class="room-sub">2 camas individuales</p>
+                  <h3 class="room-name" data-i18n="r3.name">Dormitorio 3</h3>
+                  <p class="room-sub" data-i18n="r3.sub">2 camas individuales</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>2 camas individuales</li>
-                  <li>Armario</li>
-                  <li>Baño compartido</li>
+                  <li data-i18n="r3.d1">2 camas individuales</li>
+                  <li data-i18n="r3.d2">Armario</li>
+                  <li data-i18n="r3.d3">Baño compartido</li>
                 </ul>
               </div>
             </div>
@@ -515,17 +520,17 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Dormitorio 4</h3>
-                  <p class="room-sub">2 camas individuales</p>
+                  <h3 class="room-name" data-i18n="r4.name">Dormitorio 4</h3>
+                  <p class="room-sub" data-i18n="r4.sub">2 camas individuales</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>2 camas individuales</li>
-                  <li>Armario</li>
-                  <li>Baño compartido</li>
-                  <li>Planta baja</li>
+                  <li data-i18n="r4.d1">2 camas individuales</li>
+                  <li data-i18n="r4.d2">Armario</li>
+                  <li data-i18n="r4.d3">Baño compartido</li>
+                  <li data-i18n="r4.d4">Planta baja</li>
                 </ul>
               </div>
             </div>
@@ -546,18 +551,18 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Sala de estar</h3>
-                  <p class="room-sub">TV &middot; Comedor para 8</p>
+                  <h3 class="room-name" data-i18n="rsala.name">Sala de estar</h3>
+                  <p class="room-sub" data-i18n="rsala.sub">TV &middot; Comedor para 8</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>TV</li>
-                  <li>Sofás y zona de descanso</li>
-                  <li>Comedor para 8 personas</li>
-                  <li>Acceso directo a terraza</li>
-                  <li>Vista al mar</li>
+                  <li data-i18n="rsala.d1">TV</li>
+                  <li data-i18n="rsala.d2">Sofás y zona de descanso</li>
+                  <li data-i18n="rsala.d3">Comedor para 8 personas</li>
+                  <li data-i18n="rsala.d4">Acceso directo a terraza</li>
+                  <li data-i18n="rsala.d5">Vista al mar</li>
                 </ul>
               </div>
             </div>
@@ -579,18 +584,18 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Cocina</h3>
-                  <p class="room-sub">Totalmente equipada</p>
+                  <h3 class="room-name" data-i18n="rcoc.name">Cocina</h3>
+                  <p class="room-sub" data-i18n="rcoc.sub">Totalmente equipada</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>Refrigerador con congeladora</li>
-                  <li>Cafetera, hervidor y licuadora</li>
-                  <li>Horno pequeño</li>
-                  <li>Platos y cubiertos</li>
-                  <li>Utensilios básicos de cocina</li>
+                  <li data-i18n="rcoc.d1">Refrigerador con congeladora</li>
+                  <li data-i18n="rcoc.d2">Cafetera, hervidor y licuadora</li>
+                  <li data-i18n="rcoc.d3">Horno pequeño</li>
+                  <li data-i18n="rcoc.d4">Platos y cubiertos</li>
+                  <li data-i18n="rcoc.d5">Utensilios básicos de cocina</li>
                 </ul>
               </div>
             </div>
@@ -613,17 +618,17 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Piscina y terraza</h3>
-                  <p class="room-sub">Tercer piso &middot; Vista al mar</p>
+                  <h3 class="room-name" data-i18n="rpis.name">Piscina y terraza</h3>
+                  <p class="room-sub" data-i18n="rpis.sub">Tercer piso &middot; Vista al mar</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>Piscina en la azotea</li>
-                  <li>Zona de parrilla</li>
-                  <li>Vista panorámica al mar</li>
-                  <li>Zona de descanso y hamacas</li>
+                  <li data-i18n="rpis.d1">Piscina en la azotea</li>
+                  <li data-i18n="rpis.d2">Zona de parrilla</li>
+                  <li data-i18n="rpis.d3">Vista panorámica al mar</li>
+                  <li data-i18n="rpis.d4">Zona de descanso y hamacas</li>
                 </ul>
               </div>
             </div>
@@ -645,16 +650,16 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Baños</h3>
-                  <p class="room-sub">5 baños en total</p>
+                  <h3 class="room-name" data-i18n="rbanos.name">Baños</h3>
+                  <p class="room-sub" data-i18n="rbanos.sub">5 baños en total</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>5 baños en total</li>
-                  <li>3 baños completos con ducha tipo lluvia</li>
-                  <li>2 baños incorporados en dormitorios</li>
+                  <li data-i18n="rbanos.d1">5 baños en total</li>
+                  <li data-i18n="rbanos.d2">3 baños completos con ducha tipo lluvia</li>
+                  <li data-i18n="rbanos.d3">2 baños incorporados en dormitorios</li>
                 </ul>
               </div>
             </div>
@@ -674,17 +679,17 @@
             <div class="room-info">
               <div class="room-info-top">
                 <div>
-                  <h3 class="room-name">Playa</h3>
-                  <p class="room-sub">A 80 metros &middot; Acceso directo</p>
+                  <h3 class="room-name" data-i18n="rplaya.name">Playa</h3>
+                  <p class="room-sub" data-i18n="rplaya.sub">A 80 metros &middot; Acceso directo</p>
                 </div>
-                <button class="room-more-btn">Ver más</button>
+                <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li>A solo 80 metros del mar</li>
-                  <li>Acceso directo a la playa</li>
-                  <li>A 2 minutos a pie</li>
-                  <li>Arena fina y aguas tranquilas</li>
+                  <li data-i18n="rplaya.d1">A solo 80 metros del mar</li>
+                  <li data-i18n="rplaya.d2">Acceso directo a la playa</li>
+                  <li data-i18n="rplaya.d3">A 2 minutos a pie</li>
+                  <li data-i18n="rplaya.d4">Arena fina y aguas tranquilas</li>
                 </ul>
               </div>
             </div>
@@ -702,7 +707,7 @@
         <div class="location-layout">
           <div class="location-text reveal">
             <h2 class="section-title text-left">Chocaya, Asia</h2>
-            <p class="location-description">
+            <p class="location-description" data-i18n="loc.desc">
               Chocaya ofrece un entorno familiar, privado y tranquilo, ideal
               para desconectarse y disfrutar en familia. A solo 10 minutos en
               auto del Boulevard de Asia, cuenta con vigilancia las 24 horas,
@@ -712,23 +717,23 @@
             <ul class="location-facts">
               <li>
                 <img src="images/location-pin-alt-1-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
-                A la altura del km 92.5 de la Panamericana Sur
+                <span data-i18n="loc.f1">A la altura del km 92.5 de la Panamericana Sur</span>
               </li>
               <li>
                 <img src="images/clock-three-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
-                A solo 1 hora y 10 minutos de Lima
+                <span data-i18n="loc.f2">A solo 1 hora y 10 minutos de Lima</span>
               </li>
               <li>
                 <img src="images/shield-alt-1-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
-                Ubicación tranquila y privada frente al mar
+                <span data-i18n="loc.f3">Ubicación tranquila y privada frente al mar</span>
               </li>
               <li>
                 <img src="images/restaurant-plate-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
-                Restaurantes a pocos minutos a pie
+                <span data-i18n="loc.f4">Restaurantes a pocos minutos a pie</span>
               </li>
               <li>
                 <img src="images/shopping-cart-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
-                A solo 10 minutos del Boulevard de Asia
+                <span data-i18n="loc.f5">A solo 10 minutos del Boulevard de Asia</span>
               </li>
             </ul>
           </div>
@@ -749,8 +754,8 @@
     <!-- ===================== CONTACTO / CTA ===================== -->
     <section id="kontakt" class="section section-cta">
       <div class="container container-narrow">
-        <h2 class="section-title reveal">¿Listo para darte una escapada de Lima?</h2>
-        <p class="section-subtitle reveal">
+        <h2 class="section-title reveal" data-i18n="cta.title">¿Listo para darte una escapada de Lima?</h2>
+        <p class="section-subtitle reveal" data-i18n="cta.sub">
           Contáctanos por WhatsApp – respondemos rápido y sin complicaciones.
         </p>
         <div class="reveal">
@@ -771,7 +776,7 @@
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
               />
             </svg>
-            Consultar por WhatsApp ahora
+            <span data-i18n="cta.btn">Consultar por WhatsApp ahora</span>
           </a>
         </div>
       </div>
@@ -789,7 +794,7 @@
           <span>&middot;</span>
           <a href="privacy-policy.html">Privacy Policy</a>
         </div>
-        <p class="footer-copy">
+        <p class="footer-copy" data-i18n="footer.copy">
           &copy; 2026 Casa Chocaya. Todos los derechos reservados.
         </p>
       </div>
@@ -827,82 +832,82 @@
     <div class="modal-overlay" id="modalComodidades" role="dialog" aria-modal="true" aria-label="Todas las comodidades">
       <div class="modal-panel">
         <div class="modal-header">
-          <h2 class="modal-title">Comodidades incluidas</h2>
+          <h2 class="modal-title" data-i18n="modal.title">Comodidades incluidas</h2>
           <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
         </div>
         <div class="modal-body">
 
           <div class="modal-category">
-            <h3>Común</h3>
+            <h3 data-i18n="mcat1">Común</h3>
             <ul>
-              <li>Casa de 3 pisos</li>
-              <li>Sala de estar</li>
-              <li>Sala con TV</li>
-              <li>Comedor para 8 personas</li>
-              <li>Entrada privada</li>
-              <li>4 dormitorios, 2 de ellos con baño incorporado</li>
-              <li>5 baños en total, 3 de ellos completos con ducha tipo lluvia</li>
-              <li>Ropa de cama</li>
-              <li>Almohadas</li>
+              <li data-i18n="mcat1.l1">Casa de 3 pisos</li>
+              <li data-i18n="mcat1.l2">Sala de estar</li>
+              <li data-i18n="mcat1.l3">Sala con TV</li>
+              <li data-i18n="mcat1.l4">Comedor para 8 personas</li>
+              <li data-i18n="mcat1.l5">Entrada privada</li>
+              <li data-i18n="mcat1.l6">4 dormitorios, 2 de ellos con baño incorporado</li>
+              <li data-i18n="mcat1.l7">5 baños en total, 3 de ellos completos con ducha tipo lluvia</li>
+              <li data-i18n="mcat1.l8">Ropa de cama</li>
+              <li data-i18n="mcat1.l9">Almohadas</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Instalaciones</h3>
+            <h3 data-i18n="mcat2">Instalaciones</h3>
             <ul>
-              <li>Cochera privada para 2 autos</li>
-              <li>Piscina en la terraza</li>
-              <li>Zona de parrilla</li>
-              <li>Condominio privado</li>
+              <li data-i18n="mcat2.l1">Cochera privada para 2 autos</li>
+              <li data-i18n="mcat2.l2">Piscina en la terraza</li>
+              <li data-i18n="mcat2.l3">Zona de parrilla</li>
+              <li data-i18n="mcat2.l4">Condominio privado</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Seguridad del hogar</h3>
+            <h3 data-i18n="mcat3">Seguridad del hogar</h3>
             <ul>
-              <li>Portería y vigilancia 24/7</li>
-              <li>Acceso bajo registro</li>
-              <li>Seguridad los 365 días del año</li>
+              <li data-i18n="mcat3.l1">Portería y vigilancia 24/7</li>
+              <li data-i18n="mcat3.l2">Acceso bajo registro</li>
+              <li data-i18n="mcat3.l3">Seguridad los 365 días del año</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Cocina</h3>
+            <h3 data-i18n="mcat4">Cocina</h3>
             <ul>
-              <li>Cocina equipada</li>
-              <li>Utensilios básicos de cocina</li>
-              <li>Platos y cubiertos</li>
-              <li>Refrigerador con congeladora</li>
-              <li>Cafetera, hervidor y licuadora</li>
-              <li>Horno pequeño</li>
+              <li data-i18n="mcat4.l1">Cocina equipada</li>
+              <li data-i18n="mcat4.l2">Utensilios básicos de cocina</li>
+              <li data-i18n="mcat4.l3">Platos y cubiertos</li>
+              <li data-i18n="mcat4.l4">Refrigerador con congeladora</li>
+              <li data-i18n="mcat4.l5">Cafetera, hervidor y licuadora</li>
+              <li data-i18n="mcat4.l6">Horno pequeño</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Ubicación</h3>
+            <h3 data-i18n="mcat5">Ubicación</h3>
             <ul>
-              <li>Acceso directo a la playa</li>
-              <li>A 80 metros del mar</li>
-              <li>A 2 minutos a pie de la playa</li>
-              <li>A 10 minutos en auto del Boulevard de Asia</li>
+              <li data-i18n="mcat5.l1">Acceso directo a la playa</li>
+              <li data-i18n="mcat5.l2">A 80 metros del mar</li>
+              <li data-i18n="mcat5.l3">A 2 minutos a pie de la playa</li>
+              <li data-i18n="mcat5.l4">A 10 minutos en auto del Boulevard de Asia</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Exterior</h3>
+            <h3 data-i18n="mcat6">Exterior</h3>
             <ul>
-              <li>2 balcones</li>
-              <li>2 terrazas</li>
-              <li>Terraza con vista al mar</li>
-              <li>Salida directa al jardín y parque del condominio</li>
+              <li data-i18n="mcat6.l1">2 balcones</li>
+              <li data-i18n="mcat6.l2">2 terrazas</li>
+              <li data-i18n="mcat6.l3">Terraza con vista al mar</li>
+              <li data-i18n="mcat6.l4">Salida directa al jardín y parque del condominio</li>
             </ul>
           </div>
 
           <div class="modal-category">
-            <h3>Información adicional</h3>
+            <h3 data-i18n="mcat7">Información adicional</h3>
             <ul>
-              <li>Pet friendly</li>
-              <li>Previa coordinación con el propietario</li>
+              <li data-i18n="mcat7.l1">Pet friendly</li>
+              <li data-i18n="mcat7.l2">Previa coordinación con el propietario</li>
             </ul>
           </div>
 
