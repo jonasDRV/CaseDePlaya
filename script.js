@@ -8,11 +8,14 @@
    ============================================================ */
 const translations = {
   es: {
-    'page.title':    'Casa Chocaya – Alquiler Casa de Playa en Asia, Lima | Desde $100/noche',
+    'page.title':    'Casa Chocaya · Casa de Playa Asia Lima · Beach House Peru',
+    'page.description': 'Casa Chocaya en Chocaya, Asia – Lima, Perú. Casa privada de 4 dormitorios, 5 baños, piscina en azotea, zona de parrilla y acceso directo al mar. A 10 min del Boulevard de Asia. Desde $100/noche.',
     'nav.lacasa':    'La Casa',
     'nav.dist':      'Distribución',
     'nav.galeria':   'Galería',
     'nav.ubicacion': 'Ubicación',
+    'nav.opiniones': 'Opiniones',
+    'nav.faq':       'FAQ',
     'nav.consultar': 'Consultar',
     'aria.menu':     'Abrir menú',
     'aria.scroll':   'Desplazarse hacia abajo',
@@ -143,14 +146,47 @@ const translations = {
     'mcat6.l4': 'Salida directa al jardín y parque del condominio',
     'mcat7': 'Información adicional',
     'mcat7.l1': 'Pet friendly',       'mcat7.l2': 'Previa coordinación con el propietario',
+    // Google Maps consent
+    'map.title':     'Cargar Google Maps',
+    'map.text':      'Al cargar el mapa se transferirán datos (incluida tu dirección IP) a Google LLC en Estados Unidos. Más información en nuestra ',
+    'map.textEnd':   '.',
+    'map.link':      'Política de Privacidad',
+    'map.accept':    'Cargar mapa y aceptar',
+    'map.remember':  'Recordar mi decisión',
+    'map.iframeTitle': 'Ubicación de Casa Chocaya en Google Maps',
+    // Reviews
+    'rev.title':     'Lo que dicen nuestros huéspedes',
+    'rev.sub':       'Opiniones reales de quienes ya se alojaron en Casa Chocaya',
+    'rev.date1':     'Marzo 2026',
+    'rev.date2':     'Febrero 2026',
+    'rev.date3':     'Abril 2026',
+    'rev.note':      'Reseñas en español – el idioma original en que fueron compartidas por nuestros huéspedes.',
+    // FAQ
+    'faq.title':     'Preguntas frecuentes',
+    'faq.sub':       'Todo lo que necesitas saber antes de reservar',
+    'faq.q1':        '¿Cuántas personas caben en Casa Chocaya?',
+    'faq.a1':        'Casa Chocaya tiene capacidad para 8 personas, distribuidas en 4 dormitorios con camas matrimoniales.',
+    'faq.q2':        '¿Dónde queda exactamente Casa Chocaya?',
+    'faq.a2':        'La casa está ubicada en el condominio Chocaya, en Asia, al sur de Lima, Perú. A la altura del km 92.5 de la Panamericana Sur, a aproximadamente 1 hora y 10 minutos del centro de Lima.',
+    'faq.q3':        '¿Se admiten mascotas en Casa Chocaya?',
+    'faq.a3':        'Sí, la casa es pet friendly. Las mascotas son bienvenidas previa coordinación con el propietario.',
+    'faq.q4':        '¿Qué incluye Casa Chocaya?',
+    'faq.a4':        'La casa cuenta con 4 dormitorios, 5 baños, piscina en la azotea con vista al mar, zona de parrilla, cocina totalmente equipada, estacionamiento privado para 2 autos y acceso directo a la playa.',
+    'faq.q5':        '¿A qué distancia está del Boulevard de Asia?',
+    'faq.a5':        'Casa Chocaya está a solo 10 minutos en auto del Boulevard de Asia, donde encontrarás restaurantes, tiendas y vida nocturna en temporada.',
+    'faq.q6':        '¿Cómo puedo reservar Casa Chocaya?',
+    'faq.a6':        'Para consultar disponibilidad y reservar, contáctanos por WhatsApp al +49 176 56891136. Respondemos rápido y sin complicaciones.',
   },
 
   en: {
-    'page.title':    'Casa Chocaya – Beach House Rental in Asia, Lima | From $100/night',
+    'page.title':    'Casa Chocaya · Beach House Asia Lima · Vacation Rental Peru',
+    'page.description': 'Casa Chocaya in Chocaya, Asia – Lima, Peru. Private beach house: 4 bedrooms, 5 bathrooms, rooftop pool, BBQ area and direct ocean access. 10 min from Boulevard de Asia. From $100/night.',
     'nav.lacasa':    'The House',
     'nav.dist':      'Layout',
     'nav.galeria':   'Gallery',
     'nav.ubicacion': 'Location',
+    'nav.opiniones': 'Reviews',
+    'nav.faq':       'FAQ',
     'nav.consultar': 'Enquire',
     'aria.menu':     'Open menu',
     'aria.scroll':   'Scroll down',
@@ -281,6 +317,36 @@ const translations = {
     'mcat6.l4': 'Direct access to the garden and condominium park',
     'mcat7': 'Additional information',
     'mcat7.l1': 'Pet friendly',       'mcat7.l2': 'Subject to prior coordination with the owner',
+    // Google Maps consent
+    'map.title':     'Load Google Maps',
+    'map.text':      'Loading the map will transfer data (including your IP address) to Google LLC in the United States. More information in our ',
+    'map.textEnd':   '.',
+    'map.link':      'Privacy Policy',
+    'map.accept':    'Load map & accept',
+    'map.remember':  'Remember my choice',
+    'map.iframeTitle': 'Casa Chocaya location on Google Maps',
+    // Reviews
+    'rev.title':     'What our guests say',
+    'rev.sub':       'Real reviews from people who have stayed at Casa Chocaya',
+    'rev.date1':     'March 2026',
+    'rev.date2':     'February 2026',
+    'rev.date3':     'April 2026',
+    'rev.note':      'Reviews shown in Spanish – the original language in which they were shared by our guests.',
+    // FAQ
+    'faq.title':     'Frequently asked questions',
+    'faq.sub':       'Everything you need to know before booking',
+    'faq.q1':        'How many guests can stay at Casa Chocaya?',
+    'faq.a1':        'Casa Chocaya can accommodate up to 8 guests, spread across 4 bedrooms with double beds.',
+    'faq.q2':        'Where exactly is Casa Chocaya located?',
+    'faq.a2':        'The house is located in the Chocaya condominium, in Asia, south of Lima, Peru. At km 92.5 of the Pan-American Highway South, approximately 1 hour and 10 minutes from central Lima.',
+    'faq.q3':        'Are pets allowed at Casa Chocaya?',
+    'faq.a3':        'Yes, the house is pet friendly. Pets are welcome subject to prior coordination with the owner.',
+    'faq.q4':        'What does Casa Chocaya include?',
+    'faq.a4':        'The house features 4 bedrooms, 5 bathrooms, a rooftop pool with sea view, BBQ area, fully equipped kitchen, private parking for 2 cars and direct beach access.',
+    'faq.q5':        'How far is it from the Boulevard de Asia?',
+    'faq.a5':        'Casa Chocaya is just 10 minutes by car from the Boulevard de Asia, where you will find restaurants, shops and nightlife in season.',
+    'faq.q6':        'How can I book Casa Chocaya?',
+    'faq.a6':        'To check availability and book, contact us via WhatsApp at +49 176 56891136. We reply quickly and without fuss.',
   }
 };
 
@@ -290,6 +356,11 @@ function applyLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
   document.title = translations[lang]['page.title'];
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && translations[lang]['page.description']) {
+    metaDesc.setAttribute('content', translations[lang]['page.description']);
+  }
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const text = translations[lang][el.dataset.i18n];
@@ -556,6 +627,45 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 applyLang(localStorage.getItem('lang') || 'es');
+
+
+/* ============================================================
+   GOOGLE MAPS — Two-click consent (GDPR / TTDSG)
+   The iframe is created dynamically only after explicit consent,
+   so no request is sent to Google before the user opts in.
+   ============================================================ */
+const MAPS_CONSENT_KEY = 'maps-consent';
+const MAPS_EMBED_SRC = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1945.7747017133515!2d-76.63415946125683!3d-12.74279199688801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ0JzM0LjEiUyA3NsKwMzcnNTguMyJX!5e0!3m2!1sde!2ses!4v1775253185858!5m2!1sde!2ses';
+
+function loadMapsIframe() {
+  const container = document.getElementById('mapConsent');
+  if (!container) return;
+  const iframe = document.createElement('iframe');
+  iframe.src = MAPS_EMBED_SRC;
+  iframe.style.border = '0';
+  iframe.loading = 'lazy';
+  iframe.referrerPolicy = 'no-referrer-when-downgrade';
+  iframe.allowFullscreen = true;
+  iframe.title = translations[currentLang]['map.iframeTitle'] || 'Casa Chocaya – Google Maps';
+  container.replaceWith(iframe);
+}
+
+const mapConsentBtn = document.getElementById('mapConsentBtn');
+if (mapConsentBtn) {
+  mapConsentBtn.addEventListener('click', () => {
+    const remember = document.getElementById('mapConsentRemember');
+    if (remember && remember.checked) {
+      try { localStorage.setItem(MAPS_CONSENT_KEY, 'granted'); } catch (e) { /* storage unavailable */ }
+    }
+    loadMapsIframe();
+  });
+}
+
+try {
+  if (localStorage.getItem(MAPS_CONSENT_KEY) === 'granted') {
+    loadMapsIframe();
+  }
+} catch (e) { /* storage unavailable */ }
 
 
 /* ============================================================

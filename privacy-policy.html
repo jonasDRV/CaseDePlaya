@@ -114,7 +114,7 @@
     <p class="subtitle">Last updated: April 2026</p>
 
     <div class="highlight-box">
-      <p>This website does not use cookies, does not track visitors, and does not collect any personal data directly. However, certain third-party services embedded in this website may process data as described below.</p>
+      <p>This website does not use tracking cookies or analytics and does not collect any personal data directly. The only information stored locally in your browser is your language preference (via <code>localStorage</code>) and — if you explicitly opt in — your consent to load the Google Maps embed. Third-party services (such as Google Maps, once consented) may process data as described below.</p>
     </div>
 
     <h2>1. Controller</h2>
@@ -175,12 +175,24 @@
       Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
     </p>
 
-    <h3>3.2 Google Maps</h3>
+    <h3 id="google-maps">3.2 Google Maps (consent-based embedding)</h3>
     <p>
-      This website embeds a map from <strong>Google Maps</strong>, a service provided by Google LLC. When you visit the page containing the map, your browser establishes a connection to Google's servers. Your IP address and the URL of the page you are visiting are transmitted to Google and may be processed in the United States.
+      This website offers an embedded map from <strong>Google Maps</strong>, a service provided by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). <strong>The map is not loaded automatically.</strong> Instead, a placeholder is displayed and you are asked for your explicit consent before the map is loaded.
     </p>
     <p>
-      The legal basis is our legitimate interest in providing geographic location information in a practical and accessible format (Art. 6 para. 1 lit. f GDPR). If you wish to prevent data transmission to Google, you can disable JavaScript in your browser or use a browser extension for this purpose.
+      Only after you click "Load map &amp; accept" does your browser establish a connection to Google's servers. At that point the following data may be transmitted to Google and processed in the United States:
+    </p>
+    <ul>
+      <li>Your IP address</li>
+      <li>Information about your browser and device</li>
+      <li>The URL of the page on which the map is displayed</li>
+      <li>Cookies set by Google (e.g. <code>NID</code>, <code>CONSENT</code>)</li>
+    </ul>
+    <p>
+      The legal basis for this processing is your consent pursuant to Art. 6 para. 1 lit. a GDPR and § 25 para. 1 TTDSG. You can <strong>withdraw your consent at any time</strong> with effect for the future by clearing your browser's site data for this website, or by deleting the key <code>maps-consent</code> from your browser's <code>localStorage</code>. Withdrawal of consent does not affect the lawfulness of processing already carried out.
+    </p>
+    <p>
+      If you choose the "Remember my choice" option, your consent is stored in your browser's <code>localStorage</code> only (not in a cookie) and will apply to future visits from the same browser. If you do not tick this option, your consent only applies to the current session.
     </p>
     <p>
       Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a><br>
@@ -198,9 +210,16 @@
       When you contact us via WhatsApp, you voluntarily share your name and phone number with us. This data is used solely to respond to your rental inquiry and is not shared with any third parties. The legal basis is the performance of pre-contractual measures at your request (Art. 6 para. 1 lit. b GDPR).
     </p>
 
-    <h2>4. No Cookies</h2>
+    <h2>4. Cookies and Local Storage</h2>
     <p>
-      This website itself does not set any cookies. However, third-party services embedded on this website (Google Fonts, Google Maps) may set cookies in your browser. Please refer to the respective privacy policies of these services for details.
+      This website itself does not set any tracking cookies and does not use analytics. The only data stored locally in your browser by this website is:
+    </p>
+    <ul>
+      <li><code>lang</code> (<code>localStorage</code>) — your preferred display language (Spanish or English). Stored only in your browser; never transmitted to us.</li>
+      <li><code>maps-consent</code> (<code>localStorage</code>, only if you opt in) — your explicit consent to load the Google Maps embed on future visits. You can remove it at any time via your browser's site data settings.</li>
+    </ul>
+    <p>
+      If you give your consent to load Google Maps (see section 3.2), <strong>Google</strong> may then set its own cookies in your browser (e.g. <code>NID</code>, <code>CONSENT</code>). These cookies are governed by Google's privacy policy, not ours.
     </p>
 
     <h2>5. Data Transfers to Third Countries</h2>
