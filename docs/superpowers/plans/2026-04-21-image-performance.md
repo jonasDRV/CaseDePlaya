@@ -530,13 +530,13 @@ Find the closing `</div>` of `<div class="gallery-masonry">` in [index.html](../
 ```html
         </div>
         <div class="gallery-more-wrap">
-          <button type="button" class="btn btn-ghost" id="galleryLoadMore" data-i18n="gal.more">
+          <button type="button" class="btn-amenities" id="galleryLoadMore" data-i18n="gal.more">
             Mostrar más fotos
           </button>
         </div>
 ```
 
-If the existing `.btn-ghost` class does not exist in the codebase, use plain `class="btn"`. (Grep to confirm before editing.)
+Use `class="btn-amenities"` — matches the ghost-outline styling used by the "See amenities" buttons. There is no plain `.btn` rule in style.css (only `.btn-whatsapp` and `.btn-amenities`).
 
 - [ ] **Step 2: Add the two `gal.more` i18n keys**
 
