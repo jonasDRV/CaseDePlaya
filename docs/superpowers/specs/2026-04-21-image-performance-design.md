@@ -111,25 +111,34 @@ Zusätzlich im `<head>` von [index.html](../../../index.html) nach dem `preconne
 
 Preload auf WebP (nicht AVIF), da der Preload-Hint browserunabhängig feuern soll und WebP der stabilere Fallback ist — Browser, die AVIF können, nutzen später via `image-set()` trotzdem die AVIF-Variante aus dem Cache oder laden AVIF parallel; der Preload eliminiert vor allem den Startup-Rendering-Block.
 
-### CSS — Layout-Shift-Prävention
+### CSS — Layout-Shift- und Decode-Jank-Prävention
 
-Statt `width`/`height` auf jedem `<img>` manuell zu setzen, globale CSS-Regel:
+**Gallery (CSS-`columns`-Masonry mit natürlichen Bildhöhen):** `aspect-ratio` würde die Masonry-Optik zerstören. Stattdessen `content-visibility` + `contain-intrinsic-size`, damit off-screen-Galerie-Items gar nicht erst gerendert/dekodiert werden:
 
 ```css
-.gallery-item img,
-.room-img,
-.location-image img {
-  aspect-ratio: 3/2;
-  object-fit: cover;
+.gallery-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
 }
-.gallery-item picture,
-.room-card picture {
+.gallery-item picture {
   display: block;
   width: 100%;
 }
 ```
 
-Falls Einzelbilder deutlich abweichende Seitenverhältnisse haben (z. B. Hochformat), bekommen die betreffenden Container eine Override-Regel. Wird bei der Implementierung geprüft.
+**Room-Cards (fixes Grid-Layout mit Crop):** Klassische `aspect-ratio`:
+
+```css
+.room-img,
+.room-card picture {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+```
+
+Hero-Section ist CSS-`background-image` — kein `<img>`, daher nicht betroffen.
 
 ### JS — Galerie-Pagination
 
@@ -180,7 +189,7 @@ In [script.js](../../../script.js) im `translations`-Objekt ergänzen:
 
 ### Reveal-Animation
 
-In [index.html](../../../index.html): Klasse `reveal` wird von allen `.gallery-item`-Elementen entfernt. Reveal bleibt für Room-Cards, Location-Section, FAQ, Opiniones — diese Sections haben jeweils wenige Elemente und animieren nicht gleichzeitig mit schwerem Bilder-Decode.
+Galerie-Items haben **aktuell keine** `reveal`-Klasse (geprüft in [index.html](../../../index.html):452) — es ist also nichts zu entfernen. Reveal-Animation bleibt unverändert für Section-Titel, Amenity-Items, Location, FAQ, Opiniones. Der Decode-Jank entsteht stattdessen aus CSS-`columns`-Masonry + simultanem Bilddekodieren; das wird durch `content-visibility`, kleinere Bildvarianten und Pagination adressiert.
 
 ### Weitere Micro-Optimierungen
 
@@ -238,9 +247,9 @@ Begründung: Die im HTML sichtbaren Bilder sollen mit den im Schema referenziert
 
 | Datei | Änderungsart |
 |---|---|
-| [index.html](../../../index.html) | 40 `<img>` → `<picture>`, Hero-Preload-Link, JSON-LD-Image-URLs, Galerie-Button-Markup, `reveal`-Klasse von Galerie-Items entfernen |
-| [script.js](../../../script.js) | Galerie-Pagination-Logik, `gal.more` i18n-Keys, passive Touch-Listener |
-| [style.css](../../../style.css) | `#hero` auf `image-set()` umstellen + Mobile-Override, `aspect-ratio`-Regeln für Galerie/Room-/Location-Bilder, `.gallery-more-wrap`-Styles |
+| [index.html](../../../index.html) | 40 `<img>` → `<picture>`, Hero-Preload-Link im `<head>`, JSON-LD-Image-URLs auf `-1600.webp`, Galerie-Button-Markup |
+| [script.js](../../../script.js) | Galerie-Pagination-Logik, `gal.more` i18n-Keys (ES+EN), passive Touch-Listener in der Lightbox |
+| [style.css](../../../style.css) | `#hero` auf `image-set()` umstellen + Mobile-Override, `content-visibility` für `.gallery-item`, `aspect-ratio` für Room-Card-Bilder, `.gallery-more-wrap`-Styles |
 
 Keine neuen Dateien, keine Dependencies.
 
