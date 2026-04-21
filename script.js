@@ -45,6 +45,7 @@ const translations = {
     'casa.btn':      'Ver todas las comodidades',
     'gal.title':     'Galería',
     'gal.sub':       'Un vistazo a tu próximo paraíso de vacaciones',
+    'gal.more':      'Mostrar más fotos',
     'cap.sala':      'Sala de estar',
     'cap.piscina':   'Piscina',
     'cap.fachada':   'Fachada',
@@ -216,6 +217,7 @@ const translations = {
     'casa.btn':      'View all amenities',
     'gal.title':     'Gallery',
     'gal.sub':       'A glimpse of your next holiday paradise',
+    'gal.more':      'Show more photos',
     'cap.sala':      'Living room',
     'cap.piscina':   'Pool',
     'cap.fachada':   'Facade',
@@ -674,3 +676,31 @@ try {
 document.querySelectorAll('img').forEach(img => {
   if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
 });
+
+/* ============================================================
+   GALLERY PAGINATION — initial 9, "load more" shows next 9
+   ============================================================ */
+const GALLERY_BATCH = 9;
+const galleryItemsForPagination = document.querySelectorAll('.gallery-item');
+let galleryShown = GALLERY_BATCH;
+
+galleryItemsForPagination.forEach((el, i) => {
+  if (i >= galleryShown) el.hidden = true;
+});
+
+const galleryLoadMoreBtn = document.getElementById('galleryLoadMore');
+if (galleryLoadMoreBtn) {
+  if (galleryItemsForPagination.length <= GALLERY_BATCH) {
+    galleryLoadMoreBtn.hidden = true;
+  }
+  galleryLoadMoreBtn.addEventListener('click', () => {
+    const end = Math.min(galleryShown + GALLERY_BATCH, galleryItemsForPagination.length);
+    for (let i = galleryShown; i < end; i++) {
+      galleryItemsForPagination[i].hidden = false;
+    }
+    galleryShown = end;
+    if (galleryShown >= galleryItemsForPagination.length) {
+      galleryLoadMoreBtn.hidden = true;
+    }
+  });
+}
