@@ -514,6 +514,8 @@ layoutNext.addEventListener('click', () => {
 document.querySelectorAll('.room-card').forEach(card => {
   const images = JSON.parse(card.dataset.images || '[]');
   const img  = card.querySelector('.room-img');
+  const picture = card.querySelector('.room-img-wrapper picture');
+  const sources = picture ? picture.querySelectorAll('source') : [];
   const dots = card.querySelectorAll('.room-dot');
   const prev = card.querySelector('.room-img-prev');
   const next = card.querySelector('.room-img-next');
@@ -521,7 +523,15 @@ document.querySelectorAll('.room-card').forEach(card => {
 
   function goTo(n) {
     idx = (n + images.length) % images.length;
-    img.src = images[idx];
+    const url = images[idx];
+    const name = url.match(/images\/([^.]+)\.webp$/)?.[1];
+    if (name && sources.length >= 2) {
+      sources[0].srcset = `images/${name}-800.avif 800w, images/${name}-1600.avif 1600w`;
+      sources[1].srcset = `images/${name}-800.webp 800w, images/${name}-1600.webp 1600w`;
+      img.src = `images/${name}-1600.webp`;
+    } else {
+      img.src = url;
+    }
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   }
 
@@ -678,29 +688,22 @@ document.querySelectorAll('img').forEach(img => {
 });
 
 /* ============================================================
-   GALLERY PAGINATION — initial 9, "load more" shows next 9
+   GALLERY PAGINATION — show first 9, reveal all on click
    ============================================================ */
-const GALLERY_BATCH = 9;
+const GALLERY_INITIAL = 9;
 const galleryItemsForPagination = document.querySelectorAll('.gallery-item');
-let galleryShown = GALLERY_BATCH;
 
 galleryItemsForPagination.forEach((el, i) => {
-  if (i >= galleryShown) el.hidden = true;
+  if (i >= GALLERY_INITIAL) el.hidden = true;
 });
 
 const galleryLoadMoreBtn = document.getElementById('galleryLoadMore');
 if (galleryLoadMoreBtn) {
-  if (galleryItemsForPagination.length <= GALLERY_BATCH) {
+  if (galleryItemsForPagination.length <= GALLERY_INITIAL) {
     galleryLoadMoreBtn.hidden = true;
   }
   galleryLoadMoreBtn.addEventListener('click', () => {
-    const end = Math.min(galleryShown + GALLERY_BATCH, galleryItemsForPagination.length);
-    for (let i = galleryShown; i < end; i++) {
-      galleryItemsForPagination[i].hidden = false;
-    }
-    galleryShown = end;
-    if (galleryShown >= galleryItemsForPagination.length) {
-      galleryLoadMoreBtn.hidden = true;
-    }
+    galleryItemsForPagination.forEach(el => { el.hidden = false; });
+    galleryLoadMoreBtn.hidden = true;
   });
 }
