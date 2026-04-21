@@ -4,7 +4,7 @@
 
 **Goal:** Reduce image payload on mobile by ~60 %, eliminate gallery decode jank, and improve Core Web Vitals — without introducing any build step, dependencies, or visual redesign.
 
-**Architecture:** All 30 photos are already exported in 4 variants (800/1600 × AVIF/WebP, 120 new files, confirmed present). Implementation converts 40 `<img>` tags to `<picture>` blocks with `srcset`/`sizes`, switches the hero CSS `background-image` to `image-set()`, adds CSS `content-visibility` for masonry-gallery items and `aspect-ratio` for room-card images, paginates the gallery (9 initial + "show more" button), and updates JSON-LD + preload URLs to the new `-1600.webp` variants.
+**Architecture:** All 30 photos are already exported in 4 variants (800/1600 × AVIF/WebP, 120 new files, confirmed present). Implementation converts 40 `<img>` tags to `<picture>` blocks with `srcset`/`sizes`, switches the hero CSS `background-image` to `image-set()`, adds `<picture>`-display rules for the masonry gallery and the room-card wrapper, paginates the gallery (9 initial + "show more" button), and updates JSON-LD + preload URLs to the new `-1600.webp` variants. (Earlier drafts proposed `content-visibility: auto` on `.gallery-item` and `aspect-ratio: 3/2` on `.room-img`; both were dropped during Task 1 review — `content-visibility` interacts badly with CSS-columns masonry, and the room-card wrapper already enforces `aspect-ratio: 4/3`.)
 
 **Tech Stack:** Static site on GitHub Pages. Vanilla HTML/CSS/JS. Manual image exports via XnConvert (already done). No npm/node/build.
 
@@ -68,41 +68,46 @@ Find the existing `@media (max-width: 768px)` block that already contains `#hero
   }
 ```
 
-- [ ] **Step 3: Add gallery `content-visibility` rule after the existing `.gallery-caption` rule**
+- [ ] **Step 3: Add gallery `<picture>` display rule after the existing `.gallery-caption` rule**
 
 Append after [style.css:675](../../../style.css#L675) (end of `.gallery-item:hover .gallery-caption` block, before the `/* LOCATION */` comment):
 
 ```css
-/* Skip rendering off-screen gallery items to prevent decode jank */
-.gallery-item {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 500px;
-}
 .gallery-item picture {
   display: block;
   width: 100%;
 }
 ```
 
+(Earlier draft added `content-visibility: auto` + `contain-intrinsic-size` on `.gallery-item` — dropped because CSS-columns masonry recalculates column breaks from the containment placeholder, causing visible jumps on scroll. Pagination in Task 5 already hides items past 9 via `hidden`, so the decode-jank gain is minimal.)
+
 - [ ] **Step 4: Add room-card image rules**
 
-Find the existing `.room-img` rule in [style.css](../../../style.css) (search for `.room-img {`). Replace the existing `.room-img` block with:
+Find the existing `.room-img` rule in [style.css](../../../style.css) (search for `.room-img {`). Replace the existing `.room-img` block with two rules: one to make `<picture>` fill the wrapper, one to make the `<img>` (whether bare or inside `<picture>`) cover the wrapper's existing 4/3 box. Preserve pre-existing declarations (`transition`, `cursor`):
 
 ```css
-.room-img,
 .room-img-wrapper picture {
+  display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 100%;
+}
+
+.room-img,
+.room-img-wrapper picture > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+  cursor: zoom-in;
 }
 ```
 
-If the existing `.room-img` rule contains other properties (e.g., `transition`, `border-radius`), preserve them — add `aspect-ratio: 3 / 2; object-fit: cover;` to the existing declarations and add the `,` `.room-img-wrapper picture` selector. Do not duplicate the rule.
+The wrapper (`.room-img-wrapper`) already has `aspect-ratio: 4 / 3` and `overflow: hidden`, so layout space is already reserved — no extra `aspect-ratio` needed. `object-fit: cover` crops the image to fill. `object-fit` only applies to replaced elements, so it targets the inner `<img>`, not `<picture>`.
 
 - [ ] **Step 5: Add `.gallery-more-wrap` styles at the bottom of the gallery section**
 
-Append after the `content-visibility` rule added in Step 3:
+Append after the `.gallery-item picture` rule added in Step 3:
 
 ```css
 .gallery-more-wrap {
@@ -110,10 +115,9 @@ Append after the `content-visibility` rule added in Step 3:
   justify-content: center;
   margin-top: 2rem;
 }
-.gallery-more-wrap .btn[hidden] {
-  display: none;
-}
 ```
+
+(Earlier draft added `.gallery-more-wrap .btn[hidden] { display: none }` — dropped because `[hidden]` is already `display:none` via the UA stylesheet; the rule was a no-op.)
 
 - [ ] **Step 6: Visual smoke check**
 
@@ -128,13 +132,19 @@ If hero image does not appear, verify `images/ChocayaSala-1600.avif` and `images
 
 ```bash
 git add style.css
-git commit -m "css: add image-set hero, content-visibility gallery, aspect-ratio rooms
+git commit -m "css: add image-set hero, picture display, cover-fit rooms
 
-Prepare styles for the <picture>/srcset rewrite. Switches the hero
-background to image-set() with AVIF+WebP variants and a 768px mobile
-override, adds content-visibility to .gallery-item so off-screen items
-skip rendering, and adds aspect-ratio to .room-img so room-card picture
-wrappers reserve space before decode.
+Prepare styles for the <picture>/srcset rewrite:
+- Hero background uses image-set() with AVIF+WebP variants plus a
+  url() fallback, with a 768px mobile override pointing at -800
+  variants.
+- Adds .gallery-item picture { display:block; width:100% } so the new
+  wrappers fill the masonry cell.
+- Changes .room-img to object-fit: cover with width/height 100% so it
+  fills the existing .room-img-wrapper 4/3 aspect box (the wrapper
+  already reserves space). Adds a matching rule for <img> inside
+  <picture> wrappers introduced later.
+- Adds .gallery-more-wrap centering for the pagination button.
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>"
 ```
@@ -490,7 +500,7 @@ Reload [index.html](../../../index.html). Scroll to Distribución. Expected:
 - All 9 room cards render with the correct image.
 - Hovering a card still cycles through the `data-images` alternates (old URLs still work — files remain as backup).
 - Lightbox still opens from room cards.
-- Layout does not shift (`aspect-ratio: 3/2` from Task 1 keeps room images stable).
+- Layout does not shift (`.room-img-wrapper` already reserves the 4/3 box; the inner `<img>`/`<picture>` fills it via `object-fit: cover`).
 
 - [ ] **Step 5: Commit**
 
