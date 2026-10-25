@@ -1,0 +1,325 @@
+/* Interactive guest floor plans. Scoped to avoid changing the existing cards. */
+.floorplan[hidden],
+.floorplan [hidden] {
+  display: none !important;
+}
+
+.floorplan {
+  margin: 0 auto 4rem;
+  border: 1px solid var(--beige-light);
+  border-radius: 18px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.floorplan-intro {
+  padding: 2.2rem 2.4rem 1.6rem;
+}
+
+.floorplan-eyebrow,
+.floorplan-list-title {
+  font-size: 0.67rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--beige-dark);
+}
+
+.floorplan-intro h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--brown);
+}
+
+.floorplan-intro > p:last-child,
+.floorplan-room-heading > p:last-child {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.floorplan-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 2.4rem 1.5rem;
+}
+
+.floorplan button {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.floorplan-tabs button {
+  flex: 1;
+  padding: 0.85rem 0.7rem;
+  min-height: 48px;
+  border: 1px solid var(--beige-light);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--brown);
+  font-size: 0.85rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.floorplan-tabs button[aria-selected="true"] {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--cream);
+}
+
+.floorplan-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
+  border-top: 1px solid var(--beige-light);
+}
+
+.floorplan-drawing {
+  padding: 1.8rem 2rem 1.2rem;
+  background: var(--cream);
+}
+
+.floorplan-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+}
+
+.floorplan-level h4 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--brown);
+  font-weight: 400;
+}
+
+.floorplan-level > span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.floorplan-map {
+  display: block;
+  width: 100%;
+  max-height: 710px;
+  margin: 0.6rem auto;
+}
+
+.floorplan-outline {
+  fill: #fffdf9;
+  stroke: var(--brown);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+.floorplan-room {
+  cursor: pointer;
+  outline: none;
+}
+
+.floorplan-room-shape {
+  fill: #f0e7db;
+  stroke: #a18c76;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  transition: fill 0.2s ease;
+}
+
+.floorplan-room--outdoor .floorplan-room-shape { fill: #e5ebdf; }
+.floorplan-room--water .floorplan-room-shape { fill: #d7e7e9; }
+.floorplan-room--service .floorplan-room-shape { fill: #eeeae5; }
+
+.floorplan-room:hover .floorplan-room-shape,
+.floorplan-room:focus-visible .floorplan-room-shape {
+  fill: #dbc8af;
+  stroke: var(--brown-deep);
+  stroke-width: 4;
+}
+
+.floorplan-room[aria-pressed="true"] .floorplan-room-shape {
+  fill: #d4bda0;
+  stroke: var(--brown-deep);
+  stroke-width: 4;
+}
+
+.floorplan-room:focus-visible .floorplan-room-shape {
+  stroke-dasharray: 6 3;
+}
+
+.floorplan-room-label {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  fill: var(--brown-deep);
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.floorplan-symbols {
+  fill: none;
+  stroke: #a18c76;
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+
+.floorplan-context {
+  font-family: var(--font-body);
+  fill: var(--text-muted);
+  font-size: 13px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.floorplan-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.73rem;
+  text-align: center;
+}
+
+.floorplan-legend > span:first-child {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  background: #d4bda0;
+  border: 1px solid var(--brown);
+  border-radius: 2px;
+}
+
+.floorplan-details {
+  padding: 2rem;
+  min-width: 0;
+  border-left: 1px solid var(--beige-light);
+}
+
+.floorplan-room-heading h4 {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--brown);
+  margin: 0.4rem 0 0.65rem;
+}
+
+.floorplan-photos,
+.floorplan-empty { margin-top: 1.4rem; }
+
+.floorplan-photo-open {
+  position: relative;
+  width: 100%;
+  display: block;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--brown-deep);
+}
+
+.floorplan-photo-open picture { display: block; }
+.floorplan-photo-open img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.floorplan-photo-open > span {
+  display: block;
+  padding: 0.6rem;
+  color: var(--cream);
+  font-size: 0.78rem;
+}
+
+.floorplan-photo-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.floorplan-photo-controls button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--beige-light);
+  color: var(--brown);
+  background: transparent;
+  font-size: 1.6rem;
+}
+
+.floorplan-empty {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.floorplan-list-title { margin: 1.8rem 0 0.6rem; }
+.floorplan-room-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.floorplan-room-list button {
+  min-height: 44px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--beige-light);
+  border-radius: 6px;
+  color: var(--brown);
+  background: transparent;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.floorplan-room-list button[aria-pressed="true"] {
+  background: var(--beige-light);
+  border-color: var(--beige-dark);
+}
+
+.floorplan button:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 3px;
+}
+
+.floorplan-note {
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--beige-light);
+  color: var(--text-muted);
+  font-size: 0.73rem;
+  text-align: center;
+}
+
+.floorplan-back { display: none; }
+.floorplan-details, #floorplan-map { scroll-margin-top: calc(var(--nav-height) + 1rem); }
+
+@media (max-width: 768px) {
+  .floorplan-intro { padding: 1.5rem 1.2rem 1.2rem; }
+  .floorplan-tabs { padding: 0 1rem 1.2rem; gap: 0.3rem; }
+  .floorplan-tabs button { padding: 0.7rem 0.35rem; font-size: 0.75rem; }
+  .floorplan-panel { grid-template-columns: minmax(0, 1fr); }
+  .floorplan-drawing { padding: 1.2rem 1rem; }
+  .floorplan-map { max-height: 640px; }
+  .floorplan-details { padding: 1.5rem 1.2rem; border-left: 0; border-top: 1px solid var(--beige-light); }
+  .floorplan-room-label { font-size: 17px; }
+  .floorplan-room-list { gap: 0.5rem; }
+  .floorplan-note { padding: 1rem 1.2rem; }
+  .floorplan-back {
+    display: block;
+    margin-top: 1rem;
+    min-height: 44px;
+    padding: 0.5rem 0;
+    border: 0;
+    background: transparent;
+    color: var(--brown);
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floorplan *, .floorplan *::before, .floorplan *::after { transition: none; }
+}

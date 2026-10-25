@@ -977,6 +977,19 @@ ul {
   box-shadow: 0 8px 60px rgba(0, 0, 0, 0.6);
 }
 
+.lightbox-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;
+  right: 4rem;
+  color: var(--cream);
+  text-align: center;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.lightbox-prev[hidden], .lightbox-next[hidden] { display: none; }
+
 .lightbox-close,
 .lightbox-prev,
 .lightbox-next {

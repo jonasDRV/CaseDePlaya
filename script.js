@@ -19,13 +19,17 @@ const translations = {
     'nav.consultar': 'Consultar',
     'aria.menu':     'Abrir menú',
     'aria.scroll':   'Desplazarse hacia abajo',
+    'aria.preview':  'Vista previa de imagen',
+    'aria.close':    'Cerrar',
+    'aria.previous': 'Imagen anterior',
+    'aria.next':     'Imagen siguiente',
     'hero.tagline':  'Chocaya · Lima · Perú',
     'hero.subtitle': 'Tu refugio privado en el Pacífico',
     'hero.cta':      'Consultar ahora',
     'casa.location': 'Chocaya, Asia, Lima, Perú',
     'casa.specs':    '4 dormitorios · 5 baños · 308 m² aprox.',
     'casa.desc1':    'Ubicada dentro de un condominio privado en Chocaya, Casa Chocaya ofrece una experiencia de descanso sofisticada para familias que valoran privacidad, seguridad y comodidad. A solo 80 metros del mar, combina la tranquilidad de la playa con el confort, la amplitud y el nivel de una casa pensada para disfrutarse plenamente.',
-    'casa.desc2':    'Distribuida en tres pisos, la casa reúne amplios espacios interiores y exteriores, balcones, terrazas, piscina en la azotea y zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima, con todo lo necesario para vivir la estadía con comodidad, como en casa, pero junto al mar.',
+    'casa.desc2':    'Distribuida en tres pisos, la casa tiene tres dormitorios en la planta baja y uno en el segundo piso, donde se encuentran la sala, el comedor y la cocina. La azotea reúne la piscina, la terraza y la zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima.',
     'am1.h': 'Acceso directo a la playa',
     'am1.p': 'A solo 80 metros del mar, con acceso directo para disfrutar días de playa con comodidad y total tranquilidad.',
     'am2.h': 'Condominio privado con vigilancia 24/7',
@@ -86,9 +90,10 @@ const translations = {
     'r1.d3': 'Armario',          'r1.d4': 'Planta alta',
     'r2.name': 'Dormitorio 2',   'r2.sub': 'Cama doble 140×200 cm · Baño compartido',
     'r2.d1': 'Cama doble 140×200 cm', 'r2.d2': 'Baño compartido',
-    'r2.d3': 'Armario',          'r2.d4': 'Planta alta',
+    'r2.d3': 'Armario',          'r2.d4': 'Planta baja',
     'r3.name': 'Dormitorio 3',   'r3.sub': 'Cama doble 140×200 cm',
     'r3.d1': 'Cama doble 140×200 cm', 'r3.d2': 'Armario', 'r3.d3': 'Baño compartido',
+    'r3.d4': 'Planta baja',
     'r4.name': 'Dormitorio 4',   'r4.sub': 'Cama doble 140×200 cm · Baño incorporado',
     'r4.d1': 'Cama doble 140×200 cm', 'r4.d2': 'Baño incorporado con ducha tipo lluvia',
     'r4.d3': 'Armario',          'r4.d4': 'Planta baja',
@@ -191,13 +196,17 @@ const translations = {
     'nav.consultar': 'Enquire',
     'aria.menu':     'Open menu',
     'aria.scroll':   'Scroll down',
+    'aria.preview':  'Image preview',
+    'aria.close':    'Close',
+    'aria.previous': 'Previous image',
+    'aria.next':     'Next image',
     'hero.tagline':  'Chocaya · Lima · Peru',
     'hero.subtitle': 'Your private retreat on the Pacific',
     'hero.cta':      'Enquire now',
     'casa.location': 'Chocaya, Asia, Lima, Peru',
     'casa.specs':    '4 bedrooms · 5 bathrooms · approx. 308 m²',
     'casa.desc1':    'Located within a private condominium in Chocaya, Casa Chocaya offers a sophisticated retreat for families who value privacy, security and comfort. Just 80 metres from the sea, it combines the peace of the beach with the comfort, space and quality of a home designed to be fully enjoyed.',
-    'casa.desc2':    'Spread across three floors, the house combines spacious indoor and outdoor areas, balconies, terraces, a rooftop pool and a barbecue area with sea views. Just 10 minutes by car from the Boulevard de Asia, it is an exclusive getaway near Lima, with everything you need to enjoy your stay in comfort — like home, but by the sea.',
+    'casa.desc2':    'The house spans three levels, with three bedrooms on the ground floor and one on the upper floor, alongside the living room, dining area and kitchen. The rooftop brings together the pool, terrace and BBQ area with sea views. Just 10 minutes by car from the Boulevard de Asia, it is an exclusive getaway near Lima.',
     'am1.h': 'Direct beach access',
     'am1.p': 'Just 80 metres from the sea, with direct access to enjoy beach days in complete comfort and tranquillity.',
     'am2.h': 'Private condominium with 24/7 security',
@@ -258,9 +267,10 @@ const translations = {
     'r1.d3': 'Wardrobe',         'r1.d4': 'Upper floor',
     'r2.name': 'Bedroom 2',      'r2.sub': 'Double bed 140×200 cm · Shared bathroom',
     'r2.d1': 'Double bed 140×200 cm', 'r2.d2': 'Shared bathroom',
-    'r2.d3': 'Wardrobe',         'r2.d4': 'Upper floor',
+    'r2.d3': 'Wardrobe',         'r2.d4': 'Ground floor',
     'r3.name': 'Bedroom 3',      'r3.sub': 'Double bed 140×200 cm',
     'r3.d1': 'Double bed 140×200 cm', 'r3.d2': 'Wardrobe', 'r3.d3': 'Shared bathroom',
+    'r3.d4': 'Ground floor',
     'r4.name': 'Bedroom 4',      'r4.sub': 'Double bed 140×200 cm · En-suite bathroom',
     'r4.d1': 'Double bed 140×200 cm', 'r4.d2': 'En-suite with rainfall shower',
     'r4.d3': 'Wardrobe',         'r4.d4': 'Ground floor',
@@ -430,18 +440,34 @@ mobileNav.querySelectorAll('a').forEach(link => {
    ============================================================ */
 let lightboxPool = [];   // current image src array
 let lightboxIdx  = 0;
+let lightboxReturnFocus = null;
+let lightboxTitle = '';
+let lightboxPreviousOverflow = '';
 
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev  = document.getElementById('lightboxPrev');
 const lightboxNext  = document.getElementById('lightboxNext');
+const lightboxCaption = document.getElementById('lightboxCaption');
 
-function openLightbox(srcs, index) {
+function updateLightbox() {
+  lightboxImg.src = lightboxPool[lightboxIdx];
+  lightboxImg.alt = lightboxTitle;
+  lightboxCaption.textContent = lightboxTitle
+    ? `${lightboxTitle} · ${lightboxIdx + 1} / ${lightboxPool.length}`
+    : `${lightboxIdx + 1} / ${lightboxPool.length}`;
+  lightboxPrev.hidden = lightboxNext.hidden = lightboxPool.length < 2;
+}
+
+function openLightbox(srcs, index, title = '') {
+  if (!srcs.length) return;
+  lightboxReturnFocus = document.activeElement;
+  lightboxPreviousOverflow = document.body.style.overflow;
   lightboxPool = srcs;
   lightboxIdx  = index;
-  lightboxImg.src = srcs[index];
-  lightboxImg.alt = '';
+  lightboxTitle = title;
+  updateLightbox();
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
   lightboxClose.focus();
@@ -449,13 +475,14 @@ function openLightbox(srcs, index) {
 
 function closeLightbox() {
   lightbox.classList.remove('active');
-  document.body.style.overflow = '';
-  lightboxImg.src = '';
+  document.body.style.overflow = lightboxPreviousOverflow;
+  lightboxImg.removeAttribute('src');
+  lightboxReturnFocus?.focus({ preventScroll: true });
 }
 
 function navigateLightbox(direction) {
   lightboxIdx = (lightboxIdx + direction + lightboxPool.length) % lightboxPool.length;
-  lightboxImg.src = lightboxPool[lightboxIdx];
+  updateLightbox();
 }
 
 // Gallery images
@@ -475,9 +502,16 @@ lightbox.addEventListener('click', e => {
 
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('active')) return;
-  if (e.key === 'Escape')     closeLightbox();
-  if (e.key === 'ArrowLeft')  navigateLightbox(-1);
-  if (e.key === 'ArrowRight') navigateLightbox(1);
+  if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); navigateLightbox(-1); }
+  if (e.key === 'ArrowRight') { e.preventDefault(); navigateLightbox(1); }
+  if (e.key === 'Tab') {
+    const controls = [lightboxClose, lightboxPrev, lightboxNext].filter(button => !button.hidden);
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
 });
 
 let touchStartX = 0;

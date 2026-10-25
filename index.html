@@ -117,7 +117,7 @@
           {"@type": "LocationFeatureSpecification", "name": "Suite principal con baño en suite", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Dormitorio 4 con baño en suite", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Baño de huéspedes compartido", "value": true},
-          {"@type": "LocationFeatureSpecification", "name": "Baño de servicio junto a la piscina", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "3 dormitorios en planta baja y 1 en el segundo piso", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Piscina en azotea con vista al mar", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Zona de parrilla", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Cocina totalmente equipada", "value": true},
@@ -245,7 +245,8 @@
       href="images/ChocayaSala-1600.webp"
       imagesrcset="images/ChocayaSala-800.webp 800w, images/ChocayaSala-1600.webp 1600w"
       imagesizes="100vw">
-    <link rel="stylesheet" href="style.css?v=20260422b" />
+    <link rel="stylesheet" href="style.css?v=20261025" />
+    <link rel="stylesheet" href="floorplan.css?v=20261025" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -349,7 +350,7 @@
 
         <div class="casa-description reveal">
           <p data-i18n="casa.desc1">Ubicada dentro de un condominio privado en Chocaya, Casa Chocaya ofrece una experiencia de descanso sofisticada para familias que valoran privacidad, seguridad y comodidad. A solo 80 metros del mar, combina la tranquilidad de la playa con el confort, la amplitud y el nivel de una casa pensada para disfrutarse plenamente.</p>
-          <p data-i18n="casa.desc2">Distribuida en tres pisos, la casa reúne amplios espacios interiores y exteriores, balcones, terrazas, piscina en la azotea y zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima, con todo lo necesario para vivir la estadía con comodidad, como en casa, pero junto al mar.</p>
+          <p data-i18n="casa.desc2">Distribuida en tres pisos, la casa tiene tres dormitorios en la planta baja y uno en el segundo piso, donde se encuentran la sala, el comedor y la cocina. La azotea reúne la piscina, la terraza y la zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima.</p>
         </div>
 
         <div class="amenities-grid">
@@ -714,6 +715,57 @@
       <div class="container">
         <h2 class="section-title reveal" data-i18n="dist.title">Distribución</h2>
         <p class="section-subtitle reveal" data-i18n="dist.sub">Conoce cada espacio de la casa</p>
+
+        <!-- Geometry follows the architectural plans, pages 6–8.
+             Room photos and labels are maintained in floorplan.js. -->
+        <div class="floorplan" id="floorplan" hidden>
+          <div class="floorplan-intro">
+            <p class="floorplan-eyebrow" data-plan-text="eyebrow">EXPLORA LA CASA</p>
+            <h3 data-plan-text="heading">Tres niveles, un lugar para desconectar</h3>
+            <p data-plan-text="intro">Elige un piso y toca un espacio para descubrirlo en fotos.</p>
+          </div>
+          <div class="floorplan-tabs" role="tablist" aria-label="Pisos de la casa" data-plan-aria="floors">
+            <button type="button" role="tab" id="floorplan-tab-0" aria-controls="floorplan-panel" aria-selected="true" data-floor="0">01 · Primer piso</button>
+            <button type="button" role="tab" id="floorplan-tab-1" aria-controls="floorplan-panel" aria-selected="false" tabindex="-1" data-floor="1">02 · Segundo piso</button>
+            <button type="button" role="tab" id="floorplan-tab-2" aria-controls="floorplan-panel" aria-selected="false" tabindex="-1" data-floor="2">03 · Azotea</button>
+          </div>
+          <div class="floorplan-panel" id="floorplan-panel" role="tabpanel" aria-labelledby="floorplan-tab-0">
+            <div class="floorplan-drawing">
+              <div class="floorplan-level">
+                <h4 id="floorplan-level-title"></h4>
+                <span id="floorplan-level-summary"></span>
+              </div>
+              <div id="floorplan-map"></div>
+              <p class="floorplan-legend"><span aria-hidden="true"></span><span data-plan-text="legend">Selecciona un espacio en el plano o en la lista.</span></p>
+            </div>
+            <aside class="floorplan-details" id="floorplan-room-details" aria-labelledby="floorplan-room-name">
+              <div class="floorplan-room-heading" aria-live="polite" aria-atomic="true">
+                <p class="floorplan-eyebrow" data-plan-text="selected">TU PRÓXIMA ESTADÍA</p>
+                <h4 id="floorplan-room-name"></h4>
+                <p id="floorplan-room-description"></p>
+              </div>
+              <div class="floorplan-photos" id="floorplan-photos" hidden>
+                <button type="button" class="floorplan-photo-open" id="floorplan-photo-open">
+                  <picture>
+                    <source id="floorplan-photo-avif" type="image/avif">
+                    <source id="floorplan-photo-webp" type="image/webp">
+                    <img id="floorplan-photo" width="800" height="600" loading="lazy" decoding="async" alt="">
+                  </picture>
+                  <span data-plan-text="enlarge">Ampliar fotos ↗</span>
+                </button>
+                <div class="floorplan-photo-controls">
+                  <button type="button" id="floorplan-photo-prev" aria-label="Foto anterior" data-plan-aria="previous">&#8249;</button>
+                  <span id="floorplan-photo-count" aria-live="polite" aria-atomic="true"></span>
+                  <button type="button" id="floorplan-photo-next" aria-label="Foto siguiente" data-plan-aria="next">&#8250;</button>
+                </div>
+              </div>
+              <p class="floorplan-empty" id="floorplan-empty" data-plan-text="noPhotos" hidden>Próximamente: fotos de este espacio.</p>
+              <p class="floorplan-list-title" data-plan-text="spaces">ESPACIOS DE ESTE PISO</p>
+              <div class="floorplan-room-list" id="floorplan-room-list" role="group" aria-label="Espacios de este piso" data-plan-aria="spacesLabel"></div>
+            </aside>
+          </div>
+          <p class="floorplan-note" data-plan-text="note">Plano orientativo, sin escala. La distribución sigue el plano arquitectónico; los muebles pueden variar.</p>
+        </div>
       </div>
 
       <div class="layout-wrapper">
@@ -771,7 +823,7 @@
                   <li data-i18n="r2.d1">Cama doble 140×200 cm</li>
                   <li data-i18n="r2.d2">Baño compartido</li>
                   <li data-i18n="r2.d3">Armario</li>
-                  <li data-i18n="r2.d4">Planta alta</li>
+                  <li data-i18n="r2.d4">Planta baja</li>
                 </ul>
               </div>
             </div>
@@ -799,6 +851,7 @@
                   <li data-i18n="r3.d1">Cama doble 140×200 cm</li>
                   <li data-i18n="r3.d2">Armario</li>
                   <li data-i18n="r3.d3">Baño compartido</li>
+                  <li data-i18n="r3.d4">Planta baja</li>
                 </ul>
               </div>
             </div>
@@ -1227,22 +1280,26 @@
       role="dialog"
       aria-modal="true"
       aria-label="Vista previa de imagen"
+      data-i18n-aria="aria.preview"
     >
-      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar" data-i18n-aria="aria.close">
         &times;
       </button>
       <button
         class="lightbox-prev"
         id="lightboxPrev"
         aria-label="Imagen anterior"
+        data-i18n-aria="aria.previous"
       >
         &#8249;
       </button>
       <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption" aria-live="polite" aria-atomic="true"></p>
       <button
         class="lightbox-next"
         id="lightboxNext"
         aria-label="Imagen siguiente"
+        data-i18n-aria="aria.next"
       >
         &#8250;
       </button>
@@ -1335,6 +1392,7 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260422"></script>
+    <script src="script.js?v=20261025"></script>
+    <script src="floorplan.js?v=20261025"></script>
   </body>
 </html>
