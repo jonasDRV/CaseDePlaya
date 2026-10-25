@@ -246,7 +246,7 @@
       imagesrcset="images/ChocayaSala-800.webp 800w, images/ChocayaSala-1600.webp 1600w"
       imagesizes="100vw">
     <link rel="stylesheet" href="style.css?v=20261025" />
-    <link rel="stylesheet" href="floorplan.css?v=20261025d" />
+    <link rel="stylesheet" href="floorplan.css?v=20261025e" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -743,7 +743,6 @@
               <div class="floorplan-room-heading" aria-live="polite" aria-atomic="true">
                 <p class="floorplan-eyebrow" data-plan-text="selected">TU PRÓXIMA ESTADÍA</p>
                 <h4 id="floorplan-room-name"></h4>
-                <p id="floorplan-room-description"></p>
               </div>
               <div class="floorplan-photos" id="floorplan-photos" hidden>
                 <button type="button" class="floorplan-photo-open" id="floorplan-photo-open">
@@ -761,8 +760,7 @@
                 </div>
               </div>
               <p class="floorplan-empty" id="floorplan-empty" data-plan-text="noPhotos" hidden>Próximamente: fotos de este espacio.</p>
-              <p class="floorplan-list-title" data-plan-text="spaces">ESPACIOS DE ESTE PISO</p>
-              <div class="floorplan-room-list" id="floorplan-room-list" role="group" aria-label="Espacios de este piso" data-plan-aria="spacesLabel"></div>
+              <p class="floorplan-room-description" id="floorplan-room-description" aria-live="polite" aria-atomic="true"></p>
             </aside>
           </div>
           <p class="floorplan-note" data-plan-text="note">Plano orientativo, sin escala. La distribución sigue el plano arquitectónico; los muebles pueden variar.</p>
@@ -1394,6 +1392,6 @@
     </div>
 
     <script src="script.js?v=20261025"></script>
-    <script src="floorplan.js?v=20261025d"></script>
+    <script src="floorplan.js?v=20261025e"></script>
   </body>
 </html>

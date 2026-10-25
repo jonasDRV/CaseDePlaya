@@ -16,8 +16,7 @@
   padding: 2.2rem 2.4rem 1.6rem;
 }
 
-.floorplan-eyebrow,
-.floorplan-list-title {
+.floorplan-eyebrow {
   font-size: 0.67rem;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -34,7 +33,7 @@
 }
 
 .floorplan-intro > p:last-child,
-.floorplan-room-heading > p:last-child {
+.floorplan-room-description {
   font-size: 0.88rem;
   color: var(--text-muted);
 }
@@ -352,23 +351,11 @@
   font-size: 0.85rem;
 }
 
-.floorplan-list-title { margin: 1.8rem 0 0.6rem; }
-.floorplan-room-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-
-.floorplan-room-list button {
-  min-height: 44px;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--beige-light);
-  border-radius: 6px;
-  color: var(--brown);
-  background: transparent;
-  font-size: 0.75rem;
-  text-align: left;
-}
-
-.floorplan-room-list button[aria-pressed="true"] {
-  background: var(--beige-light);
-  border-color: var(--beige-dark);
+.floorplan-room-description {
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--beige-light);
+  line-height: 1.8;
 }
 
 .floorplan button:focus-visible {
@@ -396,8 +383,6 @@
   .floorplan-map { max-height: 640px; }
   .floorplan-details { padding: 1.5rem 1.2rem; border-left: 0; border-top: 1px solid var(--beige-light); }
   .floorplan-room-label { font-size: 17px; }
-  .floorplan-list-title,
-  .floorplan-room-list { display: none; }
   .floorplan-note { padding: 1rem 1.2rem; }
   .floorplan-back {
     display: block;

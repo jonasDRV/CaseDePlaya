@@ -21,8 +21,7 @@
       summaries: ['3 dormitorios · Accesos', '1 dormitorio · Zona social', 'Piscina · Terraza · Parrilla'],
       legend: 'Selecciona un espacio en el plano.',
       selected: 'DESCUBRE CADA ESPACIO', enlarge: 'Ampliar fotos ↗',
-      previous: 'Foto anterior', next: 'Foto siguiente', spaces: 'ESPACIOS DE ESTE PISO',
-      spacesLabel: 'Espacios de este piso', noPhotos: 'Próximamente: fotos de este espacio.',
+      previous: 'Foto anterior', next: 'Foto siguiente', noPhotos: 'Próximamente: fotos de este espacio.',
       note: 'Plano orientativo, sin escala. La distribución sigue el plano arquitectónico; los muebles pueden variar.',
       front: 'Acceso principal · Estacionamiento', rear: 'Parque del condominio',
       stairs: 'Escalera', patio: 'Patio', circulation: 'Paso', back: 'Volver al plano ↑',
@@ -39,8 +38,7 @@
       summaries: ['3 bedrooms · Entrances', '1 bedroom · Living spaces', 'Pool · Terrace · BBQ'],
       legend: 'Select a space on the plan.',
       selected: 'DISCOVER EACH SPACE', enlarge: 'Enlarge photos ↗',
-      previous: 'Previous photo', next: 'Next photo', spaces: 'SPACES ON THIS FLOOR',
-      spacesLabel: 'Spaces on this floor', noPhotos: 'Photos of this space coming soon.',
+      previous: 'Previous photo', next: 'Next photo', noPhotos: 'Photos of this space coming soon.',
       note: 'Illustrative plan, not to scale. The layout follows the architectural plan; furnishings may vary.',
       front: 'Main entrance · Parking', rear: 'Condominium park',
       stairs: 'Stairs', patio: 'Patio', circulation: 'Hall', back: 'Back to the plan ↑',
@@ -168,10 +166,10 @@
           flights: [{ axis: 'y', from: 362, to: 490, start: 40, end: 85 }, { axis: 'x', from: 97, to: 145, start: 490, end: 535 }],
           route: 'M63 365V512H135', name: ['Escalera de la casa al segundo piso', 'House stairs to the upper floor'],
           label: [['Al segundo', 'piso'], ['To upper', 'floor']], at: [144, 432] },
-        { id: 'roof-pool-stairs', outline: 'M145 300H190V365H145Z',
-          flights: [{ axis: 'y', from: 311, to: 365, start: 145, end: 190 }],
-          route: 'M167 354V310', name: ['Escalera de acceso a la piscina elevada', 'Steps up to the raised pool area'],
-          label: [['Acceso', 'piscina'], ['Pool', 'steps']], at: [245, 329], kind: 'pool' },
+        { id: 'roof-pool-stairs', outline: 'M85 300H130V365H85Z',
+          flights: [{ axis: 'y', from: 311, to: 365, start: 85, end: 130 }],
+          route: 'M107 354V310', name: ['Escalera de acceso a la piscina elevada', 'Steps up to the raised pool area'],
+          label: [['Acceso', 'piscina'], ['Pool', 'steps']], at: [185, 329], kind: 'pool' },
       ],
       fixtures: 'M49 548H68V670H49Z M429 315H451V665H429',
       contexts: [],
@@ -181,7 +179,6 @@
   const ns = 'http://www.w3.org/2000/svg';
   const byId = id => document.getElementById(id);
   const map = byId('floorplan-map');
-  const roomList = byId('floorplan-room-list');
   const photo = byId('floorplan-photo');
   const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
   let floorIndex = 0;
@@ -303,17 +300,6 @@
     svgElement('text', { x: 250, y: 855, class: 'floorplan-context' }, svg).textContent = t.rear;
     map.replaceChildren(svg);
 
-    roomList.replaceChildren();
-    floor.rooms.filter(room => room.interactive !== false).forEach(room => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.dataset.room = room.id;
-      button.textContent = room.name[languageIndex()];
-      button.setAttribute('aria-pressed', String(room.id === roomId));
-      button.setAttribute('aria-controls', 'floorplan-room-details');
-      button.addEventListener('click', () => selectRoom(room.id, true));
-      roomList.append(button);
-    });
   }
 
   function showPhoto() {
