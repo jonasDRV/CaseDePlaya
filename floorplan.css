@@ -164,6 +164,91 @@
   pointer-events: none;
 }
 
+.floorplan-staircase,
+.floorplan-void,
+.floorplan-door,
+.floorplan-furniture,
+.floorplan-pool-water { pointer-events: none; }
+
+.floorplan-stair-outline {
+  fill: #fffdf9;
+  stroke: #a18c76;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.floorplan-staircase--pool .floorplan-stair-outline { fill: #e1eceb; }
+
+.floorplan-stair-tread {
+  fill: none;
+  stroke: #a18c76;
+  stroke-width: 1.2;
+}
+
+.floorplan-stair-direction {
+  fill: none;
+  stroke: var(--brown);
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.floorplan-arrowhead { fill: var(--brown); }
+.floorplan-hatch-background { fill: var(--cream); }
+.floorplan-hatch-line { fill: none; stroke: #d6ccbd; stroke-width: 1; }
+
+.floorplan-void-shape {
+  fill: url(#floorplan-void-hatch);
+  stroke: #a18c76;
+  stroke-width: 1.8;
+  stroke-dasharray: 6 4;
+}
+
+.floorplan-annotation {
+  font-family: var(--font-body);
+  font-size: 12px;
+  fill: var(--brown);
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: var(--cream);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.floorplan-door-gap { fill: none; stroke: #eeeae5; stroke-width: 7; }
+.floorplan-door-leaf { fill: none; stroke: var(--brown); stroke-width: 1.8; }
+.floorplan-door-swing { fill: none; stroke: #a18c76; stroke-width: 1.2; }
+
+.floorplan-furniture {
+  fill: #fffaf0;
+  stroke: #967b5d;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.floorplan-furniture path { fill: none; }
+.floorplan-table { fill: #e8d5b7; }
+.floorplan-pool-water { fill: #c0dce0; stroke: #70969b; stroke-width: 1.2; }
+
+.floorplan-void-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.floorplan-void-legend::before {
+  content: '';
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px dashed var(--beige-dark);
+  background: repeating-linear-gradient(135deg, transparent 0 4px, #d6ccbd 4px 5px);
+}
+
 .floorplan-context {
   font-family: var(--font-body);
   fill: var(--text-muted);
