@@ -19,7 +19,7 @@
       floors: 'Pisos de la casa', tabs: ['01 · Primer piso', '02 · Segundo piso', '03 · Azotea'],
       levels: ['Primer piso · Planta baja', 'Segundo piso', 'Azotea'],
       summaries: ['3 dormitorios · Accesos', '1 dormitorio · Zona social', 'Piscina · Terraza · Parrilla'],
-      legend: 'Selecciona un espacio en el plano o en la lista.',
+      legend: 'Selecciona un espacio en el plano.',
       selected: 'DESCUBRE CADA ESPACIO', enlarge: 'Ampliar fotos ↗',
       previous: 'Foto anterior', next: 'Foto siguiente', spaces: 'ESPACIOS DE ESTE PISO',
       spacesLabel: 'Espacios de este piso', noPhotos: 'Próximamente: fotos de este espacio.',
@@ -37,7 +37,7 @@
       floors: 'House floors', tabs: ['01 · Ground floor', '02 · Upper floor', '03 · Rooftop'],
       levels: ['Ground floor', 'Upper floor', 'Rooftop'],
       summaries: ['3 bedrooms · Entrances', '1 bedroom · Living spaces', 'Pool · Terrace · BBQ'],
-      legend: 'Select a space on the plan or from the list.',
+      legend: 'Select a space on the plan.',
       selected: 'DISCOVER EACH SPACE', enlarge: 'Enlarge photos ↗',
       previous: 'Previous photo', next: 'Next photo', spaces: 'SPACES ON THIS FLOOR',
       spacesLabel: 'Spaces on this floor', noPhotos: 'Photos of this space coming soon.',
@@ -65,7 +65,7 @@
           path: 'M205 83 460 65V354H205Z', at: [332, 215], kind: 'service', photos: ['ChocayaCarPort'] },
         { id: 'technical-room', name: ['Cuarto técnico', 'Technical room'], label: [['Cuarto', 'técnico'], ['Technical', 'room']],
           description: ['Espacio técnico junto a la cochera.', 'Technical space beside the garage.'],
-          path: 'M145 87 205 83V230H145Z', at: [175, 156], labelSize: 12, kind: 'service', photos: [] },
+          path: 'M145 87 205 83V230H145Z', at: [175, 156], labelSize: 12, kind: 'service', interactive: false, photos: [] },
         { id: 'ground-wc', name: ['Baño de visitas · Planta baja', 'Guest bathroom · Ground floor'], label: [['Baño'], ['WC']],
           description: ['Baño junto al hall de ingreso.', 'Bathroom beside the entrance hall.'],
           path: 'M145 230H205V330H145Z', at: [175, 280], kind: 'service', photos: [] },
@@ -150,11 +150,12 @@
     },
     {
       defaultRoom: 'pool',
-      outline: 'M40 180H460V680H40Z',
+      // Above the upper-floor balcony, beside the pool, there is no roof slab.
+      outline: 'M40 180H205V300H460V680H40Z',
       rooms: [
         { id: 'pool', name: ['Piscina en la azotea', 'Rooftop pool'], label: [['Piscina'], ['Pool']],
-          description: ['Piscina y zona elevada junto a ella, con una escalera de acceso propia desde la terraza.', 'The pool and its raised poolside area, reached by a separate set of steps from the terrace.'],
-          path: 'M40 180H460V300H40Z', water: 'M47 187H198V275H47Z', at: [122, 235], kind: 'water', photos: ['ChocallaPool', 'PoolyMar', 'PoolyVista', 'poolyvistafrontis'] },
+          description: ['Piscina elevada, con una escalera de acceso propia desde la terraza.', 'Raised pool, reached by a separate set of steps from the terrace.'],
+          path: 'M40 180H205V300H40Z', water: 'M47 187H198V275H47Z', at: [122, 235], kind: 'water', photos: ['ChocallaPool', 'PoolyMar', 'PoolyVista', 'poolyvistafrontis'] },
         { id: 'bbq', name: ['Zona de parrilla', 'BBQ area'], label: [['Zona de', 'parrilla'], ['BBQ', 'area']],
           description: ['Área de parrilla en la azotea, contigua a la terraza.', 'Rooftop BBQ area adjoining the terrace.'],
           path: 'M40 535H215V680H40Z', at: [127, 607], kind: 'outdoor', photos: ['Terraza'] },
@@ -271,16 +272,21 @@
     svgElement('path', { d: floor.outline || 'M40 95 460 65V787L40 825Z', class: 'floorplan-outline' }, svg);
 
     floor.rooms.forEach(room => {
+      const interactive = room.interactive !== false;
       const group = svgElement('g', {
-        class: `floorplan-room${room.kind ? ` floorplan-room--${room.kind}` : ''}`,
-        role: 'button', tabindex: '0', 'aria-label': room.name[languageIndex()],
-        'aria-pressed': String(room.id === roomId), 'aria-controls': 'floorplan-room-details',
-        'data-room': room.id,
+        class: `${interactive ? 'floorplan-room' : 'floorplan-static-room'}${room.kind ? ` floorplan-room--${room.kind}` : ''}`,
+        'aria-label': room.name[languageIndex()],
+        ...(interactive ? {
+          role: 'button', tabindex: '0',
+          'aria-pressed': String(room.id === roomId), 'aria-controls': 'floorplan-room-details',
+          'data-room': room.id,
+        } : { role: 'img', 'data-static-room': room.id }),
       }, svg);
       svgElement('path', { d: room.path, class: 'floorplan-room-shape' }, group);
       if (room.water) svgElement('path', { d: room.water, class: 'floorplan-pool-water', 'aria-hidden': 'true' }, group);
       const text = svgLabel(group, room.label[languageIndex()], room.at, 'floorplan-room-label');
       if (room.labelSize) text.style.fontSize = `${room.labelSize}px`;
+      if (!interactive) return;
       group.addEventListener('click', () => selectRoom(room.id, true));
       group.addEventListener('keydown', event => {
         if (event.key === 'Enter' || event.key === ' ') {
@@ -298,7 +304,7 @@
     map.replaceChildren(svg);
 
     roomList.replaceChildren();
-    floor.rooms.forEach(room => {
+    floor.rooms.filter(room => room.interactive !== false).forEach(room => {
       const button = document.createElement('button');
       button.type = 'button';
       button.dataset.room = room.id;

@@ -119,6 +119,11 @@
   outline: none;
 }
 
+.floorplan-static-room {
+  cursor: default;
+  pointer-events: none;
+}
+
 .floorplan-room-shape {
   fill: #f0e7db;
   stroke: #a18c76;
@@ -391,7 +396,8 @@
   .floorplan-map { max-height: 640px; }
   .floorplan-details { padding: 1.5rem 1.2rem; border-left: 0; border-top: 1px solid var(--beige-light); }
   .floorplan-room-label { font-size: 17px; }
-  .floorplan-room-list { gap: 0.5rem; }
+  .floorplan-list-title,
+  .floorplan-room-list { display: none; }
   .floorplan-note { padding: 1rem 1.2rem; }
   .floorplan-back {
     display: block;

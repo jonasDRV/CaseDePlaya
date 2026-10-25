@@ -29,8 +29,9 @@ die bisherigen Raumkarten und die allgemeine Galerie bleiben unverändert.
 
 - Erdgeschoss: Eingang und Hall bilden einen gemeinsamen Bereich. Die zwei
   zuvor leeren Bereiche neben der Garage sind zu einem Technikraum
-  zusammengefasst. Die Lounge erhält eine kleine Sitzecke zur Orientierung
-  anhand der Bestandsfotos. Die Kitchenette wird als gerade Küchenzeile
+  zusammengefasst. Dieser bleibt beschriftet sichtbar, ist aber nicht
+  anklickbar und erscheint nicht in der Raumliste. Die Lounge erhält eine
+  kleine Sitzecke zur Orientierung anhand der Bestandsfotos. Die Kitchenette wird als gerade Küchenzeile
   dargestellt; die Verbindungstür zur Garage ist eingezeichnet.
 - Obergeschoss: Die Treppe wird als L-Treppe dargestellt. Der offene
   Galeriebereich ist als Luftraum ohne Boden gekennzeichnet. Patio und die
@@ -39,7 +40,9 @@ die bisherigen Raumkarten und die allgemeine Galerie bleiben unverändert.
 - Dachterrasse: Nur Pool, BBQ und Terrasse sind auswählbare Bereiche. Der
   Zugang vom Obergeschoss und die Pooltreppe sind getrennt erkennbar und
   dienen der Orientierung. Das Bild `Terraza` zeigt den BBQ-Bereich und ist
-  diesem zugeordnet.
+  diesem zugeordnet. Rechts neben dem Pool liegt über dem Balkon im
+  Obergeschoss ein offener Bereich ohne Dachbodenfläche. Dieser ist aus
+  dem Dachumriss und der anklickbaren Poolfläche ausgespart.
 
 Die eingezeichneten Möbel unterstützen die Orientierung; sie sind keine
 verbindliche Darstellung der aktuellen Ausstattung nach der Renovierung.
@@ -58,7 +61,9 @@ Jeder Name benötigt diese Dateien in `images/`:
 
 Die Vorschau nutzt responsive AVIF/WebP-Bilder. Die vergrößerte Galerie nutzt
 1600er WebP-Dateien und die bestehende `openLightbox`-Funktion in `script.js`.
-Ein leeres `photos: []` zeigt einen Platzhalter und keine fremden Raumfotos.
+Bei auswählbaren Räumen zeigt ein leeres `photos: []` einen Platzhalter und
+keine fremden Raumfotos. Mit `interactive: false` bleibt ein Raum nur als
+beschriftete Fläche sichtbar, ohne Klick-, Tastatur- oder Listenauswahl.
 Insbesondere die einzelnen Bäder und einige Nebenbereiche benötigen noch
 eine eindeutige Fotozuordnung. Lufträume und Treppen werden als
 Orientierungselemente gezeigt und erhalten keine eigenen Fotoansichten.
@@ -71,7 +76,8 @@ stehen in `floorplan.js`; bestehende Webseitentexte bleiben in `script.js`.
 ## Verhalten und lokale Prüfung
 
 - Etagenwahl per Klick, Pfeiltasten, Home und End.
-- Raumwahl per Plan, Raumliste, Enter und Leertaste.
+- Raumwahl per Plan, Enter und Leertaste; zusätzlich per Raumliste auf dem
+  Desktop. Bis 768 px sind die Raumliste und ihre Überschrift ausgeblendet.
 - Mobile Raumwahl scrollt zur Vorschau; „Zurück zum Plan“ setzt den Fokus
   auf den gewählten Raum zurück.
 - Sprachwechsel erhält Raum und ausgewähltes Foto.
