@@ -15,15 +15,49 @@ Nordrichtung wird daraus nicht abgeleitet.
 
 | Raum-ID | Lage | Bestätigtes Schlafzimmerfoto |
 | --- | --- | --- |
-| `ground-bedroom-front` | Erdgeschoss, hinter der Garage | `Dormitorio3` |
-| `ground-bedroom-left` | Erdgeschoss, links hinten neben Patio; Bedroom 2 | `Dormitorio4` |
-| `ground-bedroom-main` | Erdgeschoss, rechts hinten zum Park; Bedroom 4 | `Dormitorio2` |
-| `upper-bedroom` | Einziges Schlafzimmer im Obergeschoss | `ChocayaDormitorio` |
+| `ground-bedroom-front` | Erdgeschoss, hinter der Garage; Bedroom 3 | `gf_bedroom3` |
+| `ground-bedroom-left` | Erdgeschoss, links hinten neben Patio; Bedroom 2 | `gf_bedroom2_1`, `gf_bedroom2_2` |
+| `ground-bedroom-main` | Erdgeschoss, rechts hinten zum Park; Bedroom 4 | `gf_bedroom4` |
+| `upper-bedroom` | Einziges Schlafzimmer im Obergeschoss; Bedroom 1 | `1st_bedroom1_1` |
 
-Die Fotozuordnung von Bedroom 2 und Bedroom 4 wurde nach der Rückmeldung
-des Eigentümers getauscht. Die Raumnummern im Grundriss ergeben sich nicht
-aus den Bilddateinamen. Diese Korrektur betrifft die Fotos im Grundriss;
-die bisherigen Raumkarten und die allgemeine Galerie bleiben unverändert.
+Die renovierten Fotos vom 27.10.2026 verwenden `gf_` für das Erdgeschoss,
+`1st_` für das Obergeschoss und `2nd_` für die Dachterrasse. Deren neue
+Schlafzimmernummern stimmen mit dem Grundriss überein. Die alten Dateinamen
+`Dormitorio2` und `Dormitorio4` waren gegenüber den Raumnummern vertauscht.
+Die bisherigen Raumkarten und die allgemeine Galerie bleiben vorerst
+unverändert; die neue Zuordnung gilt für den interaktiven Grundriss.
+
+Weitere Fotozuordnungen:
+
+| Raum-ID | Fotos |
+| --- | --- |
+| `entrance` | `exterieur_front`, `gf_lounge_entrance` |
+| `garage` | `gf_garage` |
+| `ground-wc` | `gf_toilet` |
+| `ground-lounge` | `gf_lounge`, `gf_lounge_entrance` |
+| `kitchenette` | `gf_lounge_entrance` (Zeile und Garagentür in der Gesamtansicht) |
+| `ground-shared-bath` | `gf_sharedbath_1` |
+| `ground-rear-bath` | `gf_bathroom_of_bed2` (Bad von Bedroom 2) |
+| `ground-patio` | `exterieur_back` (Außenansicht des rückwärtigen Zugangs) |
+| `upper-terrace` | `1st_living_terrace_2`, `1st_living_terrace_1` |
+| `upper-living` | `1st_living_terrace_1`, `1st_living_3`, `1st_living_2`, `1st_living_night` |
+| `dining` | `1st_dining_2`, `1st_dining_1`, `1st_dining_living` |
+| `kitchen` | `1st_kitchen`, `1st_kitchen_night`, `1st_dining_1` |
+| `upper-bath` | `1st_bathroom_of_bed1` (Bad von Bedroom 1) |
+| `balcony` | `exterieur_back` (Außenansicht), `VistaParque` (bisheriger Ausblick) |
+| `pool` | `2nd_pool_view_2`, `2nd_pool_1`, `2nd_pool_view_1`, `2nd_pool_view_3` |
+| `bbq` | `2nd_terrace_bbq` |
+| `roof-terrace` | `2nd_terrace_seaview`, `2nd_terrace_parkview`, `2nd_terrace_bbq` |
+
+Identische Dateien werden innerhalb einer Raumansicht nicht doppelt gezeigt:
+`1st_dining_kitchen` ist identisch zu `1st_dining_1`, `gf_sharedbath_2` zu
+`gf_sharedbath_1`. Die Bilddateien selbst bleiben erhalten.
+
+`1st_bathroom_of_bed1` und `gf_bathroom_of_bed2` sind ebenfalls bytegleich.
+Der Eigentümer hat bestätigt, dass die beiden Badezimmer identisch aussehen
+und das Foto ausdrücklich für beide Räume verwendet werden soll.
+Für `upper-wc` liegt weiterhin kein eindeutig zugeordnetes neues Bild vor.
+`seaview` bleibt für die spätere Auswahl der allgemeinen Galerie verfügbar.
 
 ## Schematische Darstellung der Etagen
 
@@ -40,8 +74,8 @@ die bisherigen Raumkarten und die allgemeine Galerie bleiben unverändert.
 - Dachterrasse: Nur Pool, BBQ und Terrasse sind auswählbare Bereiche. Der
   Zugang vom Obergeschoss und die Pooltreppe sind getrennt erkennbar;
   die Pooltreppe schließt rechts direkt an den Hausaufgang an, bei
-  unveränderter Breite und Länge. Das Bild `Terraza` zeigt den BBQ-Bereich und ist
-  diesem zugeordnet. Rechts neben dem Pool liegt über dem Balkon im
+  unveränderter Breite und Länge. Das neue Bild `2nd_terrace_bbq` zeigt den
+  BBQ-Bereich. Rechts neben dem Pool liegt über dem Balkon im
   Obergeschoss ein offener Bereich ohne Dachbodenfläche. Dieser ist aus
   dem Dachumriss und der anklickbaren Poolfläche ausgespart.
 
@@ -60,13 +94,22 @@ Jeder Name benötigt diese Dateien in `images/`:
 - `<name>-800.webp`
 - `<name>-1600.webp`
 
+Das Suffix `-1600` bezeichnet bei den neuen Fotos die maximale Exportbreite.
+Viele Originale sind kleiner; sie wurden korrekt nicht hochgerechnet.
+`casaImages.dimensions` in `image-metadata.js` hält die tatsächlichen Breiten
+und Höhen aller Varianten für die `srcset`-Angaben fest. Bei späteren Bildern
+diese Werte mit den realen Dateiabmessungen abgleichen. Hochformatige
+Bestandsbilder können auch bei der kleinen Variante unter 800 Pixel breit sein.
+Spanische und englische Alttexte stehen ebenfalls in `image-metadata.js` und
+werden bei Raumwechsel, Fotowechsel, Sprachwechsel und Vergrößerung verwendet.
+
 Die Vorschau nutzt responsive AVIF/WebP-Bilder. Die vergrößerte Galerie nutzt
 1600er WebP-Dateien und die bestehende `openLightbox`-Funktion in `script.js`.
 Bei auswählbaren Räumen zeigt ein leeres `photos: []` einen Platzhalter und
 keine fremden Raumfotos. Mit `interactive: false` bleibt ein Raum nur als
 beschriftete Fläche sichtbar, ohne Klick- oder Tastaturauswahl.
-Insbesondere die einzelnen Bäder und einige Nebenbereiche benötigen noch
-eine eindeutige Fotozuordnung. Lufträume und Treppen werden als
+Für das Gäste-WC im Obergeschoss fehlt noch eine eigene Aufnahme.
+Lufträume und Treppen werden als
 Orientierungselemente gezeigt und erhalten keine eigenen Fotoansichten.
 
 Die Raumkarten unter dem Plan und die allgemeine Galerie verwenden weiterhin
@@ -91,6 +134,6 @@ stehen in `floorplan.js`; bestehende Webseitentexte bleiben in `script.js`.
 
 Es gibt keinen Build-Schritt und keine neuen externen Abhängigkeiten. Zur
 lokalen Prüfung `index.html` im Browser öffnen und „Distribución“ wählen.
-Für GitHub Pages müssen `floorplan.css` und `floorplan.js` zusammen mit den
+Für GitHub Pages müssen `image-metadata.js`, `floorplan.css` und `floorplan.js` zusammen mit den
 zugehörigen Änderungen an HTML und JavaScript vorliegen.
 Versionsparameter an den eingebundenen Dateien beim späteren Update erhöhen.

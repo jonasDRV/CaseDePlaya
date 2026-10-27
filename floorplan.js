@@ -2,8 +2,8 @@
  * The owner confirmed the walls and the three/one bedroom split on 2026-10-25.
  * Geometry describes spaces; the ground-floor seating is an illustrative
  * outline of the existing photos, not a furniture survey. Never infer photo
- * assignments from legacy bedroom numbers. Bedroom photo positions were
- * confirmed by the owner; other unconfirmed spaces keep their photos empty.
+ * assignments from legacy bedroom numbers. The renovated photo set uses
+ * gf_ / 1st_ / 2nd_ for ground / upper / rooftop, matching the plan's rooms.
  * Add/replace each room's photo basenames below when the new photos arrive.
  * Expected assets: images/<basename>-{800,1600}.{avif,webp}.
  */
@@ -27,7 +27,6 @@
       stairs: 'Escalera', patio: 'Patio', circulation: 'Paso', back: 'Volver al plano ↑',
       voidLegend: 'Trama: vacío / sin suelo en este nivel.',
       seating: 'Sofá, dos sillones y mesa redonda en la sala de la planta baja.',
-      photo: (name, i, total) => `${name} · Foto ${i} de ${total}`,
       imageCount: (i, total) => `${i} / ${total}`,
     },
     en: {
@@ -44,10 +43,10 @@
       stairs: 'Stairs', patio: 'Patio', circulation: 'Hall', back: 'Back to the plan ↑',
       voidLegend: 'Hatching: open void / no floor on this level.',
       seating: 'Sofa, two armchairs and a round table in the ground-floor lounge.',
-      photo: (name, i, total) => `${name} · Photo ${i} of ${total}`,
       imageCount: (i, total) => `${i} / ${total}`,
     },
   };
+
 
   // Coordinates share the same footprint and orientation on all three floors.
   // Bedroom numbers match the existing room cards and the owner's photo mapping.
@@ -57,40 +56,40 @@
       rooms: [
         { id: 'entrance', name: ['Ingreso y hall', 'Entrance and hall'], label: [['Ingreso', 'y hall'], ['Entrance', '& hall']],
           description: ['El acceso peatonal desde el estacionamiento común continúa en el hall y conecta con la escalera y la sala.', 'The pedestrian entrance from the shared parking area continues into the hall, connecting to the staircase and lounge.'],
-          path: 'M40 95 145 87V300H40Z', at: [92, 196], photos: [] },
+          path: 'M40 95 145 87V300H40Z', at: [92, 196], photos: ['exterieur_front', 'gf_lounge_entrance'] },
         { id: 'garage', name: ['Cochera', 'Garage'], label: [['Cochera'], ['Garage']],
           description: ['Estacionamiento dentro de la propiedad, con espacio para dos autos.', 'Parking inside the property, with room for two cars.'],
-          path: 'M205 83 460 65V354H205Z', at: [332, 215], kind: 'service', photos: ['ChocayaCarPort'] },
+          path: 'M205 83 460 65V354H205Z', at: [332, 215], kind: 'service', photos: ['gf_garage'] },
         { id: 'technical-room', name: ['Cuarto técnico', 'Technical room'], label: [['Cuarto', 'técnico'], ['Technical', 'room']],
           description: ['Espacio técnico junto a la cochera.', 'Technical space beside the garage.'],
           path: 'M145 87 205 83V230H145Z', at: [175, 156], labelSize: 12, kind: 'service', interactive: false, photos: [] },
         { id: 'ground-wc', name: ['Baño de visitas · Planta baja', 'Guest bathroom · Ground floor'], label: [['Baño'], ['WC']],
           description: ['Baño junto al hall de ingreso.', 'Bathroom beside the entrance hall.'],
-          path: 'M145 230H205V330H145Z', at: [175, 280], kind: 'service', photos: [] },
+          path: 'M145 230H205V330H145Z', at: [175, 280], kind: 'service', photos: ['gf_toilet'] },
         { id: 'ground-lounge', name: ['Sala · Planta baja', 'Ground-floor lounge'], label: [['Sala'], ['Lounge']],
           description: ['Un espacio de estar junto a la escalera que conecta los pisos de la casa.', 'A sitting area beside the staircase connecting the house’s floors.'],
-          path: 'M85 330H205V535H40V480H85Z', at: [145, 365], photos: ['LobbyAbajo', 'LobbyAbajo2'] },
+          path: 'M85 330H205V535H40V480H85Z', at: [145, 365], photos: ['gf_lounge', 'gf_lounge_entrance'] },
         { id: 'kitchenette', name: ['Kitchenette · Planta baja', 'Ground-floor kitchenette'], label: [['Kitchenette'], ['Kitchenette']],
           description: ['Kitchenette en una sola línea, con área de lavandería y puerta de conexión con la cochera.', 'A single-run kitchenette with a laundry area and a connecting door to the garage.'],
-          path: 'M205 354H295V535H205Z', at: [250, 430], kind: 'service', photos: [] },
+          path: 'M205 354H295V535H205Z', at: [250, 430], kind: 'service', photos: ['gf_lounge_entrance'] },
         { id: 'ground-bedroom-front', name: ['Dormitorio 3 · Planta baja', 'Bedroom 3 · Ground floor'], label: [['Dormitorio 3'], ['Bedroom 3']],
           description: ['Dormitorio en la planta baja, situado detrás de la cochera en el plano.', 'Ground-floor bedroom immediately behind the garage on the plan.'],
-          path: 'M295 354H460V535H295Z', at: [378, 440], photos: ['Dormitorio3'] },
+          path: 'M295 354H460V535H295Z', at: [378, 440], photos: ['gf_bedroom3'] },
         { id: 'ground-bedroom-left', name: ['Dormitorio 2 · Planta baja', 'Bedroom 2 · Ground floor'], label: [['Dormitorio 2'], ['Bedroom 2']],
           description: ['Dormitorio en la planta baja, junto al patio posterior.', 'Ground-floor bedroom beside the rear patio.'],
-          path: 'M40 535H205V680H40Z', at: [122, 606], photos: ['Dormitorio4'] },
+          path: 'M40 535H205V680H40Z', at: [122, 606], photos: ['gf_bedroom2_1', 'gf_bedroom2_2'] },
         { id: 'ground-shared-bath', name: ['Baño compartido · Planta baja', 'Shared bathroom · Ground floor'], label: [['Baño', 'compartido'], ['Shared', 'bathroom']],
           description: ['Baño compartido situado entre los dormitorios de la planta baja.', 'Shared bathroom between the ground-floor bedrooms.'],
-          path: 'M350 535H460V640H350Z', at: [405, 581], kind: 'service', photos: [] },
+          path: 'M350 535H460V640H350Z', at: [405, 581], kind: 'service', photos: ['gf_sharedbath_1'] },
         { id: 'ground-bedroom-main', name: ['Dormitorio 4 · Planta baja', 'Bedroom 4 · Ground floor'], label: [['Dormitorio 4'], ['Bedroom 4']],
           description: ['Dormitorio de la planta baja, en el lado del parque del condominio.', 'Ground-floor bedroom on the condominium park side.'],
-          path: 'M255 595H350V640H460V787L255 805Z', at: [356, 727], photos: ['Dormitorio2'] },
+          path: 'M255 595H350V640H460V787L255 805Z', at: [356, 727], photos: ['gf_bedroom4'] },
         { id: 'ground-rear-bath', name: ['Baño junto al patio', 'Bathroom beside the patio'], label: [['Baño'], ['Bath']],
           description: ['Baño posterior de la planta baja, junto al patio.', 'Rear ground-floor bathroom beside the patio.'],
-          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: [] },
+          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: ['gf_bathroom_of_bed2'] },
         { id: 'ground-patio', name: ['Patio · Planta baja', 'Ground-floor patio'], label: [['Patio'], ['Patio']],
           description: ['Espacio exterior junto al acceso posterior desde el parque.', 'Outdoor space beside the rear entrance from the park.'],
-          path: 'M110 680H205V810L110 819Z', at: [157, 752], kind: 'outdoor', photos: [] },
+          path: 'M110 680H205V810L110 819Z', at: [157, 752], kind: 'outdoor', photos: ['exterieur_back'] },
       ],
       stairs: [{ id: 'ground-stairs', outline: 'M40 310H85V480H40Z',
         flights: [{ axis: 'y', from: 322, to: 480, start: 40, end: 85 }],
@@ -111,25 +110,25 @@
           path: 'M145 180H205V300H145Z', at: [175, 240], kind: 'service', photos: [] },
         { id: 'upper-terrace', name: ['Terraza · Segundo piso', 'Upper-floor terrace'], label: [['Terraza'], ['Terrace']],
           description: ['Terraza contigua a la sala del segundo piso.', 'Terrace adjoining the upper-floor living room.'],
-          path: 'M205 180H460V300H205Z', at: [332, 240], kind: 'outdoor', photos: [] },
+          path: 'M205 180H460V300H205Z', at: [332, 240], kind: 'outdoor', photos: ['1st_living_terrace_2', '1st_living_terrace_1'] },
         { id: 'upper-living', name: ['Sala de estar · Segundo piso', 'Upper-floor living room'], label: [['Sala de estar'], ['Living room']],
           description: ['La zona social principal de la casa, conectada con el comedor, la cocina y la terraza.', 'The main living space, connected to the dining area, kitchen and terrace.'],
-          path: 'M205 300H460V535H205Z', at: [332, 420], photos: ['ChocayaSala', 'ChocayaWohnzimmer2', 'Wohnzimmer'] },
+          path: 'M205 300H460V535H205Z', at: [332, 420], photos: ['1st_living_terrace_1', '1st_living_3', '1st_living_2', '1st_living_night'] },
         { id: 'upper-bedroom', name: ['Dormitorio 1 · Segundo piso', 'Bedroom 1 · Upper floor'], label: [['Dormitorio 1'], ['Bedroom 1']],
           description: ['El único dormitorio del segundo piso, junto al baño posterior.', 'The only bedroom on the upper floor, beside the rear bathroom.'],
-          path: 'M40 535H205V680H40Z', at: [122, 607], photos: ['ChocayaDormitorio'] },
+          path: 'M40 535H205V680H40Z', at: [122, 607], photos: ['1st_bedroom1_1'] },
         { id: 'dining', name: ['Comedor', 'Dining area'], label: [['Comedor'], ['Dining']],
           description: ['Comedor junto a la cocina, integrado en la zona social del segundo piso.', 'Dining area beside the kitchen, within the upper-floor living space.'],
-          path: 'M205 535H460V625H205Z', at: [332, 580], photos: ['Comedor', 'CocinaComedor'] },
+          path: 'M205 535H460V625H205Z', at: [332, 580], photos: ['1st_dining_2', '1st_dining_1', '1st_dining_living'] },
         { id: 'kitchen', name: ['Cocina · Segundo piso', 'Upper-floor kitchen'], label: [['Cocina'], ['Kitchen']],
           description: ['Cocina equipada en el segundo piso, junto al comedor y el balcón.', 'Equipped upper-floor kitchen beside the dining area and balcony.'],
-          path: 'M205 625H460V745H205Z', at: [332, 682], kind: 'service', photos: ['ChocayaCocina', 'CocinaDeNoche', 'CocinaComedor'] },
+          path: 'M205 625H460V745H205Z', at: [332, 682], kind: 'service', photos: ['1st_kitchen', '1st_kitchen_night', '1st_dining_1'] },
         { id: 'upper-bath', name: ['Baño junto al dormitorio · Segundo piso', 'Bathroom beside the upper-floor bedroom'], label: [['Baño'], ['Bath']],
           description: ['Baño posterior del segundo piso, junto al dormitorio.', 'Rear upper-floor bathroom, beside the bedroom.'],
-          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: [] },
+          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: ['1st_bathroom_of_bed1'] },
         { id: 'balcony', name: ['Balcón · Segundo piso', 'Upper-floor balcony'], label: [['Balcón'], ['Balcony']],
           description: ['Balcón en el lado del parque, junto a la cocina.', 'Balcony on the park side, beside the kitchen.'],
-          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['VistaFrontisBalcon', 'VistaParque'] },
+          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['exterieur_back', 'VistaParque'] },
       ],
       voids: [
         { id: 'entrance-void', path: 'M40 180H145V300H40Z', at: [92, 240],
@@ -153,13 +152,13 @@
       rooms: [
         { id: 'pool', name: ['Piscina en la azotea', 'Rooftop pool'], label: [['Piscina'], ['Pool']],
           description: ['Piscina elevada, con una escalera de acceso propia desde la terraza.', 'Raised pool, reached by a separate set of steps from the terrace.'],
-          path: 'M40 180H205V300H40Z', water: 'M47 187H198V275H47Z', at: [122, 235], kind: 'water', photos: ['ChocallaPool', 'PoolyMar', 'PoolyVista', 'poolyvistafrontis'] },
+          path: 'M40 180H205V300H40Z', water: 'M47 187H198V275H47Z', at: [122, 235], kind: 'water', photos: ['2nd_pool_view_2', '2nd_pool_1', '2nd_pool_view_1', '2nd_pool_view_3'] },
         { id: 'bbq', name: ['Zona de parrilla', 'BBQ area'], label: [['Zona de', 'parrilla'], ['BBQ', 'area']],
           description: ['Área de parrilla en la azotea, contigua a la terraza.', 'Rooftop BBQ area adjoining the terrace.'],
-          path: 'M40 535H215V680H40Z', at: [127, 607], kind: 'outdoor', photos: ['Terraza'] },
+          path: 'M40 535H215V680H40Z', at: [127, 607], kind: 'outdoor', photos: ['2nd_terrace_bbq'] },
         { id: 'roof-terrace', name: ['Terraza · Azotea', 'Rooftop terrace'], label: [['Terraza'], ['Terrace']],
           description: ['Terraza exterior en el tercer nivel, con vistas al mar.', 'Outdoor terrace on the third level, with sea views.'],
-          path: 'M40 300H460V680H215V535H145V490H85V350H40Z', at: [337, 497], kind: 'outdoor', photos: ['ChocallaPool'] },
+          path: 'M40 300H460V680H215V535H145V490H85V350H40Z', at: [337, 497], kind: 'outdoor', photos: ['2nd_terrace_seaview', '2nd_terrace_parkview', '2nd_terrace_bbq'] },
       ],
       stairs: [
         { id: 'roof-house-stairs', outline: 'M40 350H85V490H145V535H40Z',
@@ -315,14 +314,15 @@
       return;
     }
     const name = room.photos[photoIndex];
-    const sizes = '(max-width: 768px) 90vw, 400px';
+
+    const sizes = '(max-width: 520px) calc(100vw - 5rem), (max-width: 768px) calc(100vw - 6.5rem), (max-width: 1200px) calc(42.55vw - 5.8rem), 420px';
     ['avif', 'webp'].forEach(format => {
       const source = byId(`floorplan-photo-${format}`);
-      source.srcset = `images/${name}-800.${format} 800w, images/${name}-1600.${format} 1600w`;
+      source.srcset = casaImages.srcset(name, format);
       source.sizes = sizes;
     });
     photo.src = `images/${name}-1600.webp`;
-    photo.alt = t.photo(room.name[languageIndex()], photoIndex + 1, room.photos.length);
+    casaImages.apply(photo, lang);
     byId('floorplan-photo-count').textContent = t.imageCount(photoIndex + 1, room.photos.length);
     byId('floorplan-photo-prev').hidden = room.photos.length < 2;
     byId('floorplan-photo-next').hidden = room.photos.length < 2;

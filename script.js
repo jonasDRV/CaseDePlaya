@@ -374,6 +374,8 @@ function applyLang(lang) {
     metaDesc.setAttribute('content', translations[lang]['page.description']);
   }
 
+  casaImages.refresh(lang);
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const text = translations[lang][el.dataset.i18n];
     if (text !== undefined) el.textContent = text;
@@ -453,7 +455,7 @@ const lightboxCaption = document.getElementById('lightboxCaption');
 
 function updateLightbox() {
   lightboxImg.src = lightboxPool[lightboxIdx];
-  lightboxImg.alt = lightboxTitle;
+  casaImages.apply(lightboxImg, currentLang);
   lightboxCaption.textContent = lightboxTitle
     ? `${lightboxTitle} · ${lightboxIdx + 1} / ${lightboxPool.length}`
     : `${lightboxIdx + 1} / ${lightboxPool.length}`;
@@ -487,7 +489,7 @@ function navigateLightbox(direction) {
 
 // Gallery images
 const galleryImgs = Array.from(document.querySelectorAll('.gallery-item img'));
-const gallerySrcs = galleryImgs.map(img => img.src);
+const gallerySrcs = galleryImgs.map(img => img.getAttribute('src'));
 galleryImgs.forEach((img, i) => {
   img.addEventListener('click', () => openLightbox(gallerySrcs, i));
 });
@@ -560,12 +562,13 @@ document.querySelectorAll('.room-card').forEach(card => {
     const url = images[idx];
     const name = url.match(/images\/([^.]+)\.webp$/)?.[1];
     if (name && sources.length >= 2) {
-      sources[0].srcset = `images/${name}-800.avif 800w, images/${name}-1600.avif 1600w`;
-      sources[1].srcset = `images/${name}-800.webp 800w, images/${name}-1600.webp 1600w`;
+      sources[0].srcset = casaImages.srcset(name, 'avif');
+      sources[1].srcset = casaImages.srcset(name, 'webp');
       img.src = `images/${name}-1600.webp`;
     } else {
       img.src = url;
     }
+    casaImages.apply(img, currentLang);
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   }
 
@@ -576,7 +579,9 @@ document.querySelectorAll('.room-card').forEach(card => {
 
   // Click image → open lightbox with this card's full image set
   img.addEventListener('click', () => {
-    const srcs = images.length > 0 ? images : [img.getAttribute('src')];
+    const srcs = images.length > 0
+      ? images.map(url => url.replace(/\.webp$/, '-1600.webp'))
+      : [img.getAttribute('src')];
     openLightbox(srcs, idx);
   });
 });
