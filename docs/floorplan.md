@@ -24,8 +24,11 @@ Die renovierten Fotos vom 27.10.2026 verwenden `gf_` für das Erdgeschoss,
 `1st_` für das Obergeschoss und `2nd_` für die Dachterrasse. Deren neue
 Schlafzimmernummern stimmen mit dem Grundriss überein. Die alten Dateinamen
 `Dormitorio2` und `Dormitorio4` waren gegenüber den Raumnummern vertauscht.
-Die bisherigen Raumkarten und die allgemeine Galerie bleiben vorerst
-unverändert; die neue Zuordnung gilt für den interaktiven Grundriss.
+Die bisherigen Raumkarten behalten die Bestandsfotos, ordnen die alten Dateien
+`Dormitorio4` und `Dormitorio2` aber korrekt den Zimmern 2 und 4 zu. Auch die
+Galeriebeschriftungen folgen dieser Zuordnung. Die Ausstattungsangaben folgen
+wie der interaktive Grundriss den aktuellen Raumtexten. In der Galerie wurde
+die nahezu identische zweite Lounge-Aufnahme entfernt.
 
 Weitere Fotozuordnungen:
 
@@ -39,6 +42,7 @@ Weitere Fotozuordnungen:
 | `ground-shared-bath` | `gf_sharedbath_1` |
 | `ground-rear-bath` | `gf_bathroom_of_bed2` (Bad von Bedroom 2) |
 | `ground-patio` | `exterieur_back` (Außenansicht des rückwärtigen Zugangs) |
+| `upper-wc` | `Bano4` (vom Eigentümer aus der Galerie zugeordnet) |
 | `upper-terrace` | `1st_living_terrace_2`, `1st_living_terrace_1` |
 | `upper-living` | `1st_living_terrace_1`, `1st_living_3`, `1st_living_2`, `1st_living_night` |
 | `dining` | `1st_dining_2`, `1st_dining_1`, `1st_dining_living` |
@@ -56,8 +60,21 @@ Identische Dateien werden innerhalb einer Raumansicht nicht doppelt gezeigt:
 `1st_bathroom_of_bed1` und `gf_bathroom_of_bed2` sind ebenfalls bytegleich.
 Der Eigentümer hat bestätigt, dass die beiden Badezimmer identisch aussehen
 und das Foto ausdrücklich für beide Räume verwendet werden soll.
-Für `upper-wc` liegt weiterhin kein eindeutig zugeordnetes neues Bild vor.
+Die Bezeichnung „Bathroom4“ in der Galerie entspricht dem Dateinamen `Bano4`.
+Dieses Foto zeigt auf Wunsch des Eigentümers nun das Gäste-WC im Obergeschoss.
 `seaview` bleibt für die spätere Auswahl der allgemeinen Galerie verfügbar.
+
+Die Raumtexte vom 27.10.2026 werden auf Spanisch und Englisch am ausgewählten
+Raum angezeigt. Die Schlafzimmernummern des Anhangs wurden anhand von Etage
+und Ausstattung auf die bestehenden Plannummern übertragen: unten privat = 2,
+unten kleiner = 3, unten zur Parkseite mit geteiltem Bad = 4, einziges
+Schlafzimmer oben = 1. Das geteilte Bad gehört damit zu 3 und 4, die privaten
+Bäder zu 1 und 2. Peruanische Bettgrößen erhalten keine unbestätigten Maße.
+
+Die allgemeine Ausstattung nennt Wi-Fi, private Garage für zwei Autos,
+privaten Pool und Grillbereich. Lieferservice wird als Angebot der Umgebung
+beschrieben. Der sichtbare Real Club ist unabhängig und gehört nicht zum
+Condominio; der Lageabschnitt und die betreffenden Raumtexte erklären dies.
 
 ## Schematische Darstellung der Etagen
 

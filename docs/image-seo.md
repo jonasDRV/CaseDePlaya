@@ -10,7 +10,8 @@ Badaufnahmen werden im jeweiligen Raumkontext beschrieben.
 
 - In `index.html` stehen aussagekräftige spanische Alttexte und reale
   Bildabmessungen bereits im HTML. `data-image` verweist auf das Motiv im
-  zentralen Katalog. Die allgemeine Galerie zeigt weiterhin dieselben Motive.
+  zentralen Katalog. Die Galerie zeigt 30 Motive; die nahezu identische
+  zweite Lounge-Aufnahme wurde entfernt.
 - `script.js` aktualisiert Alttexte beim Sprachwechsel und beim Wechsel
   der Raumkartenfotos. Die Lightbox verwendet ebenfalls die Beschreibung
   des tatsächlich gezeigten Fotos und lädt die großen WebP-Varianten.
@@ -37,11 +38,11 @@ Vorabladehinweise zu. Die WebP-Rückfallvariante bleibt im CSS erhalten.
   Abmessungen 1600 × 900. Der Alttext folgt der gewählten Sprache.
 - Die JSON-LD-Bilderliste des Ferienhauses referenziert aktuelle Fotos,
   die auch über den Grundriss zugänglich sind.
-- `sitemap.xml` führt die 62 tatsächlich verwendeten Fotomotive als
+- `sitemap.xml` führt die 61 tatsächlich verwendeten Fotomotive als
   `image:loc` auf; das Änderungsdatum ist 2026-10-27. Damit sind auch Fotos
   benannt, die erst nach einem Raumwechsel angezeigt werden.
 - Bestehende Dateinamen bleiben erhalten, um vorhandene Bild-URLs und die
-  eindeutige Zuordnung des neuen Fotosatzes beizubehalten. Die drei bisher
+  eindeutige Zuordnung des neuen Fotosatzes beizubehalten. Die vier bisher
   unbenutzten Motive sind im Beschreibungskatalog vorbereitet, aber nicht
   in die Bilder-Sitemap aufgenommen.
 

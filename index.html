@@ -71,12 +71,13 @@
         "unitCode": "MTK"
       },
       "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Piscina", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Piscina privada en la azotea", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Zona de parrilla", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Estacionamiento privado", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Cochera privada para 2 autos", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Acceso directo a la playa", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Pet friendly", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Cocina equipada", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Vigilancia 24/7", "value": true}
       ],
       "address": {
@@ -116,15 +117,15 @@
         },
         "petsAllowed": true,
         "amenityFeature": [
-          {"@type": "LocationFeatureSpecification", "name": "4 dormitorios con cama matrimonial 140×200 cm", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "4 dormitorios", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Suite principal con baño en suite", "value": true},
-          {"@type": "LocationFeatureSpecification", "name": "Dormitorio 4 con baño en suite", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Dormitorio 2 con baño en suite", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Baño de huéspedes compartido", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "3 dormitorios en planta baja y 1 en el segundo piso", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Piscina en azotea con vista al mar", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Zona de parrilla", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Cocina totalmente equipada", "value": true},
-          {"@type": "LocationFeatureSpecification", "name": "Estacionamiento privado", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Cochera privada para 2 autos", "value": true},
           {"@type": "LocationFeatureSpecification", "name": "Acceso directo a la playa", "value": true}
         ]
       },
@@ -189,7 +190,7 @@
           "name": "¿Cuántas personas caben en Casa Chocaya?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Casa Chocaya tiene capacidad para 8 personas, distribuidas en 4 dormitorios con camas matrimoniales."
+            "text": "Casa Chocaya tiene capacidad para 8 personas, distribuidas en 4 dormitorios."
           }
         },
         {
@@ -213,7 +214,7 @@
           "name": "¿Qué incluye Casa Chocaya?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La casa cuenta con 4 dormitorios, 5 baños, piscina en la azotea con vista al mar, zona de parrilla, cocina totalmente equipada, estacionamiento privado para 2 autos y acceso directo a la playa."
+            "text": "La casa cuenta con Wi-Fi, 4 dormitorios, 5 baños, piscina privada en la azotea con vista al mar, zona de parrilla, cocina totalmente equipada, cochera privada para 2 autos y acceso directo a la playa."
           }
         },
         {
@@ -249,7 +250,7 @@
     <link rel="preload" as="image" type="image/avif"
       href="images/ChocayaSala-1600.avif" media="(min-width: 768.01px)">
     <link rel="stylesheet" href="style.css?v=20261025" />
-    <link rel="stylesheet" href="floorplan.css?v=20261025e" />
+    <link rel="stylesheet" href="floorplan.css?v=20261027" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -383,8 +384,8 @@
               <img src="images/pool-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3 data-i18n="am3.h">Piscina en la terraza</h3>
-              <p data-i18n="am3.p">Ubicada en el tercer piso, perfecta para relajarse, compartir y disfrutar con vista al mar.</p>
+              <h3 data-i18n="am3.h">Piscina privada en la azotea</h3>
+              <p data-i18n="am3.p">Piscina de uso privado en el tercer piso, con vista al mar.</p>
             </div>
           </div>
 
@@ -423,7 +424,7 @@
               <img src="images/parking-garage-transportation-car-parking-svgrepo-com.svg" alt="" class="amenity-svg" aria-hidden="true">
             </div>
             <div class="amenity-text">
-              <h3 data-i18n="am7.h">Estacionamiento privado</h3>
+              <h3 data-i18n="am7.h">Cochera privada para 2 autos</h3>
               <p data-i18n="am7.p">Cochera dentro de la propiedad con espacio para dos autos.</p>
             </div>
           </div>
@@ -435,6 +436,26 @@
             <div class="amenity-text">
               <h3 data-i18n="am8.h">Pet friendly</h3>
               <p data-i18n="am8.p">Las mascotas son bienvenidas, previa coordinación con el propietario, para que toda la familia disfrute la estadía.</p>
+            </div>
+          </div>
+
+          <div class="amenity-item reveal reveal-delay-3">
+            <div class="amenity-icon">
+              <svg class="amenity-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 9a15 15 0 0 1 18 0M6 13a10 10 0 0 1 12 0M9 17a5 5 0 0 1 6 0"/><circle cx="12" cy="21" r="1"/></svg>
+            </div>
+            <div class="amenity-text">
+              <h3 data-i18n="am9.h">Wi-Fi</h3>
+              <p data-i18n="am9.p">La casa dispone de conexión Wi-Fi durante tu estadía.</p>
+            </div>
+          </div>
+
+          <div class="amenity-item reveal reveal-delay-4">
+            <div class="amenity-icon">
+              <svg class="amenity-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v6a3 3 0 0 0 6 0V3M6 3v18M15 3v8h6V3M18 11v10"/></svg>
+            </div>
+            <div class="amenity-text">
+              <h3 data-i18n="am10.h">Comida a domicilio</h3>
+              <p data-i18n="am10.p">En la zona hay opciones para pedir comida a domicilio.</p>
             </div>
           </div>
 
@@ -530,14 +551,6 @@
           </div>
           <div class="gallery-item">
             <picture>
-              <source type="image/avif" srcset="images/LobbyAbajo2-800.avif 600w, images/LobbyAbajo2-1600.avif 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/LobbyAbajo2-800.webp 600w, images/LobbyAbajo2-1600.webp 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="LobbyAbajo2" width="1200" height="1600" src="images/LobbyAbajo2-1600.webp" alt="Vista de la sala de planta baja con mesa redonda de vidrio, asientos de ratán, espejo y escalera abierta junto a la galería." loading="lazy" decoding="async">
-            </picture>
-            <div class="gallery-caption" data-i18n="cap.acceso">Acceso</div>
-          </div>
-          <div class="gallery-item">
-            <picture>
               <source type="image/avif" srcset="images/Comedor-800.avif 533w, images/Comedor-1600.avif 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/Comedor-800.webp 533w, images/Comedor-1600.webp 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="Comedor" width="1067" height="1600" src="images/Comedor-1600.webp" alt="Mesa de comedor de madera con mantel verde claro, sillas de respaldo cruzado y lámpara de fibras junto a la cocina." loading="lazy" decoding="async">
@@ -574,7 +587,7 @@
               <source type="image/webp" srcset="images/Dormitorio2-800.webp 800w, images/Dormitorio2-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="Dormitorio2" width="1600" height="1067" src="images/Dormitorio2-1600.webp" alt="Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm2">Dormitorio 2</div>
+            <div class="gallery-caption" data-i18n="cap.dorm4">Dormitorio 4</div>
           </div>
           <div class="gallery-item">
             <picture>
@@ -590,7 +603,7 @@
               <source type="image/webp" srcset="images/Dormitorio4-800.webp 800w, images/Dormitorio4-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="Dormitorio4" width="1600" height="1200" src="images/Dormitorio4-1600.webp" alt="Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm4">Dormitorio 4</div>
+            <div class="gallery-caption" data-i18n="cap.dorm2">Dormitorio 2</div>
           </div>
           <div class="gallery-item">
             <picture>
@@ -804,26 +817,26 @@
           </div>
 
           <!-- Dormitorio 2 -->
-          <div class="room-card" data-images='["images/Dormitorio2.webp"]'>
+          <div class="room-card" data-images='["images/Dormitorio4.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/Dormitorio2-800.avif 800w, images/Dormitorio2-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/Dormitorio2-800.webp 800w, images/Dormitorio2-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="Dormitorio2" width="1600" height="1067" src="images/Dormitorio2-1600.webp" alt="Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/Dormitorio4-800.avif 800w, images/Dormitorio4-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/Dormitorio4-800.webp 800w, images/Dormitorio4-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="Dormitorio4" width="1600" height="1200" src="images/Dormitorio4-1600.webp" alt="Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo." class="room-img" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="room-info">
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r2.name">Dormitorio 2</h3>
-                  <p class="room-sub" data-i18n="r2.sub">Cama doble 140×200 cm &middot; Baño compartido</p>
+                  <p class="room-sub" data-i18n="r2.sub">Cama doble y colchón extraíble · Baño privado</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r2.d1">Cama doble 140×200 cm</li>
-                  <li data-i18n="r2.d2">Baño compartido</li>
+                  <li data-i18n="r2.d1">Cama de 2 plazas con colchón adicional extraíble de plaza y media</li>
+                  <li data-i18n="r2.d2">Baño privado con ducha tipo lluvia</li>
                   <li data-i18n="r2.d3">Armario</li>
                   <li data-i18n="r2.d4">Planta baja</li>
                 </ul>
@@ -844,15 +857,15 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r3.name">Dormitorio 3</h3>
-                  <p class="room-sub" data-i18n="r3.sub">Cama doble 140×200 cm</p>
+                  <p class="room-sub" data-i18n="r3.sub">Cama de plaza y media · Baño compartido</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r3.d1">Cama doble 140×200 cm</li>
+                  <li data-i18n="r3.d1">Cama de plaza y media</li>
                   <li data-i18n="r3.d2">Armario</li>
-                  <li data-i18n="r3.d3">Baño compartido</li>
+                  <li data-i18n="r3.d3">Baño compartido con el dormitorio 4</li>
                   <li data-i18n="r3.d4">Planta baja</li>
                 </ul>
               </div>
@@ -860,26 +873,26 @@
           </div>
 
           <!-- Dormitorio 4 -->
-          <div class="room-card" data-images='["images/Dormitorio4.webp"]'>
+          <div class="room-card" data-images='["images/Dormitorio2.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/Dormitorio4-800.avif 800w, images/Dormitorio4-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/Dormitorio4-800.webp 800w, images/Dormitorio4-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="Dormitorio4" width="1600" height="1200" src="images/Dormitorio4-1600.webp" alt="Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/Dormitorio2-800.avif 800w, images/Dormitorio2-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/Dormitorio2-800.webp 800w, images/Dormitorio2-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="Dormitorio2" width="1600" height="1067" src="images/Dormitorio2-1600.webp" alt="Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera." class="room-img" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="room-info">
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="r4.name">Dormitorio 4</h3>
-                  <p class="room-sub" data-i18n="r4.sub">Cama doble 140×200 cm &middot; Baño incorporado</p>
+                  <p class="room-sub" data-i18n="r4.sub">Cama doble y colchón extraíble · Baño compartido</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="r4.d1">Cama doble 140×200 cm</li>
-                  <li data-i18n="r4.d2">Baño incorporado con ducha tipo lluvia</li>
+                  <li data-i18n="r4.d1">Cama de 2 plazas con colchón adicional extraíble de plaza y media</li>
+                  <li data-i18n="r4.d2">Baño compartido con el dormitorio 3</li>
                   <li data-i18n="r4.d3">Armario</li>
                   <li data-i18n="r4.d4">Planta baja</li>
                 </ul>
@@ -1018,14 +1031,14 @@
               <div class="room-info-top">
                 <div>
                   <h3 class="room-name" data-i18n="rbanos.name">Baños</h3>
-                  <p class="room-sub" data-i18n="rbanos.sub">5 baños · 2 con ducha tipo lluvia</p>
+                  <p class="room-sub" data-i18n="rbanos.sub">3 baños completos · 2 medios baños</p>
                 </div>
                 <button class="room-more-btn" data-i18n="room.more">Ver más</button>
               </div>
               <div class="room-details" hidden>
                 <ul>
-                  <li data-i18n="rbanos.d1">2 baños en suite con ducha tipo lluvia (Dormitorios 1 y 4)</li>
-                  <li data-i18n="rbanos.d2">3 baños adicionales</li>
+                  <li data-i18n="rbanos.d1">Baños privados con ducha tipo lluvia en los dormitorios 1 y 2</li>
+                  <li data-i18n="rbanos.d2">Baño completo compartido por los dormitorios 3 y 4, y 2 medios baños de visitas</li>
                 </ul>
               </div>
             </div>
@@ -1084,6 +1097,7 @@
               los 365 días del año, acceso directo a la playa y todo lo
               necesario para escapar de la rutina.
             </p>
+            <p class="location-description" data-i18n="loc.realClub">El Real Club es visible desde la casa, pero es independiente y no forma parte del condominio.</p>
             <ul class="location-facts">
               <li>
                 <img src="images/location-pin-alt-1-svgrepo-com.svg" alt="" class="location-svg" aria-hidden="true">
@@ -1194,7 +1208,7 @@
 
           <details class="faq-item reveal">
             <summary class="faq-q" data-i18n="faq.q1">¿Cuántas personas caben en Casa Chocaya?</summary>
-            <p class="faq-a" data-i18n="faq.a1">Casa Chocaya tiene capacidad para 8 personas, distribuidas en 4 dormitorios con camas matrimoniales.</p>
+            <p class="faq-a" data-i18n="faq.a1">Casa Chocaya tiene capacidad para 8 personas, distribuidas en 4 dormitorios.</p>
           </details>
 
           <details class="faq-item reveal">
@@ -1209,7 +1223,7 @@
 
           <details class="faq-item reveal">
             <summary class="faq-q" data-i18n="faq.q4">¿Qué incluye Casa Chocaya?</summary>
-            <p class="faq-a" data-i18n="faq.a4">La casa cuenta con 4 dormitorios, 5 baños, piscina en la azotea con vista al mar, zona de parrilla, cocina totalmente equipada, estacionamiento privado para 2 autos y acceso directo a la playa.</p>
+            <p class="faq-a" data-i18n="faq.a4">La casa cuenta con Wi-Fi, 4 dormitorios, 5 baños, piscina privada en la azotea con vista al mar, zona de parrilla, cocina totalmente equipada, cochera privada para 2 autos y acceso directo a la playa.</p>
           </details>
 
           <details class="faq-item reveal">
@@ -1328,6 +1342,7 @@
               <li data-i18n="mcat1.l7">5 baños en total, 3 de ellos completos con ducha tipo lluvia</li>
               <li data-i18n="mcat1.l8">Ropa de cama</li>
               <li data-i18n="mcat1.l9">Almohadas</li>
+              <li data-i18n="mcat1.l10">Conexión Wi-Fi en la casa</li>
             </ul>
           </div>
 
@@ -1369,6 +1384,7 @@
               <li data-i18n="mcat5.l2">A 80 metros del mar</li>
               <li data-i18n="mcat5.l3">A 2 minutos a pie de la playa</li>
               <li data-i18n="mcat5.l4">A 10 minutos en auto del Boulevard de Asia</li>
+              <li data-i18n="mcat5.l5">Opciones de comida a domicilio en la zona</li>
             </ul>
           </div>
 
@@ -1395,7 +1411,7 @@
     </div>
 
     <script src="image-metadata.js?v=20261027"></script>
-    <script src="script.js?v=20261027"></script>
-    <script src="floorplan.js?v=20261027b"></script>
+    <script src="script.js?v=20261027b"></script>
+    <script src="floorplan.js?v=20261027c"></script>
   </body>
 </html>
