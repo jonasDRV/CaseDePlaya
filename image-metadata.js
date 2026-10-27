@@ -5,7 +5,7 @@
 const casaImages = (() => {
   'use strict';
   const descriptions = {
-    LogoChocaya: ['Casa Chocaya, volver al inicio.', 'Casa Chocaya, return to the home section.'],
+    'casa-chocaya-logo': ['Casa Chocaya, volver al inicio.', 'Casa Chocaya, return to the home section.'],
     Playa: ['Atardecer en la playa de Chocaya, con cielo naranja reflejado en la arena mojada entre dos formaciones rocosas.', 'Sunset on Chocaya beach, with an orange sky reflected in wet sand between two rock formations.'],
     Playa2: ['Playa de Chocaya al atardecer, con rocas a ambos lados, arena mojada y una franja naranja sobre el horizonte.', 'Chocaya beach at sunset, with rocks on both sides, wet sand and an orange band above the horizon.'],
     'view_park': ['Vista desde el balcón posterior hacia el parque del condominio, con jardines, senderos, casas blancas y cerros cerca del mar.', 'View from the rear balcony over the condominium park, with lawns, paths, white houses and hills beside the sea.'],
@@ -47,7 +47,7 @@ const casaImages = (() => {
   };
 
   const dimensions = {
-    "LogoChocaya": {"original":[1000,1000]},
+    "casa-chocaya-logo": {"original":[256,256]},
     "Playa": {"small":[600,800],"large":[1200,1600],"original":[3119,4160]},
     "Playa2": {"small":[800,565],"large":[1600,1130],"original":[5522,3900]},
     "view_park": {"small":[800,450],"large":[1600,900],"original":[1600,900]},

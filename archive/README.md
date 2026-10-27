@@ -2,12 +2,13 @@
 
 Die 29 ersetzten Bestandsmotive liegen mit allen fünf Varianten unter
 `images/` (145 Dateien, 13,4 MiB). Sie werden von der aktuellen Webseite
-nicht mehr eingebunden. Logos, SVGs und die beiden Strandfotos wurden nicht
-verschoben. Auch die zwei unbenutzten Duplikate aus dem neuen Fotosatz bleiben
+nicht mehr eingebunden. Zusätzlich liegt das ersetzte `LogoChocaya.png`
+im Archiv; insgesamt sind es 146 Bilddateien. SVGs und die beiden Strandfotos
+wurden nicht verschoben. Auch die zwei unbenutzten Duplikate aus dem neuen Fotosatz bleiben
 im aktiven Bilderordner.
 
 Die früheren spanischen und englischen Bildbeschreibungen und die tatsächlichen
-Abmessungen aller drei Varianten sind in [image-metadata.json](image-metadata.json)
+Abmessungen der Foto- und Logovarianten sind in [image-metadata.json](image-metadata.json)
 gesichert. Jede verschobene Datei wurde vor und nach dem Verschieben anhand
 ihres SHA-256-Hashes verglichen.
 
