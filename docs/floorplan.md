@@ -24,11 +24,12 @@ Die renovierten Fotos vom 27.10.2026 verwenden `gf_` für das Erdgeschoss,
 `1st_` für das Obergeschoss und `2nd_` für die Dachterrasse. Deren neue
 Schlafzimmernummern stimmen mit dem Grundriss überein. Die alten Dateinamen
 `Dormitorio2` und `Dormitorio4` waren gegenüber den Raumnummern vertauscht.
-Die bisherigen Raumkarten behalten die Bestandsfotos, ordnen die alten Dateien
+Die Schlafzimmerkarten behalten die Bestandsfotos, ordnen die alten Dateien
 `Dormitorio4` und `Dormitorio2` aber korrekt den Zimmern 2 und 4 zu. Auch die
-Galeriebeschriftungen folgen dieser Zuordnung. Die Ausstattungsangaben folgen
-wie der interaktive Grundriss den aktuellen Raumtexten. In der Galerie wurde
-die nahezu identische zweite Lounge-Aufnahme entfernt.
+Galeriebeschriftungen folgen dieser Zuordnung. Wohnzimmer- und Küchenkarte
+zeigen die neuen Aufnahmen; die Galerie zeigt auch Lounge, Essbereich und
+Hausfassaden im renovierten Zustand. Die Ausstattungsangaben folgen wie der
+interaktive Grundriss den aktuellen Raumtexten.
 
 Weitere Fotozuordnungen:
 

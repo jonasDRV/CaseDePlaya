@@ -382,14 +382,14 @@ ul {
   position: relative;
   height: 100vh;
   min-height: 620px;
-  background-image: url('images/ChocayaSala-1600.webp');
+  background-image: url('images/1st_living_terrace_1-1600.webp');
   background-image:
     image-set(
-      url('images/ChocayaSala-1600.avif') type('image/avif'),
-      url('images/ChocayaSala-1600.webp') type('image/webp')
+      url('images/1st_living_terrace_1-1600.avif') type('image/avif'),
+      url('images/1st_living_terrace_1-1600.webp') type('image/webp')
     );
   background-size: cover;
-  background-position: center;
+  background-position: 50% 46%;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -1340,11 +1340,12 @@ ul {
 
   #hero {
     background-attachment: scroll; /* iOS Safari fix */
-    background-image: url('images/ChocayaSala-800.webp');
+    background-position: 38% center;
+    background-image: url('images/1st_living_terrace_1-800.webp');
     background-image:
       image-set(
-        url('images/ChocayaSala-800.avif') type('image/avif'),
-        url('images/ChocayaSala-800.webp') type('image/webp')
+        url('images/1st_living_terrace_1-800.avif') type('image/avif'),
+        url('images/1st_living_terrace_1-800.webp') type('image/webp')
       );
   }
 

@@ -10,8 +10,9 @@ Badaufnahmen werden im jeweiligen Raumkontext beschrieben.
 
 - In `index.html` stehen aussagekräftige spanische Alttexte und reale
   Bildabmessungen bereits im HTML. `data-image` verweist auf das Motiv im
-  zentralen Katalog. Die Galerie zeigt 30 Motive; die nahezu identische
-  zweite Lounge-Aufnahme wurde entfernt.
+  zentralen Katalog. Die Galerie zeigt 29 Motive. Wohnzimmer, Lounge,
+  Essbereich, Küche und Hausfassaden zeigen die renovierten Aufnahmen.
+  Die zwei bisherigen Rückansichten wurden durch ein aktuelles Foto ersetzt.
 - `script.js` aktualisiert Alttexte beim Sprachwechsel und beim Wechsel
   der Raumkartenfotos. Die Lightbox verwendet ebenfalls die Beschreibung
   des tatsächlich gezeigten Fotos und lädt die großen WebP-Varianten.
@@ -30,6 +31,11 @@ für noch nicht geladene Galeriefotos.
 Die Hero-Vorabladung verwendet wie das CSS AVIF und dieselbe Unterteilung
 bei 768 Pixeln. Pro Bildschirmbreite trifft nur einer der beiden
 Vorabladehinweise zu. Die WebP-Rückfallvariante bleibt im CSS erhalten.
+Das Hero-Motiv ist `1st_living_terrace_1`: quadratisch mit 1254 × 1254 Pixeln
+in der großen Variante. `cover` und separate Positionen für Desktop und
+Handy halten den Meerblick und die neue Sitzecke im sichtbaren Ausschnitt.
+Die Wohnzimmerkarte zeigt vier aktuelle Ansichten, die Küchenkarte drei;
+die Anzahl der Bildindikatoren entspricht jeweils der Fotoanzahl.
 
 ## Metadaten und Auffindbarkeit
 
@@ -38,11 +44,11 @@ Vorabladehinweise zu. Die WebP-Rückfallvariante bleibt im CSS erhalten.
   Abmessungen 1600 × 900. Der Alttext folgt der gewählten Sprache.
 - Die JSON-LD-Bilderliste des Ferienhauses referenziert aktuelle Fotos,
   die auch über den Grundriss zugänglich sind.
-- `sitemap.xml` führt die 61 tatsächlich verwendeten Fotomotive als
+- `sitemap.xml` führt die 50 tatsächlich verwendeten Fotomotive als
   `image:loc` auf; das Änderungsdatum ist 2026-10-27. Damit sind auch Fotos
   benannt, die erst nach einem Raumwechsel angezeigt werden.
 - Bestehende Dateinamen bleiben erhalten, um vorhandene Bild-URLs und die
-  eindeutige Zuordnung des neuen Fotosatzes beizubehalten. Die vier bisher
+  eindeutige Zuordnung des neuen Fotosatzes beizubehalten. Die 15 derzeit
   unbenutzten Motive sind im Beschreibungskatalog vorbereitet, aber nicht
   in die Bilder-Sitemap aufgenommen.
 

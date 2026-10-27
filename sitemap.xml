@@ -69,9 +69,6 @@
       <image:loc>https://casa-chocaya.com/images/Bano4-1600.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://casa-chocaya.com/images/CasaDeAtras-1600.webp</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://casa-chocaya.com/images/ChocallaPool-1600.webp</image:loc>
     </image:image>
     <image:image>
@@ -84,31 +81,7 @@
       <image:loc>https://casa-chocaya.com/images/ChocayaCarPort-1600.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://casa-chocaya.com/images/ChocayaCocina-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/ChocayaDeAtras-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/ChocayaDeFrente-1600.webp</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://casa-chocaya.com/images/ChocayaDormitorio-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/ChocayaSala-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/ChocayaWohnzimmer2-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/CocinaComedor-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/CocinaDeNoche-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/Comedor-1600.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/Dormitorio2-1600.webp</image:loc>
@@ -159,9 +132,6 @@
       <image:loc>https://casa-chocaya.com/images/gf_toilet-1600.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://casa-chocaya.com/images/LobbyAbajo-1600.webp</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://casa-chocaya.com/images/Playa-1600.webp</image:loc>
     </image:image>
     <image:image>
@@ -184,9 +154,6 @@
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/VistaParque-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/Wohnzimmer-1600.webp</image:loc>
     </image:image>
   </url>
 </urlset>
