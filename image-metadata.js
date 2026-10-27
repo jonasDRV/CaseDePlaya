@@ -50,51 +50,51 @@ const casaImages = (() => {
 
   const dimensions = {
     "LogoChocaya": {"original":[1000,1000]},
-    "Playa": {"small":[600,800],"large":[1200,1600],"original":[3119,4160]},
-    "Playa2": {"small":[800,565],"large":[1600,1130],"original":[5522,3900]},
-    "view_park": {"small":[800,450],"large":[1600,900],"original":[1600,900]},
-    "1st_toilet": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_balcony_front_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_balcony_front_2": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "1st_bathroom_of_bed1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_bedroom1_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "1st_dining_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_dining_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_dining_kitchen": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_dining_living": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_kitchen": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_kitchen_night": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_living_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_living_3": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_living_night": {"small":[800,450],"large":[1600,900],"original":[1600,900]},
-    "1st_living_terrace_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "1st_living_terrace_2": {"small":[800,865],"large":[930,1005],"original":[930,1005]},
-    "2nd_pool_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "2nd_pool_view_1": {"small":[800,800],"large":[1024,1024],"original":[1024,1024]},
-    "2nd_pool_view_2": {"small":[800,450],"large":[1600,900],"original":[1600,900]},
-    "2nd_pool_view_3": {"small":[800,800],"large":[1024,1024],"original":[1024,1024]},
-    "2nd_terrace_bbq": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "2nd_terrace_parkview": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "2nd_terrace_seaview": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "exterieur_back": {"small":[800,842],"large":[1011,1064],"original":[1011,1064]},
-    "exterieur_front": {"small":[800,849],"large":[1182,1254],"original":[1182,1254]},
-    "gf_bathroom_of_bed2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "gf_bedroom2_1": {"small":[800,629],"large":[1262,993],"original":[1262,993]},
-    "gf_bedroom2_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "gf_bedroom3": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "gf_bedroom4": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "gf_garage": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "gf_lounge": {"small":[800,981],"large":[1086,1332],"original":[1086,1332]},
-    "gf_lounge_entrance": {"small":[800,980],"large":[1086,1330],"original":[1086,1330]},
-    "gf_sharedbath_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "gf_sharedbath_2": {"small":[800,600],"large":[1448,1086],"original":[1448,1086]},
-    "gf_toilet": {"small":[800,800],"large":[1254,1254],"original":[1254,1254]},
-    "seaview": {"small":[800,800],"large":[1600,1600],"original":[1600,1600]}
+    "Playa": {"small":[600,800],"large":[1200,1600],"original":[3119,4160],"thumbnail":[400,534],"preview":[600,800]},
+    "Playa2": {"small":[800,565],"large":[1600,1130],"original":[5522,3900],"thumbnail":[400,283],"preview":[600,424]},
+    "view_park": {"small":[800,450],"large":[1600,900],"original":[1600,900],"thumbnail":[400,225],"preview":[600,338]},
+    "1st_toilet": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_balcony_front_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_balcony_front_2": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "1st_bathroom_of_bed1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_bedroom1_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "1st_dining_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_dining_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_dining_kitchen": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_dining_living": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_kitchen": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_kitchen_night": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_living_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_living_3": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_living_night": {"small":[800,450],"large":[1600,900],"original":[1600,900],"thumbnail":[400,225],"preview":[600,338]},
+    "1st_living_terrace_1": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "1st_living_terrace_2": {"small":[800,865],"large":[930,1005],"original":[930,1005],"thumbnail":[400,432],"preview":[600,648]},
+    "2nd_pool_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "2nd_pool_view_1": {"small":[800,800],"large":[1024,1024],"original":[1024,1024],"thumbnail":[400,400],"preview":[600,600]},
+    "2nd_pool_view_2": {"small":[800,450],"large":[1600,900],"original":[1600,900],"thumbnail":[400,225],"preview":[600,338]},
+    "2nd_pool_view_3": {"small":[800,800],"large":[1024,1024],"original":[1024,1024],"thumbnail":[400,400],"preview":[600,600]},
+    "2nd_terrace_bbq": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "2nd_terrace_parkview": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "2nd_terrace_seaview": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "exterieur_back": {"small":[800,842],"large":[1011,1064],"original":[1011,1064],"thumbnail":[400,421],"preview":[600,631]},
+    "exterieur_front": {"small":[800,849],"large":[1182,1254],"original":[1182,1254],"thumbnail":[400,424],"preview":[600,637]},
+    "gf_bathroom_of_bed2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "gf_bedroom2_1": {"small":[800,629],"large":[1262,993],"original":[1262,993],"thumbnail":[400,315],"preview":[600,472]},
+    "gf_bedroom2_2": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "gf_bedroom3": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "gf_bedroom4": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "gf_garage": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "gf_lounge": {"small":[800,981],"large":[1086,1332],"original":[1086,1332],"thumbnail":[400,491],"preview":[600,736]},
+    "gf_lounge_entrance": {"small":[800,980],"large":[1086,1330],"original":[1086,1330],"thumbnail":[400,490],"preview":[600,735]},
+    "gf_sharedbath_1": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "gf_sharedbath_2": {"small":[800,600],"large":[1448,1086],"original":[1448,1086],"thumbnail":[400,300],"preview":[600,450]},
+    "gf_toilet": {"small":[800,800],"large":[1254,1254],"original":[1254,1254],"thumbnail":[400,400],"preview":[600,600]},
+    "seaview": {"small":[800,800],"large":[1600,1600],"original":[1600,1600],"thumbnail":[400,400],"preview":[600,600]}
   };
 
   function key(value) {
     return String(value || '').split(/[?#]/)[0].split('/').pop()
-      .replace(/-(?:800|1600)\.(?:avif|webp)$/i, '')
+      .replace(/-(?:400|600|800|1600)\.(?:avif|webp)$/i, '')
       .replace(/\.(?:avif|webp|png)$/i, '');
   }
 
@@ -108,8 +108,8 @@ const casaImages = (() => {
     if (!descriptions[name] || img.getAttribute('aria-hidden') === 'true') return;
     img.dataset.image = name;
     img.alt = alt(name, lang);
-    const variant = /-800\.(?:avif|webp)$/i.test(img.getAttribute('src')) ? 'small'
-      : /-1600\.(?:avif|webp)$/i.test(img.getAttribute('src')) ? 'large' : 'original';
+    const suffix = /-(400|600|800|1600)\.(?:avif|webp)$/i.exec(img.getAttribute('src'))?.[1];
+    const variant = { 400: 'thumbnail', 600: 'preview', 800: 'small', 1600: 'large' }[suffix] || 'original';
     const size = dimensions[name]?.[variant];
     if (size) { img.width = size[0]; img.height = size[1]; }
   }
@@ -117,7 +117,16 @@ const casaImages = (() => {
   function srcset(value, format) {
     const name = key(value);
     const sizes = dimensions[name];
-    return `images/${name}-800.${format} ${sizes.small[0]}w, images/${name}-1600.${format} ${sizes.large[0]}w`;
+    const seen = new Set();
+    return [['thumbnail', 400], ['preview', 600], ['small', 800], ['large', 1600]]
+      .filter(([variant]) => {
+        const width = sizes[variant]?.[0];
+        if (!width || seen.has(width)) return false;
+        seen.add(width);
+        return true;
+      })
+      .map(([variant, suffix]) => `images/${name}-${suffix}.${format} ${sizes[variant][0]}w`)
+      .join(', ');
   }
 
   function refresh(lang = 'es') {

@@ -116,10 +116,19 @@ die SVG-Koordinaten. `photos` ist eine Liste der Bildnamen ohne Dateiendung,
 zum Beispiel `photos: ['Dormitorio3', 'NeuesDormitorio3']`.
 Jeder Name benötigt diese Dateien in `images/`:
 
+- `<name>-400.avif`
+- `<name>-600.avif`
 - `<name>-800.avif`
 - `<name>-1600.avif`
+- `<name>-400.webp`
+- `<name>-600.webp`
 - `<name>-800.webp`
 - `<name>-1600.webp`
+
+Die 400-/600er-Vorschauen lassen sich mit `scripts/update-photo-previews.ps1`
+aus den Original-WebPs nacherzeugen. Voraussetzung ist FFmpeg mit WebP- und
+AVIF-Unterstützung. Sie werden auch in Galerie und Raumkarten verwendet;
+die Vergrößerung nutzt weiterhin die große WebP-Datei.
 
 Das Suffix `-1600` bezeichnet bei den neuen Fotos die maximale Exportbreite.
 Viele Originale sind kleiner; sie wurden korrekt nicht hochgerechnet.
@@ -161,6 +170,9 @@ stehen in `floorplan.js`; bestehende Webseitentexte bleiben in `script.js`.
 
 Es gibt keinen Build-Schritt und keine neuen externen Abhängigkeiten. Zur
 lokalen Prüfung `index.html` im Browser öffnen und „Distribución“ wählen.
+Das Grundriss-CSS lädt ohne den ersten Seitenaufbau zu blockieren; der Plan
+wird erst nach erfolgreichem Laden seiner Gestaltung sichtbar. Die
+Raumkarten bleiben bei einem CSS-Ladefehler als bestehende Übersicht verfügbar.
 Für GitHub Pages müssen `image-metadata.js`, `floorplan.css` und `floorplan.js` zusammen mit den
 zugehörigen Änderungen an HTML und JavaScript vorliegen.
 Versionsparameter an den eingebundenen Dateien beim späteren Update erhöhen.

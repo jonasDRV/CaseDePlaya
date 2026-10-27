@@ -1,3 +1,76 @@
+/* Local copies of the original Google Fonts Latin subsets; licenses in fonts/. */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/jost-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/jost-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/jost-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============================================================
    CASA CHOCAYA — style.css
    ============================================================ */
@@ -14,7 +87,7 @@
   --brown:        #503528;
   --brown-deep:   #3A2215;
   --text:         #1E1510;
-  --text-muted:   #7e6658;
+  --text-muted:   #765e50;
   --white:        #FFFFFF;
 
   --shadow:       0 4px 24px rgba(92, 61, 46, 0.08);
@@ -447,7 +520,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  background-color: #25D366;
+  background-color: #157f3e;
   color: var(--white);
   padding: 0.9rem 2.1rem;
   border-radius: 3rem;
@@ -463,7 +536,7 @@ ul {
 }
 
 .btn-whatsapp:hover {
-  background-color: #1fba57;
+  background-color: #116b34;
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(37, 211, 102, 0.42);
 }
@@ -506,7 +579,7 @@ ul {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--beige-dark);
+  color: var(--text-muted);
   margin-bottom: 0.6rem;
 }
 
@@ -833,7 +906,7 @@ ul {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--beige);
   margin-bottom: 2rem;
 }
 
@@ -849,13 +922,13 @@ ul {
 }
 
 .footer-legal a {
-  color: rgba(138, 112, 96, 0.7);
+  color: var(--beige);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-legal a:hover {
-  color: var(--beige);
+  color: var(--white);
 }
 
 .footer-legal span {
@@ -864,7 +937,7 @@ ul {
 
 .footer-copy {
   font-size: 0.78rem;
-  color: rgba(138, 112, 96, 0.45);
+  color: var(--beige);
 }
 
 

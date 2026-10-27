@@ -5,12 +5,24 @@
  * assignments from legacy bedroom numbers. The renovated photo set uses
  * gf_ / 1st_ / 2nd_ for ground / upper / rooftop, matching the plan's rooms.
  * Add/replace each room's photo basenames below when the new photos arrive.
- * Expected assets: images/<basename>-{800,1600}.{avif,webp}.
+ * Expected assets: images/<basename>-{400,600,800,1600}.{avif,webp}.
  */
-(() => {
+(async () => {
   'use strict';
   const root = document.getElementById('floorplan');
   if (!root) return;
+
+  // The plan is below the initial viewport. Its stylesheet must not delay
+  // the hero, but must be ready before the interactive plan becomes visible.
+  const stylesheet = document.getElementById('floorplan-styles');
+  if (stylesheet && !stylesheet.sheet) {
+    const ready = await new Promise(resolve => {
+      stylesheet.addEventListener('load', () => resolve(true), { once: true });
+      stylesheet.addEventListener('error', () => resolve(false), { once: true });
+    });
+    if (!ready) return; // The existing room cards remain available.
+  }
+  if (stylesheet) stylesheet.media = 'all';
 
   const copy = {
     es: {

@@ -3,3 +3,5 @@ exclude:
   - archive
   - docs
   - .claude
+  - scripts
+  - fonts/README.md

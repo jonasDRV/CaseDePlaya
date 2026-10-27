@@ -20,7 +20,7 @@
   font-size: 0.67rem;
   font-weight: 500;
   letter-spacing: 0.15em;
-  color: var(--beige-dark);
+  color: var(--text-muted);
 }
 
 .floorplan-intro h3 {

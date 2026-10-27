@@ -23,12 +23,20 @@ Badaufnahmen werden im jeweiligen Raumkontext beschrieben.
   ihre Bedeutung bereits im benachbarten Text steht.
 
 `casaImages.dimensions` hält für jedes Foto die tatsächliche Breite und Höhe
-von `small` (`-800`), `large` (`-1600`) und `original` (ohne Suffix) fest.
+von `thumbnail` (`-400`), `preview` (`-600`), `small` (`-800`), `large`
+(`-1600`) und `original` (ohne Suffix) fest.
 Das Dateinamensuffix allein garantiert keine entsprechende Bildbreite.
 Die `srcset`-Deskriptoren müssen die realen Pixelbreiten verwenden.
 `sizes` berücksichtigt die zwei mobilen Galeriespalten und die festen
 Breiten der Raumkarten. Breite und Höhe reservieren den passenden Platz
 für noch nicht geladene Galeriefotos.
+
+Die 400-/600er-Dateien ergänzen das bisherige System für kleinere Vorschauen.
+Alle 40 Motive haben diese Varianten in AVIF und WebP; Originale und bisherige
+800-/1600er-Dateien bleiben erhalten. Der Browser wählt anhand der sichtbaren
+Breite und Pixeldichte. Auch dynamische Raumkarten und Grundrissfotos verwenden
+diese Auswahl. Doppelte Breiten im `srcset` werden vermieden, etwa beim alten
+hochformatigen Strandfoto, dessen 800er-Datei tatsächlich nur 600 Pixel breit ist.
 
 Die Hero-Vorabladung verwendet wie das CSS AVIF und dieselbe Unterteilung
 bei 768 Pixeln. Pro Bildschirmbreite trifft nur einer der beiden
@@ -63,6 +71,13 @@ die Anzahl der Bildindikatoren entspricht jeweils der Fotoanzahl.
    `srcset`-Breiten in `index.html` passend halten.
 3. Die Fotozuordnung in `floorplan.js` bzw. den bestehenden Raumkarten
    ergänzen; die Sitemap um neu verwendete Motive erweitern.
+   Mit installiertem FFmpeg anschließend
+   `powershell -File scripts/update-photo-previews.ps1` ausführen. Das Skript
+   erzeugt fehlende 400-/600er-Dateien aus den vorhandenen Original-WebPs,
+   aktualisiert deren Abmessungen im Katalog und die statischen HTML-Quellen.
+   `-Force` überschreibt nur diese neu erzeugten Vorschaugrößen. Bei bereits
+   veröffentlichten Motiven vor Änderungen einen neuen Dateinamen verwenden,
+   damit längere Browser-Cachezeiten keine veralteten Bilder festhalten.
 4. Versionsparameter an geänderten Skripten erhöhen und Raum-/Sprachwechsel,
    Vergrößerung sowie die Dateiverweise prüfen.
 
