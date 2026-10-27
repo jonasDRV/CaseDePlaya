@@ -1,0 +1,524 @@
+{
+    "ChocayaSala":  {
+                        "es":  "Sala de Casa Chocaya con sofá de cuero, comedor de madera, baranda de vidrio y acceso a la terraza con vista al mar.",
+                        "en":  "Casa Chocaya living room with a leather sofa, wooden dining table, glass balustrade and access to the sea-view terrace.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         800,
+                                                         533
+                                                     ],
+                                           "large":  [
+                                                         1600,
+                                                         1067
+                                                     ],
+                                           "original":  [
+                                                            1536,
+                                                            1024
+                                                        ]
+                                       }
+                    },
+    "ChocallaPool":  {
+                         "es":  "Piscina elevada en la azotea, con escalera de madera, barandas de vidrio, sombrilla roja y banco junto al acceso.",
+                         "en":  "Raised rooftop pool with wooden access steps, glass balustrades, a red parasol and a bench beside the steps.",
+                         "dimensions":  {
+                                            "small":  [
+                                                          800,
+                                                          533
+                                                      ],
+                                            "large":  [
+                                                          1600,
+                                                          1067
+                                                      ],
+                                            "original":  [
+                                                             1536,
+                                                             1024
+                                                         ]
+                                        }
+                     },
+    "ChocayaDeFrente":  {
+                            "es":  "Fachada blanca de Casa Chocaya con portón de madera, puerta de ingreso y terraza con baranda de vidrio.",
+                            "en":  "White front facade of Casa Chocaya with wooden garage doors, an entrance door and a terrace with a glass balustrade.",
+                            "dimensions":  {
+                                               "small":  [
+                                                             800,
+                                                             533
+                                                         ],
+                                               "large":  [
+                                                             1600,
+                                                             1067
+                                                         ],
+                                               "original":  [
+                                                                1536,
+                                                                1024
+                                                            ]
+                                           }
+                        },
+    "ChocayaDeAtras":  {
+                           "es":  "Fachada posterior de Casa Chocaya al atardecer, con balcón cubierto, baranda de vidrio y acceso desde el parque.",
+                           "en":  "Rear facade of Casa Chocaya at sunset, with a covered balcony, glass balustrade and entrance from the park.",
+                           "dimensions":  {
+                                              "small":  [
+                                                            800,
+                                                            533
+                                                        ],
+                                              "large":  [
+                                                            1600,
+                                                            1067
+                                                        ],
+                                              "original":  [
+                                                               1536,
+                                                               1024
+                                                           ]
+                                          }
+                       },
+    "CasaDeAtras":  {
+                        "es":  "Vista posterior de la casa, con balcón de vidrio, ventanas horizontales y puerta de acceso junto al césped del condominio.",
+                        "en":  "Rear view of the house with a glass balcony, horizontal windows and an entrance beside the condominium lawn.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         800,
+                                                         800
+                                                     ],
+                                           "large":  [
+                                                         1600,
+                                                         1600
+                                                     ],
+                                           "original":  [
+                                                            2266,
+                                                            2266
+                                                        ]
+                                       }
+                    },
+    "Terraza":  {
+                    "es":  "Zona de parrilla de la azotea con encimera en U, lavadero y espacio abierto para preparar comidas al aire libre.",
+                    "en":  "Rooftop BBQ area with a U-shaped worktop, sink and open space for preparing meals outdoors.",
+                    "dimensions":  {
+                                       "small":  [
+                                                     800,
+                                                     533
+                                                 ],
+                                       "large":  [
+                                                     1600,
+                                                     1067
+                                                 ],
+                                       "original":  [
+                                                        1536,
+                                                        1024
+                                                    ]
+                                   }
+                },
+    "ChocayaWohnzimmer2":  {
+                               "es":  "Sala con sofá de cuero, dos sillones oscuros, televisión en la pared y mamparas abiertas hacia la terraza.",
+                               "en":  "Living room with a leather sofa, two dark armchairs, a wall-mounted television and sliding doors opening onto the terrace.",
+                               "dimensions":  {
+                                                  "small":  [
+                                                                800,
+                                                                533
+                                                            ],
+                                                  "large":  [
+                                                                1600,
+                                                                1067
+                                                            ],
+                                                  "original":  [
+                                                                   1536,
+                                                                   1024
+                                                               ]
+                                              }
+                           },
+    "Wohnzimmer":  {
+                       "es":  "Sala y comedor iluminados de noche, con sofá de cuero, sillones, mesa de madera y ventanas decoradas con motivos de hojas.",
+                       "en":  "Living and dining area at night, with a leather sofa, armchairs, wooden dining table and leaf-patterned window panels.",
+                       "dimensions":  {
+                                          "small":  [
+                                                        800,
+                                                        450
+                                                    ],
+                                          "large":  [
+                                                        1600,
+                                                        900
+                                                    ],
+                                          "original":  [
+                                                           4032,
+                                                           2268
+                                                       ]
+                                      }
+                   },
+    "LobbyAbajo":  {
+                       "es":  "Zona de estar en planta baja con sofá pequeño, dos sillones de ratán y mesa redonda bajo la galería y la escalera.",
+                       "en":  "Ground-floor sitting area with a small sofa, two rattan armchairs and a round table beneath the gallery and staircase.",
+                       "dimensions":  {
+                                          "small":  [
+                                                        621,
+                                                        800
+                                                    ],
+                                          "large":  [
+                                                        1242,
+                                                        1600
+                                                    ],
+                                          "original":  [
+                                                           2986,
+                                                           3847
+                                                       ]
+                                      }
+                   },
+    "LobbyAbajo2":  {
+                        "es":  "Vista de la sala de planta baja con mesa redonda de vidrio, asientos de ratán, espejo y escalera abierta junto a la galería.",
+                        "en":  "Ground-floor lounge with a round glass table, rattan seating, a mirror and an open staircase beside the gallery.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         600,
+                                                         800
+                                                     ],
+                                           "large":  [
+                                                         1200,
+                                                         1600
+                                                     ],
+                                           "original":  [
+                                                            960,
+                                                            1280
+                                                        ]
+                                       }
+                    },
+    "Comedor":  {
+                    "es":  "Mesa de comedor de madera con mantel verde claro, sillas de respaldo cruzado y lámpara de fibras junto a la cocina.",
+                    "en":  "Wooden dining table with a light green cloth, cross-back chairs and a woven pendant lamp beside the kitchen.",
+                    "dimensions":  {
+                                       "small":  [
+                                                     533,
+                                                     800
+                                                 ],
+                                       "large":  [
+                                                     1067,
+                                                     1600
+                                                 ],
+                                       "original":  [
+                                                        1024,
+                                                        1536
+                                                    ]
+                                   }
+                },
+    "ChocayaCocina":  {
+                          "es":  "Cocina abierta con isla, taburetes, refrigeradora, lavadero bajo la ventana y puerta hacia el balcón.",
+                          "en":  "Open kitchen with an island, stools, refrigerator, sink beneath the window and a door leading to the balcony.",
+                          "dimensions":  {
+                                             "small":  [
+                                                           800,
+                                                           450
+                                                       ],
+                                             "large":  [
+                                                           1600,
+                                                           900
+                                                       ],
+                                             "original":  [
+                                                              2661,
+                                                              1497
+                                                          ]
+                                         }
+                      },
+    "CocinaDeNoche":  {
+                          "es":  "Cocina iluminada de noche con isla central, taburetes, lámparas colgantes y encimera junto a la ventana.",
+                          "en":  "Kitchen at night with a central island, stools, pendant lamps and a worktop beneath the window.",
+                          "dimensions":  {
+                                             "small":  [
+                                                           450,
+                                                           800
+                                                       ],
+                                             "large":  [
+                                                           900,
+                                                           1600
+                                                       ],
+                                             "original":  [
+                                                              720,
+                                                              1280
+                                                          ]
+                                         }
+                      },
+    "CocinaComedor":  {
+                          "es":  "Vista nocturna desde la isla de cocina hacia el comedor de madera y las lámparas de fibras naturales.",
+                          "en":  "Night view from the kitchen island towards the wooden dining table and woven pendant lights.",
+                          "dimensions":  {
+                                             "small":  [
+                                                           544,
+                                                           800
+                                                       ],
+                                             "large":  [
+                                                           1088,
+                                                           1600
+                                                       ],
+                                             "original":  [
+                                                              2266,
+                                                              3331
+                                                          ]
+                                         }
+                      },
+    "ChocayaDormitorio":  {
+                              "es":  "Dormitorio con cama doble de tonos grises, dos apliques de pared y puerta abierta al baño junto a la ventana.",
+                              "en":  "Bedroom with a grey double bed, two wall lamps and an open bathroom door beside the window.",
+                              "dimensions":  {
+                                                 "small":  [
+                                                               800,
+                                                               533
+                                                           ],
+                                                 "large":  [
+                                                               1600,
+                                                               1067
+                                                           ],
+                                                 "original":  [
+                                                                  2046,
+                                                                  1364
+                                                              ]
+                                             }
+                          },
+    "Dormitorio2":  {
+                        "es":  "Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera.",
+                        "en":  "Bedroom with a double bed, yellow pillow, pendant lights and a high horizontal window above the headboard.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         800,
+                                                         533
+                                                     ],
+                                           "large":  [
+                                                         1600,
+                                                         1067
+                                                     ],
+                                           "original":  [
+                                                            1536,
+                                                            1024
+                                                        ]
+                                       }
+                    },
+    "Dormitorio3":  {
+                        "es":  "Dormitorio con cama de madera, sillón negro de trama abierta, cortinas claras y lámpara de techo de alambre.",
+                        "en":  "Bedroom with a wooden bed, black open-weave chair, light curtains and a wire pendant lamp.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         600,
+                                                         800
+                                                     ],
+                                           "large":  [
+                                                         1200,
+                                                         1600
+                                                     ],
+                                           "original":  [
+                                                            960,
+                                                            1280
+                                                        ]
+                                       }
+                    },
+    "Dormitorio4":  {
+                        "es":  "Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo.",
+                        "en":  "Bedroom with a double bed, beige curtains, an armchair beside the window and a bathroom door at the far end.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         800,
+                                                         600
+                                                     ],
+                                           "large":  [
+                                                         1600,
+                                                         1200
+                                                     ],
+                                           "original":  [
+                                                            3875,
+                                                            2906
+                                                        ]
+                                       }
+                    },
+    "ChocayaBanoAbajo":  {
+                             "es":  "Baño con ducha de lluvia negra, dos lavabos sobre mueble de madera y dos espejos ovalados sobre paredes claras.",
+                             "en":  "Bathroom with a black rainfall shower, twin basins on a wooden vanity and two oval mirrors against light-coloured walls.",
+                             "dimensions":  {
+                                                "small":  [
+                                                              800,
+                                                              533
+                                                          ],
+                                                "large":  [
+                                                              1600,
+                                                              1067
+                                                          ],
+                                                "original":  [
+                                                                 1536,
+                                                                 1024
+                                                             ]
+                                            }
+                         },
+    "ChocayaBano2":  {
+                         "es":  "Baño de visitas con revestimiento gris, lavabo sobre mueble oscuro, espejo y ventana vertical junto al inodoro.",
+                         "en":  "Guest bathroom with grey wall tiles, a basin on a dark vanity, mirror and a narrow vertical window beside the toilet.",
+                         "dimensions":  {
+                                            "small":  [
+                                                          533,
+                                                          800
+                                                      ],
+                                            "large":  [
+                                                          1067,
+                                                          1600
+                                                      ],
+                                            "original":  [
+                                                             1024,
+                                                             1536
+                                                         ]
+                                        }
+                     },
+    "Bano3":  {
+                  "es":  "Baño con ducha de lluvia y cortina a rayas, ventana de vidrio esmerilado y lavabo sobre un mueble de madera.",
+                  "en":  "Bathroom with a rainfall shower and striped curtain, frosted window and a basin on a wooden vanity.",
+                  "dimensions":  {
+                                     "small":  [
+                                                   600,
+                                                   800
+                                               ],
+                                     "large":  [
+                                                   1200,
+                                                   1600
+                                               ],
+                                     "original":  [
+                                                      3024,
+                                                      4032
+                                                  ]
+                                 }
+              },
+    "Bano4":  {
+                  "es":  "Baño con revestimiento blanco veteado, lavabo rectangular, grifería negra, espejo y ventana vertical.",
+                  "en":  "Bathroom with white veined tiles, a rectangular basin, black tap, mirror and a vertical window.",
+                  "dimensions":  {
+                                     "small":  [
+                                                   533,
+                                                   800
+                                               ],
+                                     "large":  [
+                                                   1067,
+                                                   1600
+                                               ],
+                                     "original":  [
+                                                      1024,
+                                                      1536
+                                                  ]
+                                 }
+              },
+    "ChocayaCarPort":  {
+                           "es":  "Cochera privada cubierta, con piso de baldosas y portón de madera hacia el estacionamiento del condominio.",
+                           "en":  "Covered private garage with a tiled floor and wooden doors opening towards the condominium parking area.",
+                           "dimensions":  {
+                                              "small":  [
+                                                            800,
+                                                            533
+                                                        ],
+                                              "large":  [
+                                                            1600,
+                                                            1067
+                                                        ],
+                                              "original":  [
+                                                               1536,
+                                                               1024
+                                                           ]
+                                          }
+                       },
+    "VistaFrontisBalcon":  {
+                               "es":  "Vista desde la casa hacia las palmeras del condominio, el estacionamiento y el mar al fondo.",
+                               "en":  "View from the house towards the condominium palm trees, parking area and the ocean in the distance.",
+                               "dimensions":  {
+                                                  "small":  [
+                                                                800,
+                                                                450
+                                                            ],
+                                                  "large":  [
+                                                                1600,
+                                                                900
+                                                            ],
+                                                  "original":  [
+                                                                   4032,
+                                                                   2268
+                                                               ]
+                                              }
+                           },
+    "VistaParque":  {
+                        "es":  "Vista desde el balcón hacia los senderos y áreas verdes del condominio, con casas blancas y cerros al fondo.",
+                        "en":  "View from the balcony over the condominium paths and lawns, with white houses and hills in the distance.",
+                        "dimensions":  {
+                                           "small":  [
+                                                         800,
+                                                         450
+                                                     ],
+                                           "large":  [
+                                                         1600,
+                                                         900
+                                                     ],
+                                           "original":  [
+                                                            4032,
+                                                            2268
+                                                        ]
+                                       }
+                    },
+    "PoolyMar":  {
+                     "es":  "Detalle de la piscina con mosaicos turquesa, baranda de vidrio y vista sobre las palmeras hacia el océano.",
+                     "en":  "Detail of the turquoise-tiled pool, glass balustrade and a view over the palm trees towards the ocean.",
+                     "dimensions":  {
+                                        "small":  [
+                                                      800,
+                                                      800
+                                                  ],
+                                        "large":  [
+                                                      1600,
+                                                      1600
+                                                  ],
+                                        "original":  [
+                                                         1024,
+                                                         1024
+                                                     ]
+                                    }
+                 },
+    "PoolyVista":  {
+                       "es":  "Piscina de mosaicos turquesa en la azotea, con baranda de vidrio y vista panorámica hacia la costa.",
+                       "en":  "Turquoise-tiled rooftop pool with a glass balustrade and a panoramic view towards the coast.",
+                       "dimensions":  {
+                                          "small":  [
+                                                        800,
+                                                        800
+                                                    ],
+                                          "large":  [
+                                                        1600,
+                                                        1600
+                                                    ],
+                                          "original":  [
+                                                           2141,
+                                                           2141
+                                                       ]
+                                      }
+                   },
+    "poolyvistafrontis":  {
+                              "es":  "Vista de la piscina elevada, con plataforma de madera, pasamanos de acero y una figura de Buda junto al agua.",
+                              "en":  "Raised pool with a wooden deck, steel handrails and a Buddha figure beside the water.",
+                              "dimensions":  {
+                                                 "small":  [
+                                                               800,
+                                                               533
+                                                           ],
+                                                 "large":  [
+                                                               1600,
+                                                               1067
+                                                           ],
+                                                 "original":  [
+                                                                  1536,
+                                                                  1024
+                                                              ]
+                                             }
+                          },
+    "figura":  {
+                   "es":  "Figura de Buda junto a la piscina de la azotea, con palmeras, casas del condominio y cerros al fondo.",
+                   "en":  "Buddha figure beside the rooftop pool, with palm trees, condominium houses and hills in the background.",
+                   "dimensions":  {
+                                      "small":  [
+                                                    800,
+                                                    800
+                                                ],
+                                      "large":  [
+                                                    1600,
+                                                    1600
+                                                ],
+                                      "original":  [
+                                                       1024,
+                                                       1024
+                                                   ]
+                                  }
+               }
+}

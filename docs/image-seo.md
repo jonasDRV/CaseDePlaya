@@ -1,6 +1,6 @@
 # Bildbeschreibungen und technische Bilddaten
 
-`image-metadata.js` enthält spanische und englische Alttexte für alle 65
+`image-metadata.js` enthält spanische und englische Alttexte für alle 38
 Fotomotive sowie den Text des Logo-Links. Die Beschreibungen folgen den
 sichtbaren Motiven; sie enthalten keine Keyword-Listen. Varianten desselben
 Motivs erhalten denselben Alttext. Die vom Eigentümer bestätigten identischen
@@ -10,8 +10,8 @@ Badaufnahmen werden im jeweiligen Raumkontext beschrieben.
 
 - In `index.html` stehen aussagekräftige spanische Alttexte und reale
   Bildabmessungen bereits im HTML. `data-image` verweist auf das Motiv im
-  zentralen Katalog. Die Galerie zeigt 29 Motive. Wohnzimmer, Lounge,
-  Essbereich, Küche und Hausfassaden zeigen die renovierten Aufnahmen.
+  zentralen Katalog. Die Galerie zeigt 30 Motive. Schlafzimmer, Bäder, Garage, Pool, Terrasse, BBQ,
+  Wohnzimmer, Lounge, Essbereich, Küche und Hausfassaden zeigen die neuen Aufnahmen.
   Die zwei bisherigen Rückansichten wurden durch ein aktuelles Foto ersetzt.
 - `script.js` aktualisiert Alttexte beim Sprachwechsel und beim Wechsel
   der Raumkartenfotos. Die Lightbox verwendet ebenfalls die Beschreibung
@@ -44,13 +44,14 @@ die Anzahl der Bildindikatoren entspricht jeweils der Fotoanzahl.
   Abmessungen 1600 × 900. Der Alttext folgt der gewählten Sprache.
 - Die JSON-LD-Bilderliste des Ferienhauses referenziert aktuelle Fotos,
   die auch über den Grundriss zugänglich sind.
-- `sitemap.xml` führt die 50 tatsächlich verwendeten Fotomotive als
+- `sitemap.xml` führt die 36 tatsächlich verwendeten Fotomotive als
   `image:loc` auf; das Änderungsdatum ist 2026-10-27. Damit sind auch Fotos
   benannt, die erst nach einem Raumwechsel angezeigt werden.
-- Bestehende Dateinamen bleiben erhalten, um vorhandene Bild-URLs und die
-  eindeutige Zuordnung des neuen Fotosatzes beizubehalten. Die 15 derzeit
-  unbenutzten Motive sind im Beschreibungskatalog vorbereitet, aber nicht
-  in die Bilder-Sitemap aufgenommen.
+- Die Dateinamen des neuen Fotosatzes bleiben zur eindeutigen Zuordnung
+  erhalten. Die zwei derzeit
+  unbenutzten neuen Duplikate bleiben im Beschreibungskatalog vorbereitet,
+  aber außerhalb der Bilder-Sitemap. Die 29 alten, ersetzten Motive liegen
+  mit ihren Metadaten unter `archive/`.
 
 ## Spätere Änderungen
 
@@ -65,3 +66,6 @@ die Anzahl der Bildindikatoren entspricht jeweils der Fotoanzahl.
 
 Grundlage: [Google-Bildempfehlungen](https://developers.google.com/search/docs/appearance/google-images)
 und [Bildabmessungen zur Platzreservierung](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia).
+
+Die vollständige Zuordnung alter und neuer Fotos sowie die zwei weiterhin
+benötigten Bestandsmotive stehen in [image-replacement-audit.md](image-replacement-audit.md).

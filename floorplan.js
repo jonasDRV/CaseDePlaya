@@ -40,7 +40,7 @@
       previous: 'Previous photo', next: 'Next photo', noPhotos: 'Photos of this space coming soon.',
       note: 'Illustrative plan, not to scale. The layout follows the architectural plan; furnishings may vary.',
       front: 'Main entrance · Parking', rear: 'Condominium park',
-      stairs: 'Stairs', patio: 'Patio', circulation: 'Hall', back: 'Back to the plan ↑',
+      stairs: 'Stairs', patio: 'Patio', circulation: 'Passage', back: 'Back to the plan ↑',
       voidLegend: 'Hatching: open void / no floor on this level.',
       seating: 'Sofa, two armchairs and a round table in the ground-floor lounge.',
       imageCount: (i, total) => `${i} / ${total}`,
@@ -84,21 +84,27 @@
         { id: 'ground-bedroom-main', name: ['Dormitorio 4 · Planta baja', 'Bedroom 4 · Ground floor'], label: [['Dormitorio 4'], ['Bedroom 4']],
           description: ['Cama de 2 plazas con colchón adicional extraíble de plaza y media.\nComparte un baño completo con el dormitorio 3.\nMampara con salida al área posterior y vista al parque.', 'Double bed with an additional pull-out mattress (Peruvian plaza y media size).\nShares a full bathroom with bedroom 3.\nSliding glass doors lead to the rear outdoor area with park views.'],
           path: 'M255 595H350V640H460V787L255 805Z', at: [356, 727], photos: ['gf_bedroom4'] },
-        { id: 'ground-rear-bath', name: ['Baño privado · Dormitorio 2', 'Private bathroom · Bedroom 2'], label: [['Baño'], ['Bath']],
-          description: ['Baño privado completo del dormitorio 2, junto al patio posterior.\nCuenta con ducha tipo lluvia, inodoro y lavatorio.', 'Private full bathroom for bedroom 2, beside the rear patio.\nIncludes a rainfall shower, toilet and sink.'],
-          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: ['gf_bathroom_of_bed2'] },
+        { id: 'ground-rear-bath', name: ['Baño privado · Dormitorio 2', 'Private bathroom · Bedroom 2'], label: [['Baño', 'privado'], ['Private', 'bath']],
+          description: ['Baño privado completo del dormitorio 2, junto al patio posterior.\nAcceso únicamente desde el dormitorio 2.\nCuenta con ducha tipo lluvia, inodoro y lavatorio.', 'Private full bathroom for bedroom 2, beside the rear patio.\nAccess only through bedroom 2.\nIncludes a rainfall shower, toilet and sink.'],
+          path: 'M40 680H110V819L40 825Z', at: [75, 750], labelSize: 12, kind: 'service', photos: ['gf_bathroom_of_bed2'] },
         { id: 'ground-patio', name: ['Patio · Planta baja', 'Ground-floor patio'], label: [['Patio'], ['Patio']],
-          description: ['Espacio exterior junto al acceso posterior desde el parque.', 'Outdoor space beside the rear entrance from the park.'],
-          path: 'M110 680H205V810L110 819Z', at: [157, 752], kind: 'outdoor', photos: ['exterieur_back'] },
+          description: ['Patio exterior junto al dormitorio 4 y al acceso posterior desde el parque.\nEl paso de la planta baja conduce directamente al patio.', 'Outdoor patio beside bedroom 4 and the rear entrance from the park.\nThe ground-floor passage leads directly into the patio.'],
+          path: 'M110 680H255V805L110 819Z', at: [182, 756], kind: 'outdoor', photos: ['exterieur_back'] },
       ],
       stairs: [{ id: 'ground-stairs', outline: 'M40 310H85V480H40Z',
         flights: [{ axis: 'y', from: 322, to: 480, start: 40, end: 85 }],
         route: 'M63 465V325', name: ['Escalera al segundo piso', 'Stairs to the upper floor'] }],
       fixtures: 'M450 370H420V520H450 M276 374H289V478H276Z M276 410H289 M276 444H289 M279 384H286V402H279Z M259 493H285V524H259Z',
-      doors: [{ gap: 'M220 354H278', leaf: 'M220 354V412', swing: 'M220 412A58 58 0 0 0 278 354',
-        name: ['Puerta entre la cochera y la kitchenette', 'Connecting door between garage and kitchenette'] }],
+      doors: [
+        { id: 'garage-kitchenette', gap: 'M220 354H278', leaf: 'M220 354V412', swing: 'M220 412A58 58 0 0 0 278 354',
+          name: ['Puerta entre la cochera y la kitchenette', 'Connecting door between garage and kitchenette'] },
+        { id: 'bedroom-2-private-bath', gap: 'M61 680H99', leaf: 'M61 680V718', swing: 'M61 718A38 38 0 0 0 99 680',
+          name: ['Único acceso al baño privado desde el dormitorio 2', 'Private bathroom access only through bedroom 2'] },
+      ],
+      passages: [{ id: 'hall-patio', gap: 'M211 680H249', route: 'M230 641V717',
+        name: ['Paso hacia el patio, junto al dormitorio 4', 'Passage leading into the patio beside bedroom 4'] }],
       seating: true,
-      contexts: [['circulation', 230, 713]],
+      contexts: [['circulation', 230, 620]],
     },
     {
       defaultRoom: 'upper-living',
@@ -107,7 +113,7 @@
       rooms: [
         { id: 'upper-wc', name: ['Baño de visitas · Segundo piso', 'Guest bathroom · Upper floor'], label: [['Baño'], ['WC']],
           description: ['Medio baño disponible para quienes utilizan las áreas sociales del segundo piso.\nCuenta con inodoro y lavatorio.', 'Half bathroom serving the main living areas on the upper floor.\nIncludes a toilet and sink.'],
-          path: 'M145 180H205V300H145Z', at: [175, 240], kind: 'service', photos: ['Bano4'] },
+          path: 'M145 180H205V300H145Z', at: [175, 240], kind: 'service', photos: ['1st_toilet'] },
         { id: 'upper-terrace', name: ['Balcón con vista al mar', 'Ocean-view balcony'], label: [['Balcón'], ['Balcony']],
           description: ['Un rincón para descansar y disfrutar de la brisa marina.\nDos butacas y una mesa auxiliar bajo un techo tipo sol y sombra.\nVista hacia el mar y el Real Club. El Real Club es independiente y no forma parte del condominio.', 'A relaxing spot to enjoy the sea breeze.\nTwo lounge chairs and a small table beneath a slatted pergola.\nViews of the ocean and Real Club. Real Club is independent and is not part of the condominium.'],
           path: 'M205 180H460V300H205Z', at: [332, 240], kind: 'outdoor', photos: ['1st_living_terrace_2', '1st_living_terrace_1'] },
@@ -123,12 +129,12 @@
         { id: 'kitchen', name: ['Cocina · Segundo piso', 'Upper-floor kitchen'], label: [['Cocina'], ['Kitchen']],
           description: ['Cocina con isla central, iluminación y tomacorrientes.\nRefrigeradora, cafetera, licuadora, tostadora y hervidor.\nOllas, vajilla, cubiertos y utensilios para preparar tus comidas.\nMuebles inferiores con espacio de almacenamiento.\nSalida al balcón posterior con vista al parque del condominio.', 'Kitchen with a central island, lighting and power outlets.\nRefrigerator, coffee maker, blender, toaster and electric kettle.\nPots, dishes, cutlery and cooking utensils.\nLower cabinets provide storage space.\nAccess to the rear balcony overlooking the condominium park.'],
           path: 'M205 625H460V745H205Z', at: [332, 682], kind: 'service', photos: ['1st_kitchen', '1st_kitchen_night', '1st_dining_1'] },
-        { id: 'upper-bath', name: ['Baño privado · Dormitorio 1', 'Private bathroom · Bedroom 1'], label: [['Baño'], ['Bath']],
-          description: ['Baño privado completo del dormitorio 1 en el segundo piso.\nCuenta con ducha tipo lluvia, inodoro y lavatorio.', 'Private full bathroom for upper-floor bedroom 1.\nIncludes a rainfall shower, toilet and sink.'],
-          path: 'M40 680H110V819L40 825Z', at: [75, 750], kind: 'service', photos: ['1st_bathroom_of_bed1'] },
+        { id: 'upper-bath', name: ['Baño privado · Dormitorio 1', 'Private bathroom · Bedroom 1'], label: [['Baño', 'privado'], ['Private', 'bath']],
+          description: ['Baño privado completo del dormitorio 1 en el segundo piso.\nAcceso únicamente desde el dormitorio 1.\nCuenta con ducha tipo lluvia, inodoro y lavatorio.', 'Private full bathroom for upper-floor bedroom 1.\nAccess only through bedroom 1.\nIncludes a rainfall shower, toilet and sink.'],
+          path: 'M40 680H110V819L40 825Z', at: [75, 750], labelSize: 12, kind: 'service', photos: ['1st_bathroom_of_bed1'] },
         { id: 'balcony', name: ['Balcón · Segundo piso', 'Upper-floor balcony'], label: [['Balcón'], ['Balcony']],
           description: ['Balcón posterior con vista al parque interior del condominio.\nAcceso desde la cocina del segundo piso.', 'Rear balcony overlooking the condominium’s central park.\nAccess from the upper-floor kitchen.'],
-          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['exterieur_back', 'VistaParque'] },
+          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['exterieur_back', 'view_park'] },
       ],
       voids: [
         { id: 'entrance-void', path: 'M40 180H145V300H40Z', at: [92, 240],
@@ -143,6 +149,8 @@
         route: 'M135 512H63V365', name: ['Escalera en L hacia la azotea', 'L-shaped stairs to the rooftop'],
         label: [['A la azotea'], ['To rooftop']], at: [140, 329] }],
       fixtures: 'M217 732V713H450V640 M430 640V713 M300 717H334V737H300Z',
+      doors: [{ id: 'bedroom-1-private-bath', gap: 'M61 680H99', leaf: 'M61 680V718', swing: 'M61 718A38 38 0 0 0 99 680',
+        name: ['Único acceso al baño privado desde el dormitorio 1', 'Private bathroom access only through bedroom 1'] }],
       contexts: [],
     },
     {
@@ -241,10 +249,15 @@
     });
 
     (floor.doors || []).forEach(door => {
-      const group = svgElement('g', { class: 'floorplan-door', role: 'img', 'aria-label': door.name[languageIndex()], 'data-plan-door': 'garage-kitchenette' }, svg);
+      const group = svgElement('g', { class: 'floorplan-door', role: 'img', 'aria-label': door.name[languageIndex()], 'data-plan-door': door.id }, svg);
       svgElement('path', { d: door.gap, class: 'floorplan-door-gap' }, group);
       svgElement('path', { d: door.leaf, class: 'floorplan-door-leaf' }, group);
       svgElement('path', { d: door.swing, class: 'floorplan-door-swing' }, group);
+    });
+    (floor.passages || []).forEach(passage => {
+      const group = svgElement('g', { class: 'floorplan-passage', role: 'img', 'aria-label': passage.name[languageIndex()], 'data-plan-passage': passage.id }, svg);
+      svgElement('path', { d: passage.gap, class: 'floorplan-passage-gap' }, group);
+      svgElement('path', { d: passage.route, class: 'floorplan-stair-direction', 'marker-end': 'url(#floorplan-stair-arrow)' }, group);
     });
     if (floor.seating) drawSeating(svg);
   }

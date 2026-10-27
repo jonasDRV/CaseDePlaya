@@ -24,12 +24,13 @@ Die renovierten Fotos vom 27.10.2026 verwenden `gf_` für das Erdgeschoss,
 `1st_` für das Obergeschoss und `2nd_` für die Dachterrasse. Deren neue
 Schlafzimmernummern stimmen mit dem Grundriss überein. Die alten Dateinamen
 `Dormitorio2` und `Dormitorio4` waren gegenüber den Raumnummern vertauscht.
-Die Schlafzimmerkarten behalten die Bestandsfotos, ordnen die alten Dateien
-`Dormitorio4` und `Dormitorio2` aber korrekt den Zimmern 2 und 4 zu. Auch die
-Galeriebeschriftungen folgen dieser Zuordnung. Wohnzimmer- und Küchenkarte
-zeigen die neuen Aufnahmen; die Galerie zeigt auch Lounge, Essbereich und
-Hausfassaden im renovierten Zustand. Die Ausstattungsangaben folgen wie der
-interaktive Grundriss den aktuellen Raumtexten.
+Auch die Schlafzimmerkarten und die Galerie zeigen jetzt die neuen Fotos.
+Die Karte von Schlafzimmer 2 enthält beide neuen Ansichten. Bäder, Garage,
+Pool, Terrasse und BBQ verwenden ebenfalls die aktuellen Fotos. Das Gäste-WC
+oben (`1st_toilet`) und der Blick vom hinteren Balkon
+(`view_park`) verwenden ebenfalls neue Fotos. Nur die beiden Strandmotive
+behalten alte Fotos, da hierfür kein neuer Ersatz vorhanden ist.
+Details stehen in [image-replacement-audit.md](image-replacement-audit.md).
 
 Weitere Fotozuordnungen:
 
@@ -43,13 +44,13 @@ Weitere Fotozuordnungen:
 | `ground-shared-bath` | `gf_sharedbath_1` |
 | `ground-rear-bath` | `gf_bathroom_of_bed2` (Bad von Bedroom 2) |
 | `ground-patio` | `exterieur_back` (Außenansicht des rückwärtigen Zugangs) |
-| `upper-wc` | `Bano4` (vom Eigentümer aus der Galerie zugeordnet) |
+| `upper-wc` | `1st_toilet` (neue Aufnahme des Gäste-WCs oben) |
 | `upper-terrace` | `1st_living_terrace_2`, `1st_living_terrace_1` |
 | `upper-living` | `1st_living_terrace_1`, `1st_living_3`, `1st_living_2`, `1st_living_night` |
 | `dining` | `1st_dining_2`, `1st_dining_1`, `1st_dining_living` |
 | `kitchen` | `1st_kitchen`, `1st_kitchen_night`, `1st_dining_1` |
 | `upper-bath` | `1st_bathroom_of_bed1` (Bad von Bedroom 1) |
-| `balcony` | `exterieur_back` (Außenansicht), `VistaParque` (bisheriger Ausblick) |
+| `balcony` | `exterieur_back` (Außenansicht), `view_park` (neuer Ausblick vom hinteren Balkon) |
 | `pool` | `2nd_pool_view_2`, `2nd_pool_1`, `2nd_pool_view_1`, `2nd_pool_view_3` |
 | `bbq` | `2nd_terrace_bbq` |
 | `roof-terrace` | `2nd_terrace_seaview`, `2nd_terrace_parkview`, `2nd_terrace_bbq` |
@@ -61,8 +62,8 @@ Identische Dateien werden innerhalb einer Raumansicht nicht doppelt gezeigt:
 `1st_bathroom_of_bed1` und `gf_bathroom_of_bed2` sind ebenfalls bytegleich.
 Der Eigentümer hat bestätigt, dass die beiden Badezimmer identisch aussehen
 und das Foto ausdrücklich für beide Räume verwendet werden soll.
-Die Bezeichnung „Bathroom4“ in der Galerie entspricht dem Dateinamen `Bano4`.
-Dieses Foto zeigt auf Wunsch des Eigentümers nun das Gäste-WC im Obergeschoss.
+Das zuvor als „Bathroom4“ zugeordnete Bestandsfoto `Bano4` wurde durch
+die neue Aufnahme `1st_toilet` ersetzt und archiviert.
 `seaview` bleibt für die spätere Auswahl der allgemeinen Galerie verfügbar.
 
 Die Raumtexte vom 27.10.2026 werden auf Spanisch und Englisch am ausgewählten
@@ -85,10 +86,17 @@ Condominio; der Lageabschnitt und die betreffenden Raumtexte erklären dies.
   anklickbar. Die Lounge erhält eine
   kleine Sitzecke zur Orientierung anhand der Bestandsfotos. Die Kitchenette wird als gerade Küchenzeile
   dargestellt; die Verbindungstür zur Garage ist eingezeichnet.
+  Der Patio reicht nach rechts bis an Schlafzimmer 4. Der oberhalb liegende
+  Paso führt durch eine eingezeichnete Öffnung in den Patio; ein Pfeil zeigt
+  die Verbindung. Das private Bad von Schlafzimmer 2 hat eine Tür in der
+  gemeinsamen Wand zum Schlafzimmer und eine geschlossene Wand zum Patio.
 - Obergeschoss: Die Treppe wird als L-Treppe dargestellt. Der offene
   Galeriebereich ist als Luftraum ohne Boden gekennzeichnet. Patio und die
   freien Bereiche des Erdgeschosses werden hier nicht als begehbare Räume
   oder zusätzliche Terrassen gezeigt.
+  Auch das private Bad von Schlafzimmer 1 zeigt die Tür ausschließlich zum
+  Schlafzimmer. Beide Bäder sind als privat beschriftet und in beiden
+  Sprachen mit dem ausschließlichen Zugang durch das Schlafzimmer erklärt.
 - Dachterrasse: Nur Pool, BBQ und Terrasse sind auswählbare Bereiche. Der
   Zugang vom Obergeschoss und die Pooltreppe sind getrennt erkennbar;
   die Pooltreppe schließt rechts direkt an den Hausaufgang an, bei
@@ -126,7 +134,7 @@ Die Vorschau nutzt responsive AVIF/WebP-Bilder. Die vergrößerte Galerie nutzt
 Bei auswählbaren Räumen zeigt ein leeres `photos: []` einen Platzhalter und
 keine fremden Raumfotos. Mit `interactive: false` bleibt ein Raum nur als
 beschriftete Fläche sichtbar, ohne Klick- oder Tastaturauswahl.
-Für das Gäste-WC im Obergeschoss fehlt noch eine eigene Aufnahme.
+Für das Gäste-WC im Obergeschoss wird die neue Aufnahme `1st_toilet` verwendet.
 Lufträume und Treppen werden als
 Orientierungselemente gezeigt und erhalten keine eigenen Fotoansichten.
 

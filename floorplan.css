@@ -171,6 +171,7 @@
 .floorplan-staircase,
 .floorplan-void,
 .floorplan-door,
+.floorplan-passage,
 .floorplan-furniture,
 .floorplan-pool-water { pointer-events: none; }
 
@@ -219,6 +220,7 @@
 }
 
 .floorplan-door-gap { fill: none; stroke: #eeeae5; stroke-width: 7; }
+.floorplan-passage-gap { fill: none; stroke: #e5ebdf; stroke-width: 7; }
 .floorplan-door-leaf { fill: none; stroke: var(--brown); stroke-width: 1.8; }
 .floorplan-door-swing { fill: none; stroke: #a18c76; stroke-width: 1.2; }
 

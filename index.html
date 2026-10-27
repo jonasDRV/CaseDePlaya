@@ -249,8 +249,8 @@
       href="images/1st_living_terrace_1-800.avif" media="(max-width: 768px)">
     <link rel="preload" as="image" type="image/avif"
       href="images/1st_living_terrace_1-1600.avif" media="(min-width: 768.01px)">
-    <link rel="stylesheet" href="style.css?v=20261027b" />
-    <link rel="stylesheet" href="floorplan.css?v=20261027" />
+    <link rel="stylesheet" href="style.css?v=20261027c" />
+    <link rel="stylesheet" href="floorplan.css?v=20261027b" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -349,7 +349,7 @@
         <div class="casa-header reveal">
           <p class="casa-location" data-i18n="casa.location">Chocaya, Asia, Lima, Perú</p>
           <h2 class="casa-title">Casa Chocaya</h2>
-          <p class="casa-specs" data-i18n="casa.specs">4 dormitorios &middot; 5 baños &middot; 308 m² aprox.</p>
+          <p class="casa-specs" data-i18n="casa.specs">4 dormitorios &middot; Máximo 8 huéspedes &middot; 5 baños &middot; 308 m² aprox.</p>
         </div>
 
         <div class="casa-description reveal">
@@ -477,238 +477,246 @@
         </p>
 
         <div class="gallery-masonry">
-          <div class="gallery-item">
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_living_terrace_1-800.avif 800w, images/1st_living_terrace_1-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_living_terrace_1-800.webp 800w, images/1st_living_terrace_1-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_living_terrace_1" width="1254" height="1254" src="images/1st_living_terrace_1-1600.webp" alt="Sala renovada con sofá y sillones claros, junto a la terraza con sillas de madera y vista al mar." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.sala">Sala de estar</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.sala">Sala de estar</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/ChocallaPool-800.avif 800w, images/ChocallaPool-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/ChocallaPool-800.webp 800w, images/ChocallaPool-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="ChocallaPool" width="1600" height="1067" src="images/ChocallaPool-1600.webp" alt="Piscina elevada en la azotea, con escalera de madera, barandas de vidrio, sombrilla roja y banco junto al acceso." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/2nd_pool_1-800.avif 800w, images/2nd_pool_1-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_pool_1-800.webp 800w, images/2nd_pool_1-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_pool_1" width="1448" height="1086" src="images/2nd_pool_1-1600.webp" alt="Acceso a la piscina elevada por escalones de madera, con pasamanos metálicos, baranda de vidrio y sombrilla roja." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.piscina">Piscina</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.piscina">Piscina</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/exterieur_front-800.avif 800w, images/exterieur_front-1600.avif 1182w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/exterieur_front-800.webp 800w, images/exterieur_front-1600.webp 1182w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="exterieur_front" width="1182" height="1254" src="images/exterieur_front-1600.webp" alt="Fachada de Casa Chocaya en Chocaya, Asia, con portón de madera, puerta de ingreso y terraza acristalada." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.fachada">Fachada</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.fachada">Fachada</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/exterieur_back-800.avif 800w, images/exterieur_back-1600.avif 1011w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/exterieur_back-800.webp 800w, images/exterieur_back-1600.webp 1011w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="exterieur_back" width="1011" height="1064" src="images/exterieur_back-1600.webp" alt="Fachada posterior renovada de Casa Chocaya, con acceso de madera, balcón de vidrio y pérgola en la azotea." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.trasera">Vista trasera</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.trasera">Vista trasera</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Terraza-800.avif 800w, images/Terraza-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Terraza-800.webp 800w, images/Terraza-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Terraza" width="1600" height="1067" src="images/Terraza-1600.webp" alt="Zona de parrilla de la azotea con encimera en U, lavadero y espacio abierto para preparar comidas al aire libre." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/2nd_terrace_bbq-800.avif 800w, images/2nd_terrace_bbq-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_terrace_bbq-800.webp 800w, images/2nd_terrace_bbq-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_terrace_bbq" width="1254" height="1254" src="images/2nd_terrace_bbq-1600.webp" alt="Zona de parrilla con encimera en U bajo una pérgola de madera, abierta a la vista de los cerros." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.terraza">Terraza</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.bbq">Zona de parrilla</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
+            <picture>
+              <source type="image/avif" srcset="images/2nd_terrace_seaview-800.avif 800w, images/2nd_terrace_seaview-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_terrace_seaview-800.webp 800w, images/2nd_terrace_seaview-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_terrace_seaview" width="1448" height="1086" src="images/2nd_terrace_seaview-1600.webp" alt="Terraza cubierta por una pérgola, con banco junto al muro y vistas abiertas al mar y a las rocas de la costa." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-caption" data-i18n="cap.roofSea">Terraza con vista al mar</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
+            <picture>
+              <source type="image/avif" srcset="images/2nd_terrace_parkview-800.avif 800w, images/2nd_terrace_parkview-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_terrace_parkview-800.webp 800w, images/2nd_terrace_parkview-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_terrace_parkview" width="1448" height="1086" src="images/2nd_terrace_parkview-1600.webp" alt="Terraza de la azotea bajo una pérgola de madera, con lámparas colgantes y vista hacia la costa y las casas vecinas." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-caption" data-i18n="cap.roofPanorama">Terraza panorámica</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_living_3-800.avif 800w, images/1st_living_3-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_living_3-800.webp 800w, images/1st_living_3-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_living_3" width="1254" height="1254" src="images/1st_living_3-1600.webp" alt="Sala del segundo piso con sofá y sillones claros, mesa de madera y baranda de vidrio junto a la escalera." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.sala2">Sala de estar</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.sala2">Sala de estar</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_living_night-800.avif 800w, images/1st_living_night-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_living_night-800.webp 800w, images/1st_living_night-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_living_night" width="1600" height="900" src="images/1st_living_night-1600.webp" alt="Sala iluminada de noche con sofá de cuero, asientos de cojines claros y puertas abiertas hacia la terraza." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.living">Living</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.living">Living</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/gf_lounge-800.avif 800w, images/gf_lounge-1600.avif 1086w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/gf_lounge-800.webp 800w, images/gf_lounge-1600.webp 1086w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="gf_lounge" width="1086" height="1332" src="images/gf_lounge-1600.webp" alt="Sala de planta baja con sofá pequeño, dos sillones de ratán y mesa redonda bajo la galería de doble altura." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.lobby">Lobby</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.lobby">Lobby</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_dining_2-800.avif 800w, images/1st_dining_2-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_dining_2-800.webp 800w, images/1st_dining_2-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_dining_2" width="1254" height="1254" src="images/1st_dining_2-1600.webp" alt="Vista frontal del comedor de madera con sillas de respaldo cruzado, lámpara colgante y cocina al fondo." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.comedor">Comedor</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.comedor">Comedor</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_kitchen-800.avif 800w, images/1st_kitchen-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_kitchen-800.webp 800w, images/1st_kitchen-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_kitchen" width="1254" height="1254" src="images/1st_kitchen-1600.webp" alt="Cocina con muebles de madera clara, isla central, dos taburetes y lavadero bajo una ventana horizontal." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.cocina">Cocina</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.cocina">Cocina</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_kitchen_night-800.avif 800w, images/1st_kitchen_night-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_kitchen_night-800.webp 800w, images/1st_kitchen_night-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_kitchen_night" width="1254" height="1254" src="images/1st_kitchen_night-1600.webp" alt="Cocina de noche con isla, taburetes, lámparas colgantes y encimera iluminada bajo la ventana." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.cocinanoche">Cocina de noche</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.cocinanoche">Cocina de noche</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/ChocayaDormitorio-800.avif 800w, images/ChocayaDormitorio-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/ChocayaDormitorio-800.webp 800w, images/ChocayaDormitorio-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="ChocayaDormitorio" width="1600" height="1067" src="images/ChocayaDormitorio-1600.webp" alt="Dormitorio con cama doble de tonos grises, dos apliques de pared y puerta abierta al baño junto a la ventana." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/1st_bedroom1_1-800.avif 800w, images/1st_bedroom1_1-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/1st_bedroom1_1-800.webp 800w, images/1st_bedroom1_1-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="1st_bedroom1_1" width="1448" height="1086" src="images/1st_bedroom1_1-1600.webp" alt="Dormitorio 1 en el segundo piso, con cama doble gris, apliques de pared y baño junto a la ventana." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm1">Dormitorio principal</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.dorm1">Dormitorio principal</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Dormitorio2-800.avif 800w, images/Dormitorio2-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Dormitorio2-800.webp 800w, images/Dormitorio2-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Dormitorio2" width="1600" height="1067" src="images/Dormitorio2-1600.webp" alt="Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_bedroom4-800.avif 800w, images/gf_bedroom4-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_bedroom4-800.webp 800w, images/gf_bedroom4-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_bedroom4" width="1448" height="1086" src="images/gf_bedroom4-1600.webp" alt="Dormitorio 4 en planta baja, con cama doble, almohada amarilla y ventana horizontal alta sobre la cabecera." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm4">Dormitorio 4</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.dorm4">Dormitorio 4</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Dormitorio3-800.avif 600w, images/Dormitorio3-1600.avif 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Dormitorio3-800.webp 600w, images/Dormitorio3-1600.webp 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Dormitorio3" width="1200" height="1600" src="images/Dormitorio3-1600.webp" alt="Dormitorio con cama de madera, sillón negro de trama abierta, cortinas claras y lámpara de techo de alambre." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_bedroom3-800.avif 800w, images/gf_bedroom3-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_bedroom3-800.webp 800w, images/gf_bedroom3-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_bedroom3" width="1448" height="1086" src="images/gf_bedroom3-1600.webp" alt="Dormitorio 3 en planta baja, con cama de madera, sillón negro, cortinas claras y lámpara de techo de alambre." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm3">Dormitorio 3</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.dorm3">Dormitorio 3</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Dormitorio4-800.avif 800w, images/Dormitorio4-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Dormitorio4-800.webp 800w, images/Dormitorio4-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Dormitorio4" width="1600" height="1200" src="images/Dormitorio4-1600.webp" alt="Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_bedroom2_1-800.avif 800w, images/gf_bedroom2_1-1600.avif 1262w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_bedroom2_1-800.webp 800w, images/gf_bedroom2_1-1600.webp 1262w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_bedroom2_1" width="1262" height="993" src="images/gf_bedroom2_1-1600.webp" alt="Dormitorio 2 en planta baja, con cama doble, cortinas beige y puerta del baño junto a la ventana." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.dorm2">Dormitorio 2</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.dorm2">Dormitorio 2</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/ChocayaBanoAbajo-800.avif 800w, images/ChocayaBanoAbajo-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/ChocayaBanoAbajo-800.webp 800w, images/ChocayaBanoAbajo-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="ChocayaBanoAbajo" width="1600" height="1067" src="images/ChocayaBanoAbajo-1600.webp" alt="Baño con ducha de lluvia negra, dos lavabos sobre mueble de madera y dos espejos ovalados sobre paredes claras." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_sharedbath_1-800.avif 800w, images/gf_sharedbath_1-1600.avif 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_sharedbath_1-800.webp 800w, images/gf_sharedbath_1-1600.webp 1448w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_sharedbath_1" width="1448" height="1086" src="images/gf_sharedbath_1-1600.webp" alt="Baño compartido de planta baja con ducha de lluvia negra, dos lavabos y espejos ovalados sobre un mueble de madera." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.bano1">Baño planta baja</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.sharedbath">Baño compartido · Planta baja</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/ChocayaBano2-800.avif 533w, images/ChocayaBano2-1600.avif 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/ChocayaBano2-800.webp 533w, images/ChocayaBano2-1600.webp 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="ChocayaBano2" width="1067" height="1600" src="images/ChocayaBano2-1600.webp" alt="Baño de visitas con revestimiento gris, lavabo sobre mueble oscuro, espejo y ventana vertical junto al inodoro." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_toilet-800.avif 800w, images/gf_toilet-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_toilet-800.webp 800w, images/gf_toilet-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_toilet" width="1254" height="1254" src="images/gf_toilet-1600.webp" alt="Baño de visitas de planta baja con paredes grises, lavabo sobre mueble oscuro, espejo y ventana junto al inodoro." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.bano2">Baño 2</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.guestbathGround">Baño de visitas · Planta baja</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Bano3-800.avif 600w, images/Bano3-1600.avif 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Bano3-800.webp 600w, images/Bano3-1600.webp 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Bano3" width="1200" height="1600" src="images/Bano3-1600.webp" alt="Baño con ducha de lluvia y cortina a rayas, ventana de vidrio esmerilado y lavabo sobre un mueble de madera." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/1st_bathroom_of_bed1-800.avif 800w, images/1st_bathroom_of_bed1-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/1st_bathroom_of_bed1-800.webp 800w, images/1st_bathroom_of_bed1-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="1st_bathroom_of_bed1" width="1254" height="1254" src="images/1st_bathroom_of_bed1-1600.webp" alt="Baño del dormitorio 1 con ducha de lluvia, cortina a rayas, ventana esmerilada y lavabo sobre mueble de madera." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.bano3">Baño 3</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.privatebath">Baño privado</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/Bano4-800.avif 533w, images/Bano4-1600.avif 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/Bano4-800.webp 533w, images/Bano4-1600.webp 1067w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="Bano4" width="1067" height="1600" src="images/Bano4-1600.webp" alt="Baño con revestimiento blanco veteado, lavabo rectangular, grifería negra, espejo y ventana vertical." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/1st_toilet-800.avif 800w, images/1st_toilet-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/1st_toilet-800.webp 800w, images/1st_toilet-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="1st_toilet" width="1254" height="1254" src="images/1st_toilet-1600.webp" alt="Baño de visitas del segundo piso con revestimiento blanco veteado, lavabo rectangular, grifería negra, espejo y ventana vertical junto al inodoro." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.bano4">Baño 4</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.guestbathUpper">Baño de visitas · Segundo piso</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/ChocayaCarPort-800.avif 800w, images/ChocayaCarPort-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/ChocayaCarPort-800.webp 800w, images/ChocayaCarPort-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="ChocayaCarPort" width="1600" height="1067" src="images/ChocayaCarPort-1600.webp" alt="Cochera privada cubierta, con piso de baldosas y portón de madera hacia el estacionamiento del condominio." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/gf_garage-800.avif 800w, images/gf_garage-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/gf_garage-800.webp 800w, images/gf_garage-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="gf_garage" width="1254" height="1254" src="images/gf_garage-1600.webp" alt="Interior de la cochera con piso de baldosas, portón de madera y un auto estacionado junto al muro." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.estac">Estacionamiento</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.estac">Estacionamiento</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/VistaFrontisBalcon-800.avif 800w, images/VistaFrontisBalcon-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/VistaFrontisBalcon-800.webp 800w, images/VistaFrontisBalcon-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="VistaFrontisBalcon" width="1600" height="900" src="images/VistaFrontisBalcon-1600.webp" alt="Vista desde la casa hacia las palmeras del condominio, el estacionamiento y el mar al fondo." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/seaview-800.avif 800w, images/seaview-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/seaview-800.webp 800w, images/seaview-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="seaview" width="1600" height="1600" src="images/seaview-1600.webp" alt="Vista desde la casa hacia las palmeras y la playa, con el océano y una formación rocosa clara en el horizonte." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.balcon">Vista desde el balcón</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.balcon">Vista desde el balcón</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/VistaParque-800.avif 800w, images/VistaParque-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/VistaParque-800.webp 800w, images/VistaParque-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="VistaParque" width="1600" height="900" src="images/VistaParque-1600.webp" alt="Vista desde el balcón hacia los senderos y áreas verdes del condominio, con casas blancas y cerros al fondo." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/view_park-800.avif 800w, images/view_park-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/view_park-800.webp 800w, images/view_park-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="view_park" width="1600" height="900" src="images/view_park-1600.webp" alt="Vista desde el balcón posterior hacia el parque del condominio, con jardines, senderos, casas blancas y cerros cerca del mar." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.parque">Vista del parque</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.parque">Vista del parque</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/Playa-800.avif 600w, images/Playa-1600.avif 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/Playa-800.webp 600w, images/Playa-1600.webp 1200w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="Playa" width="1200" height="1600" src="images/Playa-1600.webp" alt="Atardecer en la playa de Chocaya, con cielo naranja reflejado en la arena mojada entre dos formaciones rocosas." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.playa">Playa</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.playa">Playa</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/Playa2-800.avif 800w, images/Playa2-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/Playa2-800.webp 800w, images/Playa2-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="Playa2" width="1600" height="1130" src="images/Playa2-1600.webp" alt="Playa de Chocaya al atardecer, con rocas a ambos lados, arena mojada y una franja naranja sobre el horizonte." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.playa2">Playa</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.playa2">Playa</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/PoolyMar-800.avif 800w, images/PoolyMar-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/PoolyMar-800.webp 800w, images/PoolyMar-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="PoolyMar" width="1600" height="1600" src="images/PoolyMar-1600.webp" alt="Detalle de la piscina con mosaicos turquesa, baranda de vidrio y vista sobre las palmeras hacia el océano." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/2nd_pool_view_1-800.avif 800w, images/2nd_pool_view_1-1600.avif 1024w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_pool_view_1-800.webp 800w, images/2nd_pool_view_1-1600.webp 1024w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_pool_view_1" width="1024" height="1024" src="images/2nd_pool_view_1-1600.webp" alt="Esquina de la piscina de mosaicos turquesa, con vista al mar a través de la baranda de vidrio." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.poolmar">Piscina y mar</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.poolmar">Piscina y mar</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/PoolyVista-800.avif 800w, images/PoolyVista-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/PoolyVista-800.webp 800w, images/PoolyVista-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="PoolyVista" width="1600" height="1600" src="images/PoolyVista-1600.webp" alt="Piscina de mosaicos turquesa en la azotea, con baranda de vidrio y vista panorámica hacia la costa." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/2nd_pool_view_2-800.avif 800w, images/2nd_pool_view_2-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_pool_view_2-800.webp 800w, images/2nd_pool_view_2-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_pool_view_2" width="1600" height="900" src="images/2nd_pool_view_2-1600.webp" alt="Vista amplia de la piscina en la azotea, con plataforma de madera, pasamanos de acero y palmeras al fondo." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.poolvista">Piscina y vista</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.poolvista">Piscina y vista</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
-              <source type="image/avif" srcset="images/poolyvistafrontis-800.avif 800w, images/poolyvistafrontis-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/poolyvistafrontis-800.webp 800w, images/poolyvistafrontis-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="poolyvistafrontis" width="1600" height="1067" src="images/poolyvistafrontis-1600.webp" alt="Vista de la piscina elevada, con plataforma de madera, pasamanos de acero y una figura de Buda junto al agua." loading="lazy" decoding="async">
+              <source type="image/avif" srcset="images/2nd_pool_view_3-800.avif 800w, images/2nd_pool_view_3-1600.avif 1024w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <source type="image/webp" srcset="images/2nd_pool_view_3-800.webp 800w, images/2nd_pool_view_3-1600.webp 1024w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
+              <img data-image="2nd_pool_view_3" width="1024" height="1024" src="images/2nd_pool_view_3-1600.webp" alt="Figura de Buda junto a la piscina, con vista sobre las casas del condominio hacia los cerros de la costa." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.poolfrontis">Piscina y frontis</div>
-          </div>
-          <div class="gallery-item">
+            <span class="gallery-caption" data-i18n="cap.poolDetail">Detalle de la piscina</span>
+          </button>
+          <button type="button" class="gallery-item" aria-haspopup="dialog" aria-controls="lightbox">
             <picture>
               <source type="image/avif" srcset="images/1st_dining_1-800.avif 800w, images/1st_dining_1-1600.avif 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <source type="image/webp" srcset="images/1st_dining_1-800.webp 800w, images/1st_dining_1-1600.webp 1254w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
               <img data-image="1st_dining_1" width="1254" height="1254" src="images/1st_dining_1-1600.webp" alt="Comedor con mesa y sillas de madera, junto a la cocina abierta con isla y lámparas de fibras naturales." loading="lazy" decoding="async">
             </picture>
-            <div class="gallery-caption" data-i18n="cap.cocinacom">Cocina y comedor</div>
-          </div>
-          <div class="gallery-item">
-            <picture>
-              <source type="image/avif" srcset="images/figura-800.avif 800w, images/figura-1600.avif 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <source type="image/webp" srcset="images/figura-800.webp 800w, images/figura-1600.webp 1600w" sizes="(max-width: 520px) calc(50vw - 1.2rem - 3px), (max-width: 768px) calc(50vw - 2rem - 4px), (max-width: 1200px) calc(33.333vw - 1.333rem - 5.333px), 374px">
-              <img data-image="figura" width="1600" height="1600" src="images/figura-1600.webp" alt="Figura de Buda junto a la piscina de la azotea, con palmeras, casas del condominio y cerros al fondo." loading="lazy" decoding="async">
-            </picture>
-            <div class="gallery-caption" data-i18n="cap.casa">Casa Chocaya</div>
-          </div>
+            <span class="gallery-caption" data-i18n="cap.cocinacom">Cocina y comedor</span>
+          </button>
         </div>
         <div class="gallery-more-wrap">
           <button type="button" class="btn-amenities" id="galleryLoadMore" data-i18n="gal.more">
@@ -781,12 +789,12 @@
         <div class="layout-track" id="layoutTrack">
 
           <!-- Dormitorio 1 -->
-          <div class="room-card" data-images='["images/ChocayaDormitorio.webp"]'>
+          <div class="room-card" data-images='["images/1st_bedroom1_1.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/ChocayaDormitorio-800.avif 800w, images/ChocayaDormitorio-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/ChocayaDormitorio-800.webp 800w, images/ChocayaDormitorio-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="ChocayaDormitorio" width="1600" height="1067" src="images/ChocayaDormitorio-1600.webp" alt="Dormitorio con cama doble de tonos grises, dos apliques de pared y puerta abierta al baño junto a la ventana." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/1st_bedroom1_1-800.avif 800w, images/1st_bedroom1_1-1600.avif 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/1st_bedroom1_1-800.webp 800w, images/1st_bedroom1_1-1600.webp 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="1st_bedroom1_1" width="1448" height="1086" src="images/1st_bedroom1_1-1600.webp" alt="Dormitorio 1 en el segundo piso, con cama doble gris, apliques de pared y baño junto a la ventana." class="room-img" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="room-info">
@@ -809,13 +817,19 @@
           </div>
 
           <!-- Dormitorio 2 -->
-          <div class="room-card" data-images='["images/Dormitorio4.webp"]'>
+          <div class="room-card" data-images='["images/gf_bedroom2_1.webp","images/gf_bedroom2_2.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/Dormitorio4-800.avif 800w, images/Dormitorio4-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/Dormitorio4-800.webp 800w, images/Dormitorio4-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="Dormitorio4" width="1600" height="1200" src="images/Dormitorio4-1600.webp" alt="Dormitorio con cama doble, cortinas beige, sillón junto a la ventana y puerta del baño al fondo." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/gf_bedroom2_1-800.avif 800w, images/gf_bedroom2_1-1600.avif 1262w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/gf_bedroom2_1-800.webp 800w, images/gf_bedroom2_1-1600.webp 1262w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="gf_bedroom2_1" width="1262" height="993" src="images/gf_bedroom2_1-1600.webp" alt="Dormitorio 2 en planta baja, con cama doble, cortinas beige y puerta del baño junto a la ventana." class="room-img" loading="lazy" decoding="async">
               </picture>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
+              <div class="room-dots">
+                <span class="room-dot active"></span>
+                <span class="room-dot"></span>
+              </div>
             </div>
             <div class="room-info">
               <div class="room-info-top">
@@ -837,12 +851,12 @@
           </div>
 
           <!-- Dormitorio 3 -->
-          <div class="room-card" data-images='["images/Dormitorio3.webp"]'>
+          <div class="room-card" data-images='["images/gf_bedroom3.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/Dormitorio3-800.avif 600w, images/Dormitorio3-1600.avif 1200w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/Dormitorio3-800.webp 600w, images/Dormitorio3-1600.webp 1200w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="Dormitorio3" width="1200" height="1600" src="images/Dormitorio3-1600.webp" alt="Dormitorio con cama de madera, sillón negro de trama abierta, cortinas claras y lámpara de techo de alambre." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/gf_bedroom3-800.avif 800w, images/gf_bedroom3-1600.avif 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/gf_bedroom3-800.webp 800w, images/gf_bedroom3-1600.webp 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="gf_bedroom3" width="1448" height="1086" src="images/gf_bedroom3-1600.webp" alt="Dormitorio 3 en planta baja, con cama de madera, sillón negro, cortinas claras y lámpara de techo de alambre." class="room-img" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="room-info">
@@ -865,12 +879,12 @@
           </div>
 
           <!-- Dormitorio 4 -->
-          <div class="room-card" data-images='["images/Dormitorio2.webp"]'>
+          <div class="room-card" data-images='["images/gf_bedroom4.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/Dormitorio2-800.avif 800w, images/Dormitorio2-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/Dormitorio2-800.webp 800w, images/Dormitorio2-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="Dormitorio2" width="1600" height="1067" src="images/Dormitorio2-1600.webp" alt="Dormitorio con cama doble, almohada amarilla, lámparas colgantes y ventana horizontal alta sobre la cabecera." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/gf_bedroom4-800.avif 800w, images/gf_bedroom4-1600.avif 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/gf_bedroom4-800.webp 800w, images/gf_bedroom4-1600.webp 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="gf_bedroom4" width="1448" height="1086" src="images/gf_bedroom4-1600.webp" alt="Dormitorio 4 en planta baja, con cama doble, almohada amarilla y ventana horizontal alta sobre la cabecera." class="room-img" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="room-info">
@@ -900,8 +914,8 @@
                 <source type="image/webp" srcset="images/1st_living_terrace_1-800.webp 800w, images/1st_living_terrace_1-1600.webp 1254w" sizes="(max-width: 768px) 280px, 320px">
                 <img data-image="1st_living_terrace_1" width="1254" height="1254" src="images/1st_living_terrace_1-1600.webp" alt="Sala renovada con sofá y sillones claros, junto a la terraza con sillas de madera y vista al mar." class="room-img" loading="lazy" decoding="async">
               </picture>
-              <button class="room-img-prev" aria-label="Foto anterior">&#8249;</button>
-              <button class="room-img-next" aria-label="Foto siguiente">&#8250;</button>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
               <div class="room-dots">
                 <span class="room-dot active"></span>
                 <span class="room-dot"></span>
@@ -937,8 +951,8 @@
                 <source type="image/webp" srcset="images/1st_kitchen-800.webp 800w, images/1st_kitchen-1600.webp 1254w" sizes="(max-width: 768px) 280px, 320px">
                 <img data-image="1st_kitchen" width="1254" height="1254" src="images/1st_kitchen-1600.webp" alt="Cocina con muebles de madera clara, isla central, dos taburetes y lavadero bajo una ventana horizontal." class="room-img" loading="lazy" decoding="async">
               </picture>
-              <button class="room-img-prev" aria-label="Foto anterior">&#8249;</button>
-              <button class="room-img-next" aria-label="Foto siguiente">&#8250;</button>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
               <div class="room-dots">
                 <span class="room-dot active"></span>
                 <span class="room-dot"></span>
@@ -966,17 +980,19 @@
           </div>
 
           <!-- Piscina y terraza -->
-          <div class="room-card" data-images='["images/ChocallaPool.webp","images/Terraza.webp","images/PoolyMar.webp","images/PoolyVista.webp","images/poolyvistafrontis.webp"]'>
+          <div class="room-card" data-images='["images/2nd_pool_1.webp","images/2nd_pool_view_2.webp","images/2nd_pool_view_1.webp","images/2nd_pool_view_3.webp","images/2nd_terrace_seaview.webp","images/2nd_terrace_parkview.webp","images/2nd_terrace_bbq.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/ChocallaPool-800.avif 800w, images/ChocallaPool-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/ChocallaPool-800.webp 800w, images/ChocallaPool-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="ChocallaPool" width="1600" height="1067" src="images/ChocallaPool-1600.webp" alt="Piscina elevada en la azotea, con escalera de madera, barandas de vidrio, sombrilla roja y banco junto al acceso." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/2nd_pool_1-800.avif 800w, images/2nd_pool_1-1600.avif 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/2nd_pool_1-800.webp 800w, images/2nd_pool_1-1600.webp 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="2nd_pool_1" width="1448" height="1086" src="images/2nd_pool_1-1600.webp" alt="Acceso a la piscina elevada por escalones de madera, con pasamanos metálicos, baranda de vidrio y sombrilla roja." class="room-img" loading="lazy" decoding="async">
               </picture>
-              <button class="room-img-prev" aria-label="Foto anterior">&#8249;</button>
-              <button class="room-img-next" aria-label="Foto siguiente">&#8250;</button>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
               <div class="room-dots">
                 <span class="room-dot active"></span>
+                <span class="room-dot"></span>
+                <span class="room-dot"></span>
                 <span class="room-dot"></span>
                 <span class="room-dot"></span>
                 <span class="room-dot"></span>
@@ -1003,15 +1019,15 @@
           </div>
 
           <!-- Baños -->
-          <div class="room-card" data-images='["images/ChocayaBanoAbajo.webp","images/ChocayaBano2.webp","images/Bano3.webp","images/Bano4.webp"]'>
+          <div class="room-card" data-images='["images/gf_sharedbath_1.webp","images/gf_toilet.webp","images/1st_bathroom_of_bed1.webp","images/1st_toilet.webp"]'>
             <div class="room-img-wrapper">
               <picture>
-                <source type="image/avif" srcset="images/ChocayaBanoAbajo-800.avif 800w, images/ChocayaBanoAbajo-1600.avif 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <source type="image/webp" srcset="images/ChocayaBanoAbajo-800.webp 800w, images/ChocayaBanoAbajo-1600.webp 1600w" sizes="(max-width: 768px) 280px, 320px">
-                <img data-image="ChocayaBanoAbajo" width="1600" height="1067" src="images/ChocayaBanoAbajo-1600.webp" alt="Baño con ducha de lluvia negra, dos lavabos sobre mueble de madera y dos espejos ovalados sobre paredes claras." class="room-img" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="images/gf_sharedbath_1-800.avif 800w, images/gf_sharedbath_1-1600.avif 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <source type="image/webp" srcset="images/gf_sharedbath_1-800.webp 800w, images/gf_sharedbath_1-1600.webp 1448w" sizes="(max-width: 768px) 280px, 320px">
+                <img data-image="gf_sharedbath_1" width="1448" height="1086" src="images/gf_sharedbath_1-1600.webp" alt="Baño compartido de planta baja con ducha de lluvia negra, dos lavabos y espejos ovalados sobre un mueble de madera." class="room-img" loading="lazy" decoding="async">
               </picture>
-              <button class="room-img-prev" aria-label="Foto anterior">&#8249;</button>
-              <button class="room-img-next" aria-label="Foto siguiente">&#8250;</button>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
               <div class="room-dots">
                 <span class="room-dot active"></span>
                 <span class="room-dot"></span>
@@ -1044,8 +1060,8 @@
                 <source type="image/webp" srcset="images/Playa-800.webp 600w, images/Playa-1600.webp 1200w" sizes="(max-width: 768px) 280px, 320px">
                 <img data-image="Playa" width="1200" height="1600" src="images/Playa-1600.webp" alt="Atardecer en la playa de Chocaya, con cielo naranja reflejado en la arena mojada entre dos formaciones rocosas." class="room-img" loading="lazy" decoding="async">
               </picture>
-              <button class="room-img-prev" aria-label="Foto anterior">&#8249;</button>
-              <button class="room-img-next" aria-label="Foto siguiente">&#8250;</button>
+              <button class="room-img-prev" data-i18n-aria="aria.previous" aria-label="Foto anterior">&#8249;</button>
+              <button class="room-img-next" data-i18n-aria="aria.next" aria-label="Foto siguiente">&#8250;</button>
               <div class="room-dots">
                 <span class="room-dot active"></span>
                 <span class="room-dot"></span>
@@ -1402,8 +1418,8 @@
       </div>
     </div>
 
-    <script src="image-metadata.js?v=20261027"></script>
-    <script src="script.js?v=20261027b"></script>
-    <script src="floorplan.js?v=20261027c"></script>
+    <script src="image-metadata.js?v=20261027b"></script>
+    <script src="script.js?v=20261027d"></script>
+    <script src="floorplan.js?v=20261027e"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@ const translations = {
     'hero.subtitle': 'Tu refugio privado en el Pacífico',
     'hero.cta':      'Consultar ahora',
     'casa.location': 'Chocaya, Asia, Lima, Perú',
-    'casa.specs':    '4 dormitorios · 5 baños · 308 m² aprox.',
+    'casa.specs':    '4 dormitorios · Máximo 8 huéspedes · 5 baños · 308 m² aprox.',
     'casa.desc1':    'Ubicada dentro de un condominio privado en Chocaya, Casa Chocaya ofrece una experiencia de descanso sofisticada para familias que valoran privacidad, seguridad y comodidad. A solo 80 metros del mar, combina la tranquilidad de la playa con el confort, la amplitud y el nivel de una casa pensada para disfrutarse plenamente.',
     'casa.desc2':    'Distribuida en tres pisos, la casa tiene tres dormitorios en la planta baja y uno en el segundo piso, donde se encuentran la sala, el comedor y la cocina. La azotea reúne la piscina, la terraza y la zona de parrilla con vista al mar. A solo 10 minutos en auto del Boulevard de Asia, es una escapada exclusiva cerca de Lima.',
     'am1.h': 'Acceso directo a la playa',
@@ -85,6 +85,14 @@ const translations = {
     'cap.poolfrontis': 'Piscina y frontis',
     'cap.cocinacom': 'Cocina y comedor',
     'cap.casa':      'Casa Chocaya',
+    'cap.bbq': 'Zona de parrilla',
+    'cap.guestbathGround': 'Baño de visitas · Planta baja',
+    'cap.guestbathUpper': 'Baño de visitas · Segundo piso',
+    'cap.poolDetail': 'Detalle de la piscina',
+    'cap.privatebath': 'Baño privado',
+    'cap.roofPanorama': 'Terraza panorámica',
+    'cap.roofSea': 'Terraza con vista al mar',
+    'cap.sharedbath': 'Baño compartido · Planta baja',
     'dist.title':    'Distribución',
     'dist.sub':      'Conoce cada espacio de la casa',
     'room.more':     'Ver más',
@@ -211,7 +219,7 @@ const translations = {
     'hero.subtitle': 'Your private retreat on the Pacific',
     'hero.cta':      'Enquire now',
     'casa.location': 'Chocaya, Asia, Lima, Peru',
-    'casa.specs':    '4 bedrooms · 5 bathrooms · approx. 308 m²',
+    'casa.specs':    '4 bedrooms · Maximum 8 guests · 5 bathrooms · approx. 308 m²',
     'casa.desc1':    'Located within a private condominium in Chocaya, Casa Chocaya offers a sophisticated retreat for families who value privacy, security and comfort. Just 80 metres from the sea, it combines the peace of the beach with the comfort, space and quality of a home designed to be fully enjoyed.',
     'casa.desc2':    'The house spans three levels, with three bedrooms on the ground floor and one on the upper floor, alongside the living room, dining area and kitchen. The rooftop brings together the pool, terrace and BBQ area with sea views. Just 10 minutes by car from the Boulevard de Asia, it is an exclusive getaway near Lima.',
     'am1.h': 'Direct beach access',
@@ -269,6 +277,14 @@ const translations = {
     'cap.poolfrontis': 'Pool and front view',
     'cap.cocinacom': 'Kitchen and dining',
     'cap.casa':      'Casa Chocaya',
+    'cap.bbq': 'BBQ area',
+    'cap.guestbathGround': 'Guest bathroom · Ground floor',
+    'cap.guestbathUpper': 'Guest bathroom · Upper floor',
+    'cap.poolDetail': 'Pool detail',
+    'cap.privatebath': 'Private bathroom',
+    'cap.roofPanorama': 'Panoramic rooftop terrace',
+    'cap.roofSea': 'Ocean-view rooftop terrace',
+    'cap.sharedbath': 'Shared bathroom · Ground floor',
     'dist.title':    'Layout',
     'dist.sub':      'Explore every room in the house',
     'room.more':     'Show more',
@@ -501,11 +517,12 @@ function navigateLightbox(direction) {
   updateLightbox();
 }
 
-// Gallery images
-const galleryImgs = Array.from(document.querySelectorAll('.gallery-item img'));
-const gallerySrcs = galleryImgs.map(img => img.getAttribute('src'));
-galleryImgs.forEach((img, i) => {
-  img.addEventListener('click', () => openLightbox(gallerySrcs, i));
+// The entire native button opens the photo, including its caption and edges.
+// A single click handler preserves normal touch scrolling and keyboard activation.
+const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const gallerySrcs = galleryItems.map(item => item.querySelector('img').getAttribute('src'));
+galleryItems.forEach((item, i) => {
+  item.addEventListener('click', () => openLightbox(gallerySrcs, i));
 });
 
 lightboxClose.addEventListener('click', closeLightbox);
