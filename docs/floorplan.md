@@ -50,7 +50,7 @@ Weitere Fotozuordnungen:
 | `dining` | `1st_dining_2`, `1st_dining_1`, `1st_dining_living` |
 | `kitchen` | `1st_kitchen`, `1st_kitchen_night`, `1st_dining_1` |
 | `upper-bath` | `1st_bathroom_of_bed1` (Bad von Bedroom 1) |
-| `balcony` | `exterieur_back` (Außenansicht), `view_park` (neuer Ausblick vom hinteren Balkon) |
+| `balcony` | `view_park` (neuer Ausblick vom hinteren Balkon), `exterieur_back` (Außenansicht) |
 | `pool` | `2nd_pool_view_2`, `2nd_pool_1`, `2nd_pool_view_1`, `2nd_pool_view_3` |
 | `bbq` | `2nd_terrace_bbq` |
 | `roof-terrace` | `2nd_terrace_seaview`, `2nd_terrace_parkview`, `2nd_terrace_bbq` |

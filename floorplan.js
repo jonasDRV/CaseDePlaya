@@ -146,7 +146,7 @@
           path: 'M40 680H110V819L40 825Z', at: [75, 750], labelSize: 12, kind: 'service', photos: ['1st_bathroom_of_bed1'] },
         { id: 'balcony', name: ['Balcón posterior · Vista al parque', 'Rear balcony · Park view'], label: [['Balcón', 'posterior'], ['Rear', 'balcony']],
           description: ['Balcón posterior con vista al parque interior del condominio.\nAcceso desde la cocina del segundo piso.', 'Rear balcony overlooking the condominium’s central park.\nAccess from the upper-floor kitchen.'],
-          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['exterieur_back', 'view_park'] },
+          path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['view_park', 'exterieur_back'] },
       ],
       voids: [
         { id: 'entrance-void', path: 'M40 180H145V300H40Z', at: [92, 240],
