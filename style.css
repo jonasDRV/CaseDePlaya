@@ -157,12 +157,18 @@ ul {
 }
 
 .nav-logo-img {
-  height: 56px;
-  max-height: 56px;
+  height: 135px;
+  max-height: 135px;
   width: auto;
-  max-width: 56px;
+  max-width: 160px;
   object-fit: contain;
   display: block;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+
+#header.scrolled .nav-logo-img {
+  filter: none;
 }
 
 .nav-links {

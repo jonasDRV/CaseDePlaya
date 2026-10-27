@@ -520,15 +520,5 @@
                                                        1024
                                                    ]
                                   }
-               },
-    "LogoChocaya":  {
-                        "es":  "Casa Chocaya, volver al inicio.",
-                        "en":  "Casa Chocaya, return to the home section.",
-                        "dimensions":  {
-                                           "original":  [
-                                                            1000,
-                                                            1000
-                                                        ]
-                                       }
-                    }
+               }
 }
