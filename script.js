@@ -8,8 +8,8 @@
    ============================================================ */
 const translations = {
   es: {
-    'page.title':    'Casa Chocaya · Casa de Playa Asia Lima · Beach House Peru',
-    'page.description': 'Casa Chocaya en Chocaya, Asia – Lima, Perú. Casa privada de 4 dormitorios, 5 baños, piscina en azotea, zona de parrilla y acceso directo al mar. A 10 min del Boulevard de Asia. Desde $100/noche.',
+    'page.title':    'Casa Chocaya | Casa de playa en Asia, Perú',
+    'page.description': 'Casa de playa en Chocaya, Asia: hasta 8 huéspedes, 4 dormitorios, piscina privada, parrilla y Wi-Fi.',
     'nav.lacasa':    'La Casa',
     'nav.dist':      'Distribución',
     'nav.galeria':   'Galería',
@@ -23,6 +23,9 @@ const translations = {
     'aria.close':    'Cerrar',
     'aria.previous': 'Imagen anterior',
     'aria.next':     'Imagen siguiente',
+    'aria.nextRoom': 'Siguiente espacio',
+    'aria.previousRoom': 'Espacio anterior',
+    'aria.rating5': '5 de 5 estrellas',
     'hero.tagline':  'Chocaya · Lima · Perú',
     'hero.subtitle': 'Tu refugio privado en el Pacífico',
     'hero.cta':      'Consultar ahora',
@@ -38,8 +41,8 @@ const translations = {
     'am3.p': 'Piscina de uso privado en el tercer piso, con vista al mar.',
     'am4.h': 'Zona de parrilla',
     'am4.p': 'Ideal para almuerzos al aire libre, tardes largas y encuentros especiales en familia.',
-    'am5.h': 'Balcones y terrazas',
-    'am5.p': 'Dos balcones y dos terrazas que amplían la experiencia de la casa con luz, aire y espacios para disfrutar.',
+    'am5.h': 'Balcones, patio y terraza',
+    'am5.p': 'Dos balcones, un patio en la planta baja y una terraza en la azotea para disfrutar del aire libre y las vistas.',
     'am6.h': 'Cocina equipada',
     'am6.p': 'Cuenta con lo necesario para acompañar la estadía con practicidad y comodidad.',
     'am7.h': 'Cochera privada para 2 autos',
@@ -58,33 +61,24 @@ const translations = {
     'cap.piscina':   'Piscina',
     'cap.fachada':   'Fachada',
     'cap.trasera':   'Vista trasera',
-    'cap.jardin':    'Jardín trasero',
-    'cap.terraza':   'Terraza',
     'cap.sala2':     'Sala de estar',
-    'cap.living':    'Living',
-    'cap.lobby':     'Lobby',
-    'cap.acceso':    'Acceso',
+    'cap.living':    'Sala de estar · Noche',
+    'cap.lobby':     'Sala · Planta baja',
     'cap.comedor':   'Comedor',
     'cap.cocina':    'Cocina',
     'cap.cocinanoche': 'Cocina de noche',
-    'cap.dorm1':     'Dormitorio principal',
+    'cap.dorm1':     'Dormitorio 1',
     'cap.dorm2':     'Dormitorio 2',
     'cap.dorm3':     'Dormitorio 3',
     'cap.dorm4':     'Dormitorio 4',
-    'cap.bano1':     'Baño planta baja',
-    'cap.bano2':     'Baño 2',
-    'cap.bano3':     'Baño 3',
-    'cap.bano4':     'Baño 4',
-    'cap.estac':     'Estacionamiento',
-    'cap.balcon':    'Vista desde el balcón',
+    'cap.estac':     'Cochera',
+    'cap.balcon':    'Balcón con vista al mar',
     'cap.parque':    'Vista del parque',
     'cap.playa':     'Playa',
     'cap.playa2':    'Playa',
     'cap.poolmar':   'Piscina y mar',
     'cap.poolvista': 'Piscina y vista',
-    'cap.poolfrontis': 'Piscina y frontis',
     'cap.cocinacom': 'Cocina y comedor',
-    'cap.casa':      'Casa Chocaya',
     'cap.bbq': 'Zona de parrilla',
     'cap.guestbathGround': 'Baño de visitas · Planta baja',
     'cap.guestbathUpper': 'Baño de visitas · Segundo piso',
@@ -97,9 +91,9 @@ const translations = {
     'dist.sub':      'Conoce cada espacio de la casa',
     'room.more':     'Ver más',
     'room.less':     'Ver menos',
-    'r1.name': 'Dormitorio 1',   'r1.sub': 'Cama matrimonial · Baño incorporado',
-    'r1.d1': 'Cama matrimonial', 'r1.d2': 'Baño incorporado con ducha tipo lluvia',
-    'r1.d3': 'Armario',          'r1.d4': 'Planta alta',
+    'r1.name': 'Dormitorio 1',   'r1.sub': 'Cama matrimonial · Baño privado',
+    'r1.d1': 'Cama matrimonial', 'r1.d2': 'Baño privado con ducha tipo lluvia',
+    'r1.d3': 'Armario',          'r1.d4': 'Segundo piso',
     'r2.name': 'Dormitorio 2',   'r2.sub': 'Cama doble y colchón extraíble · Baño privado',
     'r2.d1': 'Cama de 2 plazas con colchón adicional extraíble de plaza y media', 'r2.d2': 'Baño privado con ducha tipo lluvia',
     'r2.d3': 'Armario',          'r2.d4': 'Planta baja',
@@ -111,31 +105,32 @@ const translations = {
     'r4.d3': 'Armario',          'r4.d4': 'Planta baja',
     'rsala.name': 'Sala de estar', 'rsala.sub': 'TV · Comedor para 8',
     'rsala.d1': 'TV',            'rsala.d2': 'Sofás y zona de descanso',
-    'rsala.d3': 'Comedor para 8 personas', 'rsala.d4': 'Acceso directo a terraza',
+    'rsala.d3': 'Comedor para 8 personas', 'rsala.d4': 'Acceso directo al balcón con vista al mar',
     'rsala.d5': 'Vista al mar',
     'rcoc.name': 'Cocina',       'rcoc.sub': 'Totalmente equipada',
     'rcoc.d1': 'Refrigerador con congeladora', 'rcoc.d2': 'Cafetera, hervidor y licuadora',
     'rcoc.d3': 'Horno pequeño',  'rcoc.d4': 'Platos y cubiertos',
     'rcoc.d5': 'Utensilios básicos de cocina',
-    'rpis.name': 'Piscina y terraza', 'rpis.sub': 'Tercer piso · Vista al mar',
+    'rpis.name': 'Piscina y terraza', 'rpis.sub': 'Azotea · Vista al mar',
     'rpis.d1': 'Piscina en la azotea', 'rpis.d2': 'Zona de parrilla',
-    'rpis.d3': 'Vista panorámica al mar', 'rpis.d4': 'Zona de descanso y hamacas',
+    'rpis.d3': 'Vista panorámica al mar', 'rpis.d4': 'Zona de descanso con reposeras',
     'rbanos.name': 'Baños',      'rbanos.sub': '3 baños completos · 2 medios baños',
     'rbanos.d1': 'Baños privados con ducha tipo lluvia en los dormitorios 1 y 2',
     'rbanos.d2': 'Baño completo compartido por los dormitorios 3 y 4, y 2 medios baños de visitas',
     'rplaya.name': 'Playa',      'rplaya.sub': 'A 80 metros · Acceso directo',
     'rplaya.d1': 'A solo 80 metros del mar', 'rplaya.d2': 'Acceso directo a la playa',
-    'rplaya.d3': 'A 2 minutos a pie', 'rplaya.d4': 'Arena fina y aguas tranquilas',
+    'rplaya.d3': 'A 2 minutos a pie', 'rplaya.d4': 'Playa de Chocaya, en la costa de Asia',
     'loc.desc': 'Chocaya ofrece un entorno familiar, privado y tranquilo, ideal para desconectarse y disfrutar en familia. A solo 10 minutos en auto del Boulevard de Asia, cuenta con vigilancia las 24 horas, los 365 días del año, acceso directo a la playa y todo lo necesario para escapar de la rutina.',
     'loc.realClub': 'El Real Club es visible desde la casa, pero es independiente y no forma parte del condominio.',
     'loc.f1': 'A la altura del km 92.5 de la Panamericana Sur',
     'loc.f2': 'A solo 1 hora y 10 minutos de Lima',
-    'loc.f3': 'Ubicación tranquila y privada frente al mar',
+    'loc.f3': 'Entorno tranquilo y privado cerca del mar',
     'loc.f4': 'Restaurantes a pocos minutos a pie',
     'loc.f5': 'A solo 10 minutos del Boulevard de Asia',
     'cta.title': '¿Listo para darte una escapada de Lima?',
-    'cta.sub':   'Contáctanos por WhatsApp – respondemos rápido y sin complicaciones.',
+    'cta.sub':   'Contáctanos por WhatsApp o correo para consultar disponibilidad y la tarifa final.',
     'cta.btn':   'Consultar por WhatsApp ahora',
+    'cta.email': 'También por correo:',
     'footer.copy': '© 2026 Casa Chocaya. Todos los derechos reservados.',
     'modal.title': 'Comodidades incluidas',
     'mcat1': 'Común',
@@ -162,7 +157,7 @@ const translations = {
     'mcat5.l4': 'A 10 minutos en auto del Boulevard de Asia',
     'mcat5.l5': 'Opciones de comida a domicilio en la zona',
     'mcat6': 'Exterior',
-    'mcat6.l1': '2 balcones',         'mcat6.l2': '2 terrazas',
+    'mcat6.l1': '2 balcones',         'mcat6.l2': 'Terraza en la azotea',
     'mcat6.l3': 'Terraza con vista al mar',
     'mcat6.l4': 'Salida directa al jardín y parque del condominio',
     'mcat7': 'Información adicional',
@@ -196,12 +191,12 @@ const translations = {
     'faq.q5':        '¿A qué distancia está del Boulevard de Asia?',
     'faq.a5':        'Casa Chocaya está a solo 10 minutos en auto del Boulevard de Asia, donde encontrarás restaurantes, tiendas y vida nocturna en temporada.',
     'faq.q6':        '¿Cómo puedo reservar Casa Chocaya?',
-    'faq.a6':        'Para consultar disponibilidad y reservar, contáctanos por WhatsApp al +49 176 56891136. Respondemos rápido y sin complicaciones.',
+    'faq.a6':        'Para consultar disponibilidad y reservar, contáctanos por WhatsApp al +49 176 56891136 o por correo a info@casa-chocaya.com. Confirmaremos las fechas y la tarifa final.',
   },
 
   en: {
-    'page.title':    'Casa Chocaya · Beach House Asia Lima · Vacation Rental Peru',
-    'page.description': 'Casa Chocaya in Chocaya, Asia – Lima, Peru. Private beach house: 4 bedrooms, 5 bathrooms, rooftop pool, BBQ area and direct ocean access. 10 min from Boulevard de Asia. From $100/night.',
+    'page.title':    'Casa Chocaya | Beach house in Asia, Peru',
+    'page.description': 'Beach house in Chocaya, Asia, Peru: up to 8 guests, 4 bedrooms, a private pool, BBQ and Wi-Fi.',
     'nav.lacasa':    'The House',
     'nav.dist':      'Layout',
     'nav.galeria':   'Gallery',
@@ -215,6 +210,9 @@ const translations = {
     'aria.close':    'Close',
     'aria.previous': 'Previous image',
     'aria.next':     'Next image',
+    'aria.nextRoom': 'Next space',
+    'aria.previousRoom': 'Previous space',
+    'aria.rating5': '5 out of 5 stars',
     'hero.tagline':  'Chocaya · Lima · Peru',
     'hero.subtitle': 'Your private retreat on the Pacific',
     'hero.cta':      'Enquire now',
@@ -230,8 +228,8 @@ const translations = {
     'am3.p': 'A private pool on the rooftop, with ocean views.',
     'am4.h': 'BBQ area',
     'am4.p': 'Ideal for outdoor lunches, long afternoons and special family gatherings.',
-    'am5.h': 'Balconies and terraces',
-    'am5.p': 'Two balconies and two terraces that extend the living experience with light, fresh air and space to enjoy.',
+    'am5.h': 'Balconies, patio and rooftop terrace',
+    'am5.p': 'Two balconies, a ground-floor patio and a rooftop terrace provide outdoor space and views.',
     'am6.h': 'Fully equipped kitchen',
     'am6.p': 'Has everything needed to complement your stay with practicality and comfort.',
     'am7.h': 'Private garage for 2 cars',
@@ -250,33 +248,24 @@ const translations = {
     'cap.piscina':   'Pool',
     'cap.fachada':   'Facade',
     'cap.trasera':   'Rear view',
-    'cap.jardin':    'Back garden',
-    'cap.terraza':   'Terrace',
     'cap.sala2':     'Living room',
-    'cap.living':    'Living area',
-    'cap.lobby':     'Lobby',
-    'cap.acceso':    'Entrance',
+    'cap.living':    'Living room · Night',
+    'cap.lobby':     'Ground-floor lounge',
     'cap.comedor':   'Dining room',
     'cap.cocina':    'Kitchen',
     'cap.cocinanoche': 'Kitchen at night',
-    'cap.dorm1':     'Master bedroom',
+    'cap.dorm1':     'Bedroom 1',
     'cap.dorm2':     'Bedroom 2',
     'cap.dorm3':     'Bedroom 3',
     'cap.dorm4':     'Bedroom 4',
-    'cap.bano1':     'Ground floor bathroom',
-    'cap.bano2':     'Bathroom 2',
-    'cap.bano3':     'Bathroom 3',
-    'cap.bano4':     'Bathroom 4',
-    'cap.estac':     'Parking',
-    'cap.balcon':    'View from the balcony',
+    'cap.estac':     'Garage',
+    'cap.balcon':    'Ocean-view balcony',
     'cap.parque':    'Park view',
     'cap.playa':     'Beach',
     'cap.playa2':    'Beach',
     'cap.poolmar':   'Pool and sea',
     'cap.poolvista': 'Pool and view',
-    'cap.poolfrontis': 'Pool and front view',
     'cap.cocinacom': 'Kitchen and dining',
-    'cap.casa':      'Casa Chocaya',
     'cap.bbq': 'BBQ area',
     'cap.guestbathGround': 'Guest bathroom · Ground floor',
     'cap.guestbathUpper': 'Guest bathroom · Upper floor',
@@ -289,8 +278,8 @@ const translations = {
     'dist.sub':      'Explore every room in the house',
     'room.more':     'Show more',
     'room.less':     'Show less',
-    'r1.name': 'Bedroom 1',      'r1.sub': 'Double bed · En-suite bathroom',
-    'r1.d1': 'Double bed',       'r1.d2': 'En-suite with rainfall shower',
+    'r1.name': 'Bedroom 1',      'r1.sub': 'Double bed · Private bathroom',
+    'r1.d1': 'Double bed',       'r1.d2': 'Private bathroom with rainfall shower',
     'r1.d3': 'Wardrobe',         'r1.d4': 'Upper floor',
     'r2.name': 'Bedroom 2',      'r2.sub': 'Double bed and pull-out mattress · Private bathroom',
     'r2.d1': 'Double bed with an additional pull-out mattress (Peruvian plaza y media size)', 'r2.d2': 'Private bathroom with rainfall shower',
@@ -303,31 +292,32 @@ const translations = {
     'r4.d3': 'Wardrobe',         'r4.d4': 'Ground floor',
     'rsala.name': 'Living room', 'rsala.sub': 'TV · Dining for 8',
     'rsala.d1': 'TV',            'rsala.d2': 'Sofas and lounge area',
-    'rsala.d3': 'Dining table for 8', 'rsala.d4': 'Direct terrace access',
+    'rsala.d3': 'Dining table for 8', 'rsala.d4': 'Direct access to the ocean-view balcony',
     'rsala.d5': 'Sea view',
     'rcoc.name': 'Kitchen',      'rcoc.sub': 'Fully equipped',
     'rcoc.d1': 'Fridge-freezer', 'rcoc.d2': 'Coffee maker, kettle and blender',
     'rcoc.d3': 'Small oven',     'rcoc.d4': 'Plates and cutlery',
     'rcoc.d5': 'Basic kitchen utensils',
-    'rpis.name': 'Pool and terrace', 'rpis.sub': 'Third floor · Sea view',
+    'rpis.name': 'Pool and terrace', 'rpis.sub': 'Rooftop · Sea view',
     'rpis.d1': 'Rooftop pool',   'rpis.d2': 'BBQ area',
-    'rpis.d3': 'Panoramic sea view', 'rpis.d4': 'Lounge area and hammocks',
+    'rpis.d3': 'Panoramic sea view', 'rpis.d4': 'Lounge area with sun loungers',
     'rbanos.name': 'Bathrooms',  'rbanos.sub': '3 full bathrooms · 2 half bathrooms',
     'rbanos.d1': 'Private bathrooms with rainfall showers for Bedrooms 1 and 2',
     'rbanos.d2': 'Full bathroom shared by Bedrooms 3 and 4, plus 2 guest half bathrooms',
     'rplaya.name': 'Beach',      'rplaya.sub': '80 metres away · Direct access',
     'rplaya.d1': 'Just 80 metres from the sea', 'rplaya.d2': 'Direct beach access',
-    'rplaya.d3': '2 minutes on foot', 'rplaya.d4': 'Fine sand and calm waters',
+    'rplaya.d3': '2 minutes on foot', 'rplaya.d4': 'Chocaya beach on the Asia coast',
     'loc.desc': 'Chocaya offers a family-friendly, private and peaceful setting, ideal for switching off and enjoying time together. Just 10 minutes by car from the Boulevard de Asia, the condominium has 24-hour security all year round, direct beach access and everything you need to escape the everyday.',
     'loc.realClub': 'Real Club is visible from the house, but it is independent and is not part of the condominium.',
     'loc.f1': 'At km 92.5 of the Pan-American Highway South',
     'loc.f2': 'Just 1 hour 10 minutes from Lima',
-    'loc.f3': 'Quiet, private location by the sea',
+    'loc.f3': 'Quiet, private setting near the sea',
     'loc.f4': 'Restaurants a few minutes on foot',
     'loc.f5': 'Just 10 minutes from the Boulevard de Asia',
     'cta.title': 'Ready for a getaway from Lima?',
-    'cta.sub':   'Contact us on WhatsApp – we reply quickly and without fuss.',
+    'cta.sub':   'Contact us by WhatsApp or email to check availability and the final rate.',
     'cta.btn':   'Enquire on WhatsApp now',
+    'cta.email': 'You can also email us:',
     'footer.copy': '© 2026 Casa Chocaya. All rights reserved.',
     'modal.title': 'Amenities included',
     'mcat1': 'General',
@@ -354,7 +344,7 @@ const translations = {
     'mcat5.l4': '10 minutes by car from the Boulevard de Asia',
     'mcat5.l5': 'Food delivery options in the surrounding area',
     'mcat6': 'Exterior',
-    'mcat6.l1': '2 balconies',        'mcat6.l2': '2 terraces',
+    'mcat6.l1': '2 balconies',        'mcat6.l2': 'Rooftop terrace',
     'mcat6.l3': 'Terrace with sea view',
     'mcat6.l4': 'Direct access to the garden and condominium park',
     'mcat7': 'Additional information',
@@ -388,13 +378,14 @@ const translations = {
     'faq.q5':        'How far is it from the Boulevard de Asia?',
     'faq.a5':        'Casa Chocaya is just 10 minutes by car from the Boulevard de Asia, where you will find restaurants, shops and nightlife in season.',
     'faq.q6':        'How can I book Casa Chocaya?',
-    'faq.a6':        'To check availability and book, contact us via WhatsApp at +49 176 56891136. We reply quickly and without fuss.',
+    'faq.a6':        'To check availability and book, contact us via WhatsApp at +49 176 56891136 or email info@casa-chocaya.com. We will confirm your dates and the final rate.',
   }
 };
 
 let currentLang = 'es';
 
 function applyLang(lang) {
+  lang = lang === 'en' ? 'en' : 'es';
   currentLang = lang;
   document.documentElement.lang = lang;
   document.title = translations[lang]['page.title'];
@@ -403,6 +394,16 @@ function applyLang(lang) {
   if (metaDesc && translations[lang]['page.description']) {
     metaDesc.setAttribute('content', translations[lang]['page.description']);
   }
+  document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(meta => {
+    meta.content = translations[lang]['page.title'];
+  });
+  document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(meta => {
+    meta.content = translations[lang]['page.description'];
+  });
+  document.querySelector('meta[property="og:locale"]').content = lang === 'en' ? 'en_US' : 'es_PE';
+  document.querySelector('meta[property="og:locale:alternate"]').content = lang === 'en' ? 'es_PE' : 'en_US';
+  const map = document.querySelector('.location-image iframe');
+  if (map) map.title = translations[lang]['map.iframeTitle'];
 
   casaImages.refresh(lang);
 
@@ -430,7 +431,7 @@ function applyLang(lang) {
     b.setAttribute('aria-pressed', String(active));
   });
 
-  localStorage.setItem('lang', lang);
+  try { localStorage.setItem('lang', lang); } catch { /* The site also works with storage disabled. */ }
 }
 
 
@@ -609,7 +610,7 @@ document.querySelectorAll('.room-card').forEach(card => {
   }
 
   // Click image → open lightbox with this card's full image set
-  img.addEventListener('click', () => {
+  card.querySelector('.room-photo-open').addEventListener('click', () => {
     const srcs = images.length > 0
       ? images.map(url => url.replace(/\.webp$/, '-1600.webp'))
       : [img.getAttribute('src')];
@@ -689,16 +690,20 @@ modalOverlay.addEventListener('keydown', e => {
    ============================================================ */
 const revealElements = document.querySelectorAll('.reveal');
 
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealElements.forEach(el => {
+    el.classList.add('reveal-pending');
+    revealObserver.observe(el);
   });
-}, { threshold: 0.12 });
-
-revealElements.forEach(el => revealObserver.observe(el));
+}
 
 
 /* ============================================================
@@ -708,7 +713,9 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
 
-applyLang(localStorage.getItem('lang') || 'es');
+let preferredLanguage = 'es';
+try { preferredLanguage = localStorage.getItem('lang') || 'es'; } catch { /* Use the default language. */ }
+applyLang(preferredLanguage);
 
 
 /* ============================================================
@@ -717,7 +724,7 @@ applyLang(localStorage.getItem('lang') || 'es');
    so no request is sent to Google before the user opts in.
    ============================================================ */
 const MAPS_CONSENT_KEY = 'maps-consent';
-const MAPS_EMBED_SRC = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1945.7747017133515!2d-76.63415946125683!3d-12.74279199688801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ0JzM0LjEiUyA3NsKwMzcnNTguMyJX!5e0!3m2!1sde!2ses!4v1775253185858!5m2!1sde!2ses';
+const MAPS_EMBED_SRC = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1945.7747017133515!2d-76.632833!3d-12.742939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ0JzM0LjYiUyA3NsKwMzcnNTguMiJX!5e0!3m2!1sde!2ses!4v1775253185858!5m2!1sde!2ses';
 
 function loadMapsIframe() {
   const container = document.getElementById('mapConsent');

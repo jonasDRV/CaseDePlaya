@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /impressum.html
-Disallow: /privacy-policy.html
 
+# Legal pages declare noindex in their HTML; crawlers must be able to read it.
 Sitemap: https://casa-chocaya.com/sitemap.xml

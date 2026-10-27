@@ -1,6 +1,6 @@
 # Bildbeschreibungen und technische Bilddaten
 
-`image-metadata.js` enthält spanische und englische Alttexte für alle 38
+`image-metadata.js` enthält spanische und englische Alttexte für alle 40
 Fotomotive sowie den Text des Logo-Links. Die Beschreibungen folgen den
 sichtbaren Motiven; sie enthalten keine Keyword-Listen. Varianten desselben
 Motivs erhalten denselben Alttext. Die vom Eigentümer bestätigten identischen
@@ -13,6 +13,8 @@ Badaufnahmen werden im jeweiligen Raumkontext beschrieben.
   zentralen Katalog. Die Galerie zeigt 30 Motive. Schlafzimmer, Bäder, Garage, Pool, Terrasse, BBQ,
   Wohnzimmer, Lounge, Essbereich, Küche und Hausfassaden zeigen die neuen Aufnahmen.
   Die zwei bisherigen Rückansichten wurden durch ein aktuelles Foto ersetzt.
+  Der vordere Meerblick-Balkon zeigt beide neuen Balkonfotos im Grundriss;
+  `1st_balcony_front_2` ersetzt die reine Meerblick-Aufnahme in der Galerie.
 - `script.js` aktualisiert Alttexte beim Sprachwechsel und beim Wechsel
   der Raumkartenfotos. Die Lightbox verwendet ebenfalls die Beschreibung
   des tatsächlich gezeigten Fotos und lädt die großen WebP-Varianten.
@@ -48,8 +50,8 @@ die Anzahl der Bildindikatoren entspricht jeweils der Fotoanzahl.
   `image:loc` auf; das Änderungsdatum ist 2026-10-27. Damit sind auch Fotos
   benannt, die erst nach einem Raumwechsel angezeigt werden.
 - Die Dateinamen des neuen Fotosatzes bleiben zur eindeutigen Zuordnung
-  erhalten. Die zwei derzeit
-  unbenutzten neuen Duplikate bleiben im Beschreibungskatalog vorbereitet,
+  erhalten. Die zwei derzeit unbenutzten Duplikate sowie `seaview` und
+  `1st_living_terrace_2` bleiben im Beschreibungskatalog vorbereitet,
   aber außerhalb der Bilder-Sitemap. Die 29 alten, ersetzten Motive liegen
   mit ihren Metadaten unter `archive/`.
 

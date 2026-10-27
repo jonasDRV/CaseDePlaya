@@ -6,6 +6,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
+      <image:loc>https://casa-chocaya.com/images/1st_balcony_front_1-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://casa-chocaya.com/images/1st_balcony_front_2-1600.webp</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://casa-chocaya.com/images/1st_bathroom_of_bed1-1600.webp</image:loc>
     </image:image>
     <image:image>
@@ -39,7 +45,7 @@
       <image:loc>https://casa-chocaya.com/images/1st_living_terrace_1-1600.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://casa-chocaya.com/images/1st_living_terrace_2-1600.webp</image:loc>
+      <image:loc>https://casa-chocaya.com/images/1st_toilet-1600.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/2nd_pool_1-1600.webp</image:loc>
@@ -61,9 +67,6 @@
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/2nd_terrace_seaview-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/1st_toilet-1600.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/exterieur_back-1600.webp</image:loc>
@@ -106,9 +109,6 @@
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/Playa2-1600.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://casa-chocaya.com/images/seaview-1600.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://casa-chocaya.com/images/view_park-1600.webp</image:loc>

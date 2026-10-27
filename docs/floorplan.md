@@ -45,7 +45,7 @@ Weitere Fotozuordnungen:
 | `ground-rear-bath` | `gf_bathroom_of_bed2` (Bad von Bedroom 2) |
 | `ground-patio` | `exterieur_back` (Außenansicht des rückwärtigen Zugangs) |
 | `upper-wc` | `1st_toilet` (neue Aufnahme des Gäste-WCs oben) |
-| `upper-terrace` | `1st_living_terrace_2`, `1st_living_terrace_1` |
+| `upper-terrace` | `1st_balcony_front_2`, `1st_balcony_front_1` (neue Fotos des vorderen Meerblick-Balkons) |
 | `upper-living` | `1st_living_terrace_1`, `1st_living_3`, `1st_living_2`, `1st_living_night` |
 | `dining` | `1st_dining_2`, `1st_dining_1`, `1st_dining_living` |
 | `kitchen` | `1st_kitchen`, `1st_kitchen_night`, `1st_dining_1` |
@@ -64,7 +64,8 @@ Der Eigentümer hat bestätigt, dass die beiden Badezimmer identisch aussehen
 und das Foto ausdrücklich für beide Räume verwendet werden soll.
 Das zuvor als „Bathroom4“ zugeordnete Bestandsfoto `Bano4` wurde durch
 die neue Aufnahme `1st_toilet` ersetzt und archiviert.
-`seaview` bleibt für die spätere Auswahl der allgemeinen Galerie verfügbar.
+Die Galerie zeigt statt `seaview` nun `1st_balcony_front_2`. `seaview` und
+`1st_living_terrace_2` bleiben als derzeit unbenutzte Dateien erhalten.
 
 Die Raumtexte vom 27.10.2026 werden auf Spanisch und Englisch am ausgewählten
 Raum angezeigt. Die Schlafzimmernummern des Anhangs wurden anhand von Etage

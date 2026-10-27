@@ -8,6 +8,9 @@ zurückverschoben. Auch das CSS entspricht wieder der bisherigen Darstellung:
 135 Pixel Bildhöhe im 72 Pixel hohen Logo-Bereich, Weißfilter über dem Hero
 und die Originalfarbe bei gescrollter Kopfzeile. Der Bildkatalog führt wieder
 den Schlüssel `LogoChocaya` mit den ursprünglichen Abmessungen und Linktexten.
+Die Dateien `LogoChocaya-256.png` und `LogoChocaya-512.png` dienen als responsive
+PNG-Varianten. `srcset` und `sizes="135px"` wählen eine passende Auflösung;
+das unveränderte 1000-Pixel-Original bleibt für hohe Pixeldichten verfügbar.
 
 ## Browser-Symbole
 

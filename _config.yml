@@ -1,0 +1,5 @@
+# Keep internal source documentation and archived media in Git, outside the Pages build.
+exclude:
+  - archive
+  - docs
+  - .claude

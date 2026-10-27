@@ -116,7 +116,7 @@
           path: 'M145 180H205V300H145Z', at: [175, 240], kind: 'service', photos: ['1st_toilet'] },
         { id: 'upper-terrace', name: ['Balcón con vista al mar', 'Ocean-view balcony'], label: [['Balcón'], ['Balcony']],
           description: ['Un rincón para descansar y disfrutar de la brisa marina.\nDos butacas y una mesa auxiliar bajo un techo tipo sol y sombra.\nVista hacia el mar y el Real Club. El Real Club es independiente y no forma parte del condominio.', 'A relaxing spot to enjoy the sea breeze.\nTwo lounge chairs and a small table beneath a slatted pergola.\nViews of the ocean and Real Club. Real Club is independent and is not part of the condominium.'],
-          path: 'M205 180H460V300H205Z', at: [332, 240], kind: 'outdoor', photos: ['1st_living_terrace_2', '1st_living_terrace_1'] },
+          path: 'M205 180H460V300H205Z', at: [332, 240], kind: 'outdoor', photos: ['1st_balcony_front_2', '1st_balcony_front_1'] },
         { id: 'upper-living', name: ['Sala de estar · Segundo piso', 'Upper-floor living room'], label: [['Sala de estar'], ['Living room']],
           description: ['Un espacio amplio para relajarse y compartir en familia o con amigos.\nSofás y sillones con capacidad aproximada para 8 personas.\nTelevisor y acceso directo al balcón con vista al mar.', 'A spacious area to relax and spend time with family or friends.\nSofas and armchairs seat approximately 8 people.\nA television and direct access to the ocean-view balcony.'],
           path: 'M205 300H460V535H205Z', at: [332, 420], photos: ['1st_living_terrace_1', '1st_living_3', '1st_living_2', '1st_living_night'] },
@@ -132,7 +132,7 @@
         { id: 'upper-bath', name: ['Baño privado · Dormitorio 1', 'Private bathroom · Bedroom 1'], label: [['Baño', 'privado'], ['Private', 'bath']],
           description: ['Baño privado completo del dormitorio 1 en el segundo piso.\nAcceso únicamente desde el dormitorio 1.\nCuenta con ducha tipo lluvia, inodoro y lavatorio.', 'Private full bathroom for upper-floor bedroom 1.\nAccess only through bedroom 1.\nIncludes a rainfall shower, toilet and sink.'],
           path: 'M40 680H110V819L40 825Z', at: [75, 750], labelSize: 12, kind: 'service', photos: ['1st_bathroom_of_bed1'] },
-        { id: 'balcony', name: ['Balcón · Segundo piso', 'Upper-floor balcony'], label: [['Balcón'], ['Balcony']],
+        { id: 'balcony', name: ['Balcón posterior · Vista al parque', 'Rear balcony · Park view'], label: [['Balcón', 'posterior'], ['Rear', 'balcony']],
           description: ['Balcón posterior con vista al parque interior del condominio.\nAcceso desde la cocina del segundo piso.', 'Rear balcony overlooking the condominium’s central park.\nAccess from the upper-floor kitchen.'],
           path: 'M205 745H460V787L205 810Z', at: [332, 774], kind: 'outdoor', photos: ['exterieur_back', 'view_park'] },
       ],
@@ -342,9 +342,9 @@
     byId('floorplan-photo-open').setAttribute('aria-label', `${t.enlarge} · ${room.name[languageIndex()]}`);
   }
 
-  function selectRoom(id, reveal = false) {
+  function selectRoom(id, reveal = false, selectedPhoto = 0) {
     roomId = id;
-    photoIndex = 0;
+    photoIndex = selectedPhoto;
     root.querySelectorAll('[data-room]').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.room === id)));
     const room = selectedRoom();
     byId('floorplan-room-name').textContent = room.name[languageIndex()];
@@ -372,10 +372,7 @@
     byId('floorplan-void-legend').hidden = !(floors[floorIndex].voids || []).length;
     drawPlan();
     // Language changes preserve both the selected room and photo.
-    const previousPhoto = photoIndex;
-    selectRoom(roomId);
-    photoIndex = previousPhoto;
-    showPhoto();
+    selectRoom(roomId, false, photoIndex);
   }
 
   function selectFloor(index) {
